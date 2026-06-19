@@ -495,7 +495,7 @@ function Index() {
       </section>
 
       <footer className="py-10 text-center text-xs" style={{ color: "var(--ink-soft)" }}>
-        © {new Date().getFullYear()} Yonit Yodelevich
+        © {new Date().getFullYear()} Yonit Yudelevich
       </footer>
 
       {/* Floating contact */}
