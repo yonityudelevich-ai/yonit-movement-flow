@@ -485,15 +485,36 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
   return (
     <button
       type={type}
-      className={`px-7 py-3 text-sm tracking-wide transition-opacity hover:opacity-90 ${full ? "w-full" : ""}`}
+      className={`px-8 py-3.5 text-sm tracking-wide font-medium transition-colors shadow-sm ${full ? "w-full" : ""}`}
       style={{
         background: "var(--accent)",
-        color: "#fff",
+        color: "var(--accent-ink)",
         borderRadius: "999px",
       }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
+      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
     >
       {children}
     </button>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p
+      className="text-center text-xs uppercase tracking-[0.35em] mb-4"
+      style={{ color: "var(--accent)" }}
+    >
+      {children}
+    </p>
+  );
+}
+
+function AccentRule({ center }: { center?: boolean }) {
+  return (
+    <div className={center ? "flex justify-center" : ""}>
+      <span className="block w-12 h-[2px]" style={{ background: "var(--accent)" }} />
+    </div>
   );
 }
 
