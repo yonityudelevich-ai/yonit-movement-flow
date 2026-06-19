@@ -26,11 +26,11 @@ const t = {
   nav: { he: "צרי קשר", en: "Contact" },
   heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "Movement Therapy,Awareness Through Movement" },
   heroSub: {
-    he: "מרחב אישי וקבוצתי לעבודה עם הגוף דרך תנועה, נשימה והקשבה.",
+    he: "",
     en: "A personal and group space for working with the body through movement, breath, and listening.",
   },
   heroSmall: {
-    he: "מתאים לנשים, ילדים, תהליכי שיקום, ויסות וחזרה לקשר עם הגוף.",
+    he: "",
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
   heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
