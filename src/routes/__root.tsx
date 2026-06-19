@@ -1,3 +1,4 @@
+import faviconAsset from "../assets/favicon-spiral.png.asset.json";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -87,6 +88,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: faviconAsset.url,
+      },
       {
         rel: "stylesheet",
         href: appCss,
