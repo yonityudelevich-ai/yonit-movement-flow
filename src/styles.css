@@ -119,8 +119,8 @@
   --accent-soft: #B3C4D6;
   --quiet: #6B7E99;
   --line: #B3C4D6;
-  --font-heading: "Cascadia Code", "Tinos", Georgia, serif;
-  --font-body: "Cascadia Code", system-ui, sans-serif;
+  --font-heading: "Cascadia Mono", "Tinos", Georgia, serif;
+  --font-body: "Cascadia Mono", system-ui, sans-serif;
   --heading-weight: 500;
   --heading-tracking: 0em;
   --radius-soft: 1.25rem;
