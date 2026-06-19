@@ -265,6 +265,8 @@ function Index() {
               <Btn>{tr(t.heroCta)}</Btn>
             </a>
           </div>
+        </div>
+      </section>
 
       {/* Videos */}
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
