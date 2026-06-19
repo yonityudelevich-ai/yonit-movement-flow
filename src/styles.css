@@ -63,12 +63,15 @@
 
 :root {
   --radius: 0.625rem;
-  /* Default = Style A (Warm India) */
+  /* Warm India — single permanent theme */
   --bg: #F2E6D3;
+  --bg-alt: #E8D4B2;
   --surface: #FBF5EA;
   --ink: #3A2E22;
   --ink-soft: #6B5A48;
   --accent: #C17A4F;
+  --accent-hover: #A6633D;
+  --accent-ink: #FFFFFF;
   --accent-soft: #E2B594;
   --line: #E4D3B8;
   --font-heading: "Frank Ruhl Libre", "Cormorant Garamond", "Noto Serif Hebrew", serif;
@@ -109,37 +112,6 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-}
-
-[data-theme="b"] {
-  --bg: #F1F4EE;
-  --surface: #F8FAF5;
-  --ink: #2F3A30;
-  --ink-soft: #5E6B5E;
-  --accent: #8A9A7E;
-  --accent-soft: #B8C5AD;
-  --line: #DCE3D4;
-  --secondary-accent: #7A98A8;
-  --font-heading: "Assistant", "Heebo", system-ui, sans-serif;
-  --font-body: "Assistant", "Heebo", system-ui, sans-serif;
-  --heading-weight: 500;
-  --heading-tracking: -0.01em;
-  --radius-soft: 1rem;
-}
-
-[data-theme="c"] {
-  --bg: #EFEDE9;
-  --surface: #F7F5F2;
-  --ink: #2E3338;
-  --ink-soft: #6A6E73;
-  --accent: #6E8A9C;
-  --accent-soft: #A8BAC6;
-  --line: #DEDAD3;
-  --font-heading: "Heebo", "Assistant", system-ui, sans-serif;
-  --font-body: "Heebo", "Assistant", system-ui, sans-serif;
-  --heading-weight: 300;
-  --heading-tracking: 0.04em;
-  --radius-soft: 0.5rem;
 }
 
 .dark {
