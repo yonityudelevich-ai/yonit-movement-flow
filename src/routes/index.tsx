@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import heroAsset from "../assets/hero.jpg.asset.json";
+import aboutAsset from "../assets/about.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -316,13 +317,11 @@ function Index() {
       {/* About */}
       <section className="py-24" style={{ background: "var(--bg-alt)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div
-            className="aspect-[4/5] w-full"
-            style={{
-              borderRadius: "var(--radius-soft)",
-              background: "linear-gradient(160deg, var(--accent-soft), var(--bg))",
-            }}
-            aria-hidden
+          <img
+            src={aboutAsset.url}
+            alt="Yonit Yudelevich"
+            className="aspect-[4/5] w-full object-cover"
+            loading="lazy"
           />
           <div>
             <SectionLabel>{isHe ? "היכרות" : "Introduction"}</SectionLabel>
@@ -352,7 +351,6 @@ function Index() {
                   className="p-8"
                   style={{
                     background: "var(--surface)",
-                    borderRadius: "var(--radius-soft)",
                     border: "1px solid var(--line)",
                   }}
                 >
@@ -398,7 +396,6 @@ function Index() {
                 className="px-5 py-2 text-sm"
                 style={{
                   border: "1px solid var(--line)",
-                  borderRadius: "999px",
                   color: "var(--ink)",
                   background: "var(--surface)",
                 }}
@@ -438,7 +435,7 @@ function Index() {
           {sent ? (
             <div
               className="p-8 text-center"
-              style={{ borderRadius: "var(--radius-soft)", background: "var(--surface)", border: "1px solid var(--line)" }}
+              style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
             >
               {tr(t.sent)}
             </div>
@@ -461,7 +458,7 @@ function Index() {
               style={{
                 border: "2px solid var(--accent)",
                 color: "var(--accent)",
-                borderRadius: "999px",
+                borderRadius: "4px",
               }}
             >
               {tr(t.whatsapp)}
@@ -483,7 +480,7 @@ function Index() {
           [isHe ? "left" : "right"]: "1.5rem",
           background: "var(--accent)",
           color: "var(--accent-ink)",
-          borderRadius: "999px",
+          borderRadius: "4px",
           fontWeight: 500,
         } as React.CSSProperties}
         onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
@@ -506,7 +503,7 @@ function Index() {
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              style={{ borderRadius: "var(--radius-soft)" }}
+              style={{ border: "none" }}
             />
           </div>
         </div>
@@ -523,7 +520,7 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
       style={{
         background: "var(--accent)",
         color: "var(--accent-ink)",
-        borderRadius: "999px",
+        borderRadius: "4px",
         border: "none",
         boxShadow: "none",
         fontWeight: 600,
@@ -565,7 +562,6 @@ function Field({
     className: "w-full px-4 py-3 text-sm bg-transparent outline-none focus:border-[var(--accent)] transition-colors",
     style: {
       border: "1px solid var(--line)",
-      borderRadius: "var(--radius-soft)",
       background: "var(--surface)",
       color: "var(--ink)",
     } as React.CSSProperties,
@@ -582,7 +578,7 @@ function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => voi
   return (
     <div
       className="flex text-xs overflow-hidden"
-      style={{ border: "1px solid var(--line)", borderRadius: "999px" }}
+      style={{ border: "1px solid var(--line)" }}
     >
       {(["he", "en"] as const).map((l) => (
         <button
