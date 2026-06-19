@@ -93,19 +93,19 @@
 
 :root {
   --radius: 0.625rem;
-  /* Warm sand + coral palette */
-  --bg: #E8DFD3;
-  --bg-alt: #D7C6AA;
-  --surface: #F2EADC;
-  --ink: #282620;
-  --ink-soft: #5C564C;
-  --accent: #E8714B;
-  --accent-hover: #C95A37;
-  --accent-ink: #FFFFFF;
-  --accent-soft: #F4B89F;
-  --quiet: #7E99BE;
-  --line: #C9B998;
-  --font-heading: "Tinos", Georgia, serif;
+  /* Calm sage palette */
+  --bg: #F7F6F1;
+  --bg-alt: #E2E6DE;
+  --surface: #FDFCF8;
+  --ink: #2E3B29;
+  --ink-soft: #5A6B53;
+  --accent: #6B8F5E;
+  --accent-hover: #4F6B47;
+  --accent-ink: #F7F6F1;
+  --accent-soft: #C8D4BF;
+  --quiet: #8A9786;
+  --line: #C8D4BF;
+  --font-heading: "Cascadia Code", "Tinos", Georgia, serif;
   --font-body: "M PLUS Rounded 1c", system-ui, sans-serif;
   --heading-weight: 500;
   --heading-tracking: 0em;
@@ -181,13 +181,13 @@
 }
 
 /* Brand overrides — must come AFTER the shadcn token blocks above
-   so the terracotta values win the cascade. */
+   so the sage values win the cascade. */
 :root,
 .dark {
-  --accent: #E8714B;
-  --accent-hover: #C95A37;
-  --accent-ink: #FFFFFF;
-  --accent-soft: #F4B89F;
+  --accent: #6B8F5E;
+  --accent-hover: #4F6B47;
+  --accent-ink: #F7F6F1;
+  --accent-soft: #C8D4BF;
 }
 
 @layer base {
