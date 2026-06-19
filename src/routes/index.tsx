@@ -155,30 +155,6 @@ const videos = [
     desc_en: "A moment of gentle pelvic awareness work, lying down, from a private session.",
     desc_he: "רגע של תשומת לב עדינה לאגן, בשכיבה, מתוך מפגש פרטי.",
   },
-  {
-    videoId: "dQw4w9WgXcQ",
-    isShort: false,
-    desc_he: "רצף עדין על הרצפה, ממוקד בנשימה ובעמוד השדרה.",
-    desc_en: "A gentle floor sequence focused on breath and the spine.",
-  },
-  {
-    videoId: "dQw4w9WgXcQ",
-    isShort: false,
-    desc_he: "עבודה רכה עם האגן והירכיים, להרגעה ולוויסות.",
-    desc_en: "Soft work with the pelvis and hips, for grounding and regulation.",
-  },
-  {
-    videoId: "dQw4w9WgXcQ",
-    isShort: false,
-    desc_he: "תנועות קטנות לכתפיים ולצוואר, לשחרור מתח יומיומי.",
-    desc_en: "Small movements for the shoulders and neck, releasing everyday tension.",
-  },
-  {
-    videoId: "dQw4w9WgXcQ",
-    isShort: false,
-    desc_he: "מפגש קצר על הקשבה לגוף לפני שמתחילים לנוע.",
-    desc_en: "A short session on listening to the body before beginning to move.",
-  },
 ];
 
 function Index() {
