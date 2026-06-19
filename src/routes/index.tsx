@@ -14,7 +14,6 @@ export const Route = createFileRoute("/")({
 });
 
 type Lang = "he" | "en";
-type Theme = "a" | "b" | "c";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 const WHATSAPP_NUMBER = "972500000000";
