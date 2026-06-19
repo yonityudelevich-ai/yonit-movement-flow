@@ -520,30 +520,6 @@ function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => voi
   );
 }
 
-function ThemeSwitcher({ theme, setTheme }: { theme: Theme; setTheme: (t: Theme) => void }) {
-  return (
-    <div
-      className="flex text-xs overflow-hidden"
-      style={{ border: "1px solid var(--line)", borderRadius: "999px" }}
-      title="Temporary style switcher"
-    >
-      {(["a", "b", "c"] as const).map((th) => (
-        <button
-          key={th}
-          onClick={() => setTheme(th)}
-          className="px-2.5 py-1.5 uppercase transition-colors"
-          style={{
-            background: theme === th ? "var(--ink)" : "transparent",
-            color: theme === th ? "var(--bg)" : "var(--ink-soft)",
-          }}
-        >
-          {th}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 function VideoCard({ videoId, desc, onPlay }: { videoId: string; desc: string; onPlay: () => void }) {
   return (
     <div>
