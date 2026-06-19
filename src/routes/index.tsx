@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
+import heroImage from "../assets/hero.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +31,7 @@ const t = {
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
   heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
+  heroName: { he: "יונית יודלביץ'", en: "Yonit Yodelevich" },
   bridge: {
     he: "קצת מהתנועה עצמה, לפני הכל.",
     en: "A glimpse of the movement itself, before anything else.",
@@ -213,31 +215,58 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="pt-32 pb-24 sm:pt-40 sm:pb-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] mb-6" style={{ color: "var(--ink-soft)" }}>
-            Yonit Yodelevich
-          </p>
-          <h1 className="text-4xl sm:text-6xl mb-6">{tr(t.heroHeadline)}</h1>
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-4" style={{ color: "var(--ink-soft)" }}>
-            {tr(t.heroSub)}
-          </p>
-          <p className="text-sm sm:text-base max-w-xl mx-auto mb-10" style={{ color: "var(--ink-soft)" }}>
-            {tr(t.heroSmall)}
-          </p>
-          <a href="#contact" onClick={scrollTo("contact")}>
-            <Btn>{tr(t.heroCta)}</Btn>
-          </a>
-        </div>
-        <div className="max-w-3xl mx-auto mt-20 px-6">
+      <section className="relative w-full pt-14">
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "70vh",
+            aspectRatio: "16 / 9",
+          }}
+        >
+          {/* Scrim for legibility */}
           <div
-            className="aspect-[16/7] w-full"
+            className="absolute inset-0"
             style={{
-              borderRadius: "var(--radius-soft)",
-              background: "linear-gradient(135deg, var(--accent-soft), var(--surface))",
+              background:
+                "linear-gradient(to bottom, rgba(20,16,10,0.55) 0%, rgba(20,16,10,0.15) 40%, rgba(20,16,10,0.05) 60%, rgba(20,16,10,0.75) 100%)",
             }}
-            aria-hidden
           />
+          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "#FFF" }}>
+            <h1
+              className="mb-4"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(2.75rem, 8vw, 5.5rem)",
+                lineHeight: 1.05,
+                color: "#FFF",
+                textShadow: "0 2px 24px rgba(0,0,0,0.45)",
+              }}
+            >
+              {tr(t.heroName)}
+            </h1>
+            <p
+              className="text-base sm:text-lg tracking-[0.2em] uppercase"
+              style={{ color: "rgba(255,255,255,0.92)", textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
+            >
+              {tr(t.heroHeadline)}
+            </p>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 sm:pb-14">
+            <div className="max-w-3xl mx-auto text-center" style={{ color: "#FFF" }}>
+              <p className="text-base sm:text-lg mb-2" style={{ color: "rgba(255,255,255,0.95)", textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
+                {tr(t.heroSub)}
+              </p>
+              <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.85)", textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
+                {tr(t.heroSmall)}
+              </p>
+              <a href="#contact" onClick={scrollTo("contact")}>
+                <Btn>{tr(t.heroCta)}</Btn>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
