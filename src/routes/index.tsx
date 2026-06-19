@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import heroAsset from "../assets/hero.jpg.asset.json";
+import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutAsset from "../assets/about.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -213,23 +214,23 @@ function Index() {
 
       {/* Hero */}
       <section className="relative w-full pt-14">
-        <div
-          className="relative w-full overflow-hidden"
-          style={{
-            backgroundImage: `url(${heroAsset.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: "70vh",
-            aspectRatio: "16 / 9",
-            filter: "brightness(1.35) contrast(1.05)",
-          }}
-        >
+        <div className="relative w-full overflow-hidden" style={{ minHeight: "70vh", aspectRatio: "16 / 9" }}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: "brightness(1.15) contrast(1.05)" }}
+          >
+            <source src={heroVideo.url} type="video/mp4" />
+          </video>
           {/* Scrim for legibility */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(15,20,30,0.12) 0%, rgba(15,20,30,0.02) 35%, rgba(15,20,30,0.02) 60%, rgba(15,20,30,0.18) 100%)",
+                "linear-gradient(to bottom, rgba(10,15,26,0.25) 0%, rgba(10,15,26,0.05) 35%, rgba(10,15,26,0.05) 60%, rgba(10,15,26,0.35) 100%)",
             }}
           />
           <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "#FFF" }}>
@@ -258,27 +259,22 @@ function Index() {
               {tr(t.heroHeadline)}
             </h2>
           </div>
-          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 sm:pb-14">
-            <div className="max-w-3xl mx-auto text-center" style={{ color: "#FFF" }}>
-              <p className="text-base sm:text-lg mb-2" style={{ color: "rgba(255,255,255,0.95)", textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
-                {tr(t.heroSub)}
-              </p>
-              <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.85)", textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>
-                {tr(t.heroSmall)}
-              </p>
-              <a href="#contact" onClick={scrollTo("contact")}>
-                <Btn>{tr(t.heroCta)}</Btn>
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Bridge */}
+      {/* Hero description + CTA */}
       <section className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <p className="max-w-2xl mx-auto px-6 text-center text-lg italic" style={{ color: "var(--ink-soft)" }}>
-          {tr(t.bridge)}
-        </p>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-base sm:text-lg mb-3" style={{ color: "var(--ink)" }}>
+            {tr(t.heroSub)}
+          </p>
+          <p className="text-sm mb-6" style={{ color: "var(--ink-soft)" }}>
+            {tr(t.heroSmall)}
+          </p>
+          <a href="#contact" onClick={scrollTo("contact")}>
+            <Btn>{tr(t.heroCta)}</Btn>
+          </a>
+        </div>
       </section>
 
       {/* Videos */}

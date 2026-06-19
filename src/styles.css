@@ -198,8 +198,8 @@
    so the jeans values win the cascade. */
 :root,
 .dark {
-  --accent: #7BA3C9;
-  --accent-hover: #8FB8D4;
+  --accent: #8FC5E9;
+  --accent-hover: #A5D5F0;
   --accent-ink: #0A0F1A;
   --accent-soft: #1E3A5F;
 }
