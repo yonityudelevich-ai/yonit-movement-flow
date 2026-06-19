@@ -454,7 +454,7 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-block px-6 py-3 text-sm transition-colors hover:bg-[var(--accent)] hover:text-white"
+              className="inline-block px-6 py-3 text-sm transition-colors hover:bg-[var(--accent)] hover:text-[var(--accent-ink)]"
               style={{
                 border: "2px solid var(--accent)",
                 color: "var(--accent)",
