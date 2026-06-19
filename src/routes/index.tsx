@@ -593,7 +593,7 @@ function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => voi
           className="px-3 py-1.5 transition-colors"
           style={{
             background: lang === l ? "var(--accent)" : "transparent",
-            color: lang === l ? "#fff" : "var(--ink-soft)",
+            color: lang === l ? "var(--accent-ink)" : "var(--ink-soft)",
           }}
         >
           {l === "he" ? "עב" : "EN"}
