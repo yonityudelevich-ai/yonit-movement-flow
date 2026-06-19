@@ -248,7 +248,7 @@ function Index() {
               {tr(t.heroName)}
             </h1>
             <h2
-              className="tracking-[0.15em] uppercase"
+              className="tracking-[0.08em]"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
