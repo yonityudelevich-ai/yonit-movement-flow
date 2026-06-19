@@ -23,7 +23,7 @@ const WHATSAPP_NUMBER = "972500000000";
 
 const t = {
   nav: { he: "צרי קשר", en: "Contact" },
-  heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "Movement, Body, and Presence" },
+  heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "dance movement therapist feldenkrise body based process facilitator" },
   heroSub: {
     he: "מרחב אישי וקבוצתי לעבודה עם הגוף דרך תנועה, נשימה והקשבה.",
     en: "A personal and group space for working with the body through movement, breath, and listening.",
@@ -248,7 +248,7 @@ function Index() {
               {tr(t.heroName)}
             </h1>
             <h2
-              className="tracking-[0.15em] uppercase"
+              className="tracking-[0.08em]"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
