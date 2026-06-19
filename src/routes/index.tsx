@@ -454,22 +454,28 @@ function Index() {
         © {new Date().getFullYear()} Yonit Yudelevich
       </footer>
 
-      {/* Floating contact */}
+      {/* Floating WhatsApp */}
       <a
-        href="#contact"
-        onClick={scrollTo("contact")}
-        className="fixed bottom-6 z-30 px-5 py-3 text-sm shadow-lg transition-colors"
+        href={whatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={tr(t.whatsapp)}
+        className="fixed bottom-6 z-30 w-14 h-14 flex items-center justify-center shadow-lg transition-colors"
         style={{
           [isHe ? "left" : "right"]: "1.5rem",
           background: "var(--accent)",
           color: "var(--accent-ink)",
-          borderRadius: "4px",
-          fontWeight: 500,
+          borderRadius: "50%",
         } as React.CSSProperties}
         onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
         onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
       >
-        {tr(t.nav)}
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+          <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" fill="currentColor" stroke="none" />
+          <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" fill="currentColor" stroke="none" />
+          <path d="M9.5 13.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5" />
+        </svg>
       </a>
 
       {/* Video modal */}
