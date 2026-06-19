@@ -521,7 +521,7 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
       style={{
         background: "var(--accent)",
         color: "var(--accent-ink)",
-        borderRadius: "999px",
+        borderRadius: "4px",
         border: "none",
         boxShadow: "none",
         fontWeight: 600,
