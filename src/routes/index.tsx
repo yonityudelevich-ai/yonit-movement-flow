@@ -275,14 +275,14 @@ function Index() {
       </section>
 
       {/* Bridge */}
-      <section className="py-16" style={{ background: "var(--bg-alt)" }}>
+      <section className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <p className="max-w-2xl mx-auto px-6 text-center text-lg italic" style={{ color: "var(--ink-soft)" }}>
           {tr(t.bridge)}
         </p>
       </section>
 
       {/* Videos */}
-      <section className="py-16">
+      <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <SectionLabel>{isHe ? "וידאו" : "Video"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
@@ -315,7 +315,7 @@ function Index() {
       </section>
 
       {/* About */}
-      <section className="py-24" style={{ background: "var(--bg-alt)" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
             src={aboutAsset.url}
@@ -336,7 +336,7 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24">
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6">
           <SectionLabel>{isHe ? "הגישה" : "Approach"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
@@ -365,7 +365,7 @@ function Index() {
       </section>
 
       {/* Who */}
-      <section className="py-24" style={{ background: "var(--bg-alt)" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <SectionLabel>{isHe ? "קהל" : "For You"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.whoTitle)}</h2>
@@ -383,7 +383,7 @@ function Index() {
       </section>
 
       {/* Services */}
-      <section className="py-24">
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <SectionLabel>{isHe ? "מה אני מציעה" : "Offerings"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.servicesTitle)}</h2>
@@ -409,7 +409,7 @@ function Index() {
       </section>
 
       {/* Trust */}
-      <section className="py-20" style={{ background: "var(--bg-alt)" }}>
+      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <SectionLabel>{isHe ? "רקע" : "Background"}</SectionLabel>
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.trustTitle)}</h2>
@@ -426,7 +426,7 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24">
+      <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-xl mx-auto px-6">
           <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.contactTitle)}</h2>
