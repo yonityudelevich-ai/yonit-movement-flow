@@ -260,24 +260,11 @@ function Index() {
             >
               {tr(t.heroHeadline)}
             </h2>
+            <div className="h-8" />
+            <a href="#contact" onClick={scrollTo("contact")}>
+              <Btn>{tr(t.heroCta)}</Btn>
+            </a>
           </div>
-        </div>
-      </section>
-
-      {/* Hero description + CTA */}
-      <section className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-base sm:text-lg mb-3" style={{ color: "var(--ink)" }}>
-            {tr(t.heroSub)}
-          </p>
-          <p className="text-sm mb-6" style={{ color: "var(--ink-soft)" }}>
-            {tr(t.heroSmall)}
-          </p>
-          <a href="#contact" onClick={scrollTo("contact")}>
-            <Btn>{tr(t.heroCta)}</Btn>
-          </a>
-        </div>
-      </section>
 
       {/* Videos */}
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
