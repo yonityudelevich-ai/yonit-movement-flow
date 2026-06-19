@@ -4,6 +4,7 @@ import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutAsset from "../assets/about.jpg.asset.json";
 import aboutFace from "../assets/about-face.jpg";
+import contactPhoto from "../assets/contact-photo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
