@@ -238,7 +238,7 @@ function Index() {
               className="mb-4"
               style={{
                 fontFamily: "var(--font-heading)",
-                fontSize: "clamp(2.75rem, 8vw, 5.5rem)",
+                fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "#FFF",
                 fontWeight: 300,
