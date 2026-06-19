@@ -23,7 +23,7 @@ const WHATSAPP_NUMBER = "972500000000";
 
 const t = {
   nav: { he: "צרי קשר", en: "Contact" },
-  heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "dance movement therapist feldenkrise body based process facilitator" },
+  heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "movement therapy, awarness through movement" },
   heroSub: {
     he: "מרחב אישי וקבוצתי לעבודה עם הגוף דרך תנועה, נשימה והקשבה.",
     en: "A personal and group space for working with the body through movement, breath, and listening.",
