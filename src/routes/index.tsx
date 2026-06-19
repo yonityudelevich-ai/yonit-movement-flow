@@ -242,7 +242,7 @@ function Index() {
       </section>
 
       {/* Bridge */}
-      <section className="py-16">
+      <section className="py-16" style={{ background: "var(--bg-alt)" }}>
         <p className="max-w-2xl mx-auto px-6 text-center text-lg italic" style={{ color: "var(--ink-soft)" }}>
           {tr(t.bridge)}
         </p>
@@ -251,7 +251,10 @@ function Index() {
       {/* Videos */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-12">{tr(t.videosTitle)}</h2>
+          <SectionLabel>{isHe ? "וידאו" : "Video"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {videos.map((v, i) => (
               <VideoCard
@@ -277,7 +280,7 @@ function Index() {
       </section>
 
       {/* About */}
-      <section className="py-24" style={{ background: "var(--surface)" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div
             className="aspect-[4/5] w-full"
@@ -288,7 +291,10 @@ function Index() {
             aria-hidden
           />
           <div>
-            <h2 className="text-3xl sm:text-4xl mb-6">{tr(t.aboutTitle)}</h2>
+            <SectionLabel>{isHe ? "היכרות" : "Introduction"}</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
+            <AccentRule />
+            <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink-soft)" }}>{p}</p>
             ))}
@@ -299,7 +305,10 @@ function Index() {
       {/* How */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-14">{tr(t.howTitle)}</h2>
+          <SectionLabel>{isHe ? "הגישה" : "Approach"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
           <div className="grid md:grid-cols-3 gap-8">
             {t.how.map((c, i) => {
               const card = isHe ? c.he : c.en;
@@ -324,9 +333,12 @@ function Index() {
       </section>
 
       {/* Who */}
-      <section className="py-24" style={{ background: "var(--surface)" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)" }}>
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-12">{tr(t.whoTitle)}</h2>
+          <SectionLabel>{isHe ? "קהל" : "For You"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.whoTitle)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
           <ul className="space-y-4">
             {(isHe ? t.who.he : t.who.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -341,7 +353,10 @@ function Index() {
       {/* Services */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl mb-12">{tr(t.servicesTitle)}</h2>
+          <SectionLabel>{isHe ? "מה אני מציעה" : "Offerings"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.servicesTitle)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {(isHe ? t.services.he : t.services.en).map((s, i) => (
               <span
@@ -363,9 +378,12 @@ function Index() {
       </section>
 
       {/* Trust */}
-      <section className="py-20" style={{ background: "var(--surface)" }}>
+      <section className="py-20" style={{ background: "var(--bg-alt)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl text-center mb-10">{tr(t.trustTitle)}</h2>
+          <SectionLabel>{isHe ? "רקע" : "Background"}</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.trustTitle)}</h2>
+          <AccentRule center />
+          <div className="h-8" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
             {(isHe ? t.trust.he : t.trust.en).map((item, i) => (
               <div key={i} className="text-center text-sm sm:text-base" style={{ color: "var(--ink-soft)" }}>
@@ -379,7 +397,9 @@ function Index() {
       {/* Contact */}
       <section id="contact" className="py-24">
         <div className="max-w-xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-4">{tr(t.contactTitle)}</h2>
+          <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.contactTitle)}</h2>
+          <div className="flex justify-center mb-6"><span className="block w-12 h-[2px]" style={{ background: "var(--accent)" }} /></div>
           <p className="text-center mb-10" style={{ color: "var(--ink-soft)" }}>{tr(t.contactSub)}</p>
           {sent ? (
             <div
@@ -403,9 +423,9 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-block px-6 py-3 text-sm"
+              className="inline-block px-6 py-3 text-sm transition-colors hover:bg-[var(--accent)] hover:text-white"
               style={{
-                border: "1px solid var(--accent)",
+                border: "2px solid var(--accent)",
                 color: "var(--accent)",
                 borderRadius: "999px",
               }}
@@ -424,13 +444,16 @@ function Index() {
       <a
         href="#contact"
         onClick={scrollTo("contact")}
-        className="fixed bottom-6 z-30 px-5 py-3 text-sm shadow-md"
+        className="fixed bottom-6 z-30 px-5 py-3 text-sm shadow-lg transition-colors"
         style={{
           [isHe ? "left" : "right"]: "1.5rem",
           background: "var(--accent)",
-          color: "#fff",
+          color: "var(--accent-ink)",
           borderRadius: "999px",
+          fontWeight: 500,
         } as React.CSSProperties}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
       >
         {tr(t.nav)}
       </a>
