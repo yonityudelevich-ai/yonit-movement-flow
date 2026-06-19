@@ -216,7 +216,7 @@ function Index() {
 
       {/* Hero */}
       <section className="relative w-full pt-14">
-        <div className="relative w-full overflow-hidden" style={{ minHeight: "70vh", aspectRatio: "16 / 9" }}>
+        <div className="relative w-full overflow-hidden" style={{ minHeight: "50vh", aspectRatio: "16 / 9" }}>
           <video
             autoPlay
             loop
