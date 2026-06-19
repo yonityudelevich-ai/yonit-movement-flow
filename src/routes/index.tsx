@@ -226,7 +226,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-3" style={{ color: "var(--ink)" }}>
           <div className="text-sm tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
-            Yonit Yodelevich
+            Yonit Yudelevich
           </div>
           <div className="flex items-center gap-2">
             <LangSwitcher lang={lang} setLang={setLang} />
