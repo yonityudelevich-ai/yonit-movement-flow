@@ -351,7 +351,6 @@ function Index() {
                   className="p-8"
                   style={{
                     background: "var(--surface)",
-                    borderRadius: "var(--radius-soft)",
                     border: "1px solid var(--line)",
                   }}
                 >
