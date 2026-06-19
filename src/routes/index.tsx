@@ -238,7 +238,7 @@ function Index() {
               className="mb-4"
               style={{
                 fontFamily: "var(--font-heading)",
-                fontSize: "clamp(2.75rem, 8vw, 5.5rem)",
+                fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "#FFF",
                 fontWeight: 300,
@@ -250,8 +250,8 @@ function Index() {
             <h2
               className="tracking-[0.15em] uppercase"
               style={{
-                fontFamily: isHe ? "var(--font-hebrew)" : "var(--font-heading)",
-                fontSize: isHe ? "clamp(1.4rem, 3.5vw, 2.4rem)" : "clamp(1.1rem, 2.5vw, 1.6rem)",
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
                 color: "#FFF",
                 textShadow: "0 1px 12px rgba(0,0,0,0.55)",
