@@ -415,50 +415,60 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-xl mx-auto px-6">
-          <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.contactTitle)}</h2>
-          <div className="flex justify-center mb-6"><span className="block w-12 h-[2px]" style={{ background: "var(--accent)" }} /></div>
-          <p className="text-center mb-10" style={{ color: "var(--ink-soft)" }}>{tr(t.contactSub)}</p>
-          {sent ? (
-            <div
-              className="p-8 text-center"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
-            >
-              {tr(t.sent)}
-            </div>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-4">
-              <Field name="name" label={tr(t.name)} required />
-              <Field name="contact" label={tr(t.contactField)} required />
-              <Field name="message" label={tr(t.message)} as="textarea" required />
-              <div className="pt-2">
-                <Btn type="submit" full>{tr(t.send)}</Btn>
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src={contactPhoto}
+            alt="Yonit Yudelevich"
+            className="w-full object-cover"
+            style={{ filter: "saturate(1.35) contrast(1.05)" }}
+            loading="lazy"
+          />
+          <div>
+            <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
+            <AccentRule />
+            <div className="h-6" />
+            <p className="mb-10" style={{ color: "var(--ink-soft)" }}>{tr(t.contactSub)}</p>
+            {sent ? (
+              <div
+                className="p-8 text-center"
+                style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
+              >
+                {tr(t.sent)}
               </div>
-            </form>
-          )}
-          <div className="mt-6 text-center">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block px-6 py-3 text-sm transition-colors"
-              style={{
-                border: "2px solid var(--accent)",
-                color: "var(--accent)",
-                borderRadius: "4px",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
-                e.currentTarget.style.color = "var(--accent-ink)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "var(--accent)";
-              }}
-            >
-              {tr(t.whatsapp)}
-            </a>
+            ) : (
+              <form onSubmit={onSubmit} className="space-y-4">
+                <Field name="name" label={tr(t.name)} required />
+                <Field name="contact" label={tr(t.contactField)} required />
+                <Field name="message" label={tr(t.message)} as="textarea" required />
+                <div className="pt-2">
+                  <Btn type="submit" full>{tr(t.send)}</Btn>
+                </div>
+              </form>
+            )}
+            <div className="mt-6 text-center">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block px-6 py-3 text-sm transition-colors"
+                style={{
+                  border: "2px solid var(--accent)",
+                  color: "var(--accent)",
+                  borderRadius: "4px",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "var(--accent)";
+                }}
+              >
+                {tr(t.whatsapp)}
+              </a>
+            </div>
           </div>
         </div>
       </section>
