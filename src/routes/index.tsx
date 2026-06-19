@@ -239,7 +239,7 @@ function Index() {
         <div
           className="relative w-full overflow-hidden"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${heroAsset.url})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             minHeight: "70vh",
