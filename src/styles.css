@@ -1,28 +1,14 @@
 @font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Cascadia Mono";
+  src: url("/fonts/CascadiaMono.ttf") format("truetype");
+  font-weight: 200 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "Cascadia Mono";
+  src: url("/fonts/CascadiaMonoItalic.ttf") format("truetype");
+  font-weight: 200 700;
   font-style: italic;
   font-display: swap;
 }
