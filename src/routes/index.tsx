@@ -161,7 +161,6 @@ const videos = [
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
-  const [theme, setTheme] = useState<Theme>("a");
   const [sent, setSent] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -171,8 +170,7 @@ function Index() {
   useEffect(() => {
     document.documentElement.setAttribute("dir", dir);
     document.documentElement.setAttribute("lang", lang);
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [dir, lang, theme]);
+  }, [dir, lang]);
 
   const tr = (key: { he: string; en: string }) => key[lang];
 
@@ -209,7 +207,6 @@ function Index() {
             Yonit Yodelevich
           </div>
           <div className="flex items-center gap-2">
-            <ThemeSwitcher theme={theme} setTheme={setTheme} />
             <LangSwitcher lang={lang} setLang={setLang} />
           </div>
         </div>
