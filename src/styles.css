@@ -1,28 +1,14 @@
 @font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Cascadia Mono";
+  src: url("/fonts/CascadiaMono.ttf") format("truetype");
+  font-weight: 200 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cascadia Code";
-  src: url("/fonts/CascadiaCode-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "Cascadia Mono";
+  src: url("/fonts/CascadiaMonoItalic.ttf") format("truetype");
+  font-weight: 200 700;
   font-style: italic;
   font-display: swap;
 }
@@ -133,8 +119,8 @@
   --accent-soft: #B3C4D6;
   --quiet: #6B7E99;
   --line: #B3C4D6;
-  --font-heading: "Cascadia Code", "Tinos", Georgia, serif;
-  --font-body: "Cascadia Code", system-ui, sans-serif;
+  --font-heading: "Cascadia Mono", "Tinos", Georgia, serif;
+  --font-body: "Cascadia Mono", system-ui, sans-serif;
   --heading-weight: 500;
   --heading-tracking: 0em;
   --radius-soft: 1.25rem;
