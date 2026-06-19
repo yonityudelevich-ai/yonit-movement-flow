@@ -195,13 +195,13 @@
 }
 
 /* Brand overrides — must come AFTER the shadcn token blocks above
-   so the sage values win the cascade. */
+   so the jeans values win the cascade. */
 :root,
 .dark {
-  --accent: #2B4A6B;
-  --accent-hover: #1E3650;
-  --accent-ink: #FFFFFF;
-  --accent-soft: #B3C4D6;
+  --accent: #7BA3C9;
+  --accent-hover: #8FB8D4;
+  --accent-ink: #0A0F1A;
+  --accent-soft: #1E3A5F;
 }
 
 @layer base {
