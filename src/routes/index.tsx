@@ -26,11 +26,11 @@ const t = {
   nav: { he: "צרי קשר", en: "Contact" },
   heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "Movement Therapy,Awareness Through Movement" },
   heroSub: {
-    he: "מרחב אישי וקבוצתי לעבודה עם הגוף דרך תנועה, נשימה והקשבה.",
+    he: "",
     en: "A personal and group space for working with the body through movement, breath, and listening.",
   },
   heroSmall: {
-    he: "מתאים לנשים, ילדים, תהליכי שיקום, ויסות וחזרה לקשר עם הגוף.",
+    he: "",
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
   heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
@@ -260,22 +260,11 @@ function Index() {
             >
               {tr(t.heroHeadline)}
             </h2>
+            <div className="h-8" />
+            <a href="#contact" onClick={scrollTo("contact")}>
+              <Btn>{tr(t.heroCta)}</Btn>
+            </a>
           </div>
-        </div>
-      </section>
-
-      {/* Hero description + CTA */}
-      <section className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-base sm:text-lg mb-3" style={{ color: "var(--ink)" }}>
-            {tr(t.heroSub)}
-          </p>
-          <p className="text-sm mb-6" style={{ color: "var(--ink-soft)" }}>
-            {tr(t.heroSmall)}
-          </p>
-          <a href="#contact" onClick={scrollTo("contact")}>
-            <Btn>{tr(t.heroCta)}</Btn>
-          </a>
         </div>
       </section>
 
