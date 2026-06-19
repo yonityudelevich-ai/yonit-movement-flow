@@ -244,7 +244,7 @@ function Index() {
             backgroundPosition: "center",
             minHeight: "70vh",
             aspectRatio: "16 / 9",
-            filter: "brightness(1.25) contrast(1.02)",
+            filter: "brightness(1.35) contrast(1.05)",
           }}
         >
           {/* Scrim for legibility */}
@@ -252,7 +252,7 @@ function Index() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(15,20,30,0.28) 0%, rgba(15,20,30,0.05) 35%, rgba(15,20,30,0.02) 60%, rgba(15,20,30,0.30) 100%)",
+                "linear-gradient(to bottom, rgba(15,20,30,0.12) 0%, rgba(15,20,30,0.02) 35%, rgba(15,20,30,0.02) 60%, rgba(15,20,30,0.18) 100%)",
             }}
           />
           <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "#FFF" }}>
