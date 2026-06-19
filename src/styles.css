@@ -121,6 +121,7 @@
   --line: #1E3A5F;
   --font-heading: "Cascadia Mono", "Tinos", Georgia, serif;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
+  --font-hebrew: "David Libre", "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
   --heading-weight: 500;
   --heading-tracking: 0em;
   --radius-soft: 1.25rem;
