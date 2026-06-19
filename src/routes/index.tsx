@@ -436,7 +436,7 @@ function Index() {
           {sent ? (
             <div
               className="p-8 text-center"
-              style={{ borderRadius: "var(--radius-soft)", background: "var(--surface)", border: "1px solid var(--line)" }}
+              style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
             >
               {tr(t.sent)}
             </div>
