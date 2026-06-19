@@ -485,11 +485,14 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
   return (
     <button
       type={type}
-      className={`px-8 py-3.5 text-sm tracking-wide font-medium transition-colors shadow-sm ${full ? "w-full" : ""}`}
+      className={`px-8 py-3.5 text-sm tracking-wide transition-colors ${full ? "w-full" : ""}`}
       style={{
         background: "var(--accent)",
         color: "var(--accent-ink)",
         borderRadius: "999px",
+        border: "none",
+        boxShadow: "none",
+        fontWeight: 600,
       }}
       onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
       onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
