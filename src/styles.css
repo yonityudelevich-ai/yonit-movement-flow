@@ -93,19 +93,20 @@
 
 :root {
   --radius: 0.625rem;
-  /* Warm India — single permanent theme */
-  --bg: #F2E6D3;
-  --bg-alt: #E8D4B2;
-  --surface: #FBF5EA;
-  --ink: #3A2E22;
-  --ink-soft: #6B5A48;
-  --accent: #C17A4F;
-  --accent-hover: #A6633D;
+  /* Warm sand + coral palette */
+  --bg: #E8DFD3;
+  --bg-alt: #D7C6AA;
+  --surface: #F2EADC;
+  --ink: #282620;
+  --ink-soft: #5C564C;
+  --accent: #E8714B;
+  --accent-hover: #C95A37;
   --accent-ink: #FFFFFF;
-  --accent-soft: #E2B594;
-  --line: #E4D3B8;
+  --accent-soft: #F4B89F;
+  --quiet: #7E99BE;
+  --line: #C9B998;
   --font-heading: "Tinos", Georgia, serif;
-  --font-body: "Tinos", Georgia, serif;
+  --font-body: "M PLUS Rounded 1c", system-ui, sans-serif;
   --heading-weight: 500;
   --heading-tracking: 0em;
   --radius-soft: 1.25rem;
@@ -183,10 +184,10 @@
    so the terracotta values win the cascade. */
 :root,
 .dark {
-  --accent: #C17A4F;
-  --accent-hover: #A8623A;
+  --accent: #E8714B;
+  --accent-hover: #C95A37;
   --accent-ink: #FFFFFF;
-  --accent-soft: #E2B594;
+  --accent-soft: #F4B89F;
 }
 
 @layer base {
