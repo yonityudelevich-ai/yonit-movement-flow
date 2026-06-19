@@ -5,10 +5,10 @@ import heroAsset from "../assets/hero.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yonit Yodelevich · Movement Therapy" },
-      { name: "description", content: "Movement, body, and presence — a personal and group space with Yonit Yodelevich." },
-      { property: "og:title", content: "Yonit Yodelevich · Movement Therapy" },
-      { property: "og:description", content: "Movement, body, and presence — a personal and group space with Yonit Yodelevich." },
+      { title: "Yonit Yudelevich · Movement Therapy" },
+      { name: "description", content: "Movement, body, and presence — a personal and group space with Yonit Yudelevich." },
+      { property: "og:title", content: "Yonit Yudelevich · Movement Therapy" },
+      { property: "og:description", content: "Movement, body, and presence — a personal and group space with Yonit Yudelevich." },
     ],
   }),
   component: Index,
