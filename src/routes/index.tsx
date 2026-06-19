@@ -31,7 +31,7 @@ const t = {
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
   heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
-  heroName: { he: "יונית יודלביץ'", en: "Yonit Yodelevich" },
+  heroName: { he: "יונית יודלביץ'", en: "Yonit Yudelevich" },
   bridge: {
     he: "קצת מהתנועה עצמה, לפני הכל.",
     en: "A glimpse of the movement itself, before anything else.",
