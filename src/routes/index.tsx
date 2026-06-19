@@ -242,7 +242,7 @@ function Index() {
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "#FFF",
-                fontWeight: 300,
+                fontWeight: 700,
                 textShadow: "0 2px 24px rgba(0,0,0,0.45)",
               }}
             >
@@ -253,7 +253,7 @@ function Index() {
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
-                fontWeight: 500,
+                fontWeight: 300,
                 color: "#FFF",
                 textShadow: "0 1px 12px rgba(0,0,0,0.55)",
               }}
