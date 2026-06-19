@@ -467,7 +467,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="py-10 text-center text-xs" style={{ color: "var(--ink-soft)" }}>
+      <footer className="py-10 text-center text-xs" style={{ color: "var(--ink-soft)", borderTop: "1px solid var(--line)" }}>
         © {new Date().getFullYear()} Yonit Yudelevich
       </footer>
 
