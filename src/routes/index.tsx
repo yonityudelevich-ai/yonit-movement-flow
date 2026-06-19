@@ -396,7 +396,6 @@ function Index() {
                 className="px-5 py-2 text-sm"
                 style={{
                   border: "1px solid var(--line)",
-                  borderRadius: "999px",
                   color: "var(--ink)",
                   background: "var(--surface)",
                 }}
