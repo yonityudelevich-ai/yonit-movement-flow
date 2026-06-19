@@ -306,12 +306,12 @@ function Index() {
 
       {/* Videos */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <SectionLabel>{isHe ? "וידאו" : "Video"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {videos.map((v, i) => (
               <VideoCard
                 key={i}
@@ -637,7 +637,6 @@ function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string;
         target="_blank"
         rel="noreferrer"
         className="group block w-full overflow-hidden relative"
-        style={{ borderRadius: "var(--radius-soft)" }}
       >
         <div className={`${aspectClass} w-full overflow-hidden`} style={{ background: "var(--accent-soft)" }}>
           <img
