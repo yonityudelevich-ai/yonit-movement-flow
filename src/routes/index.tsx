@@ -441,11 +441,19 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-block px-6 py-3 text-sm transition-colors hover:bg-[var(--accent)] hover:text-[var(--accent-ink)]"
+              className="inline-block px-6 py-3 text-sm transition-colors"
               style={{
                 border: "2px solid var(--accent)",
                 color: "var(--accent)",
                 borderRadius: "4px",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "var(--accent)";
               }}
             >
               {tr(t.whatsapp)}
