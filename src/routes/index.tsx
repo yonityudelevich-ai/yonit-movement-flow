@@ -459,7 +459,7 @@ function Index() {
               style={{
                 border: "2px solid var(--accent)",
                 color: "var(--accent)",
-                borderRadius: "999px",
+                borderRadius: "4px",
               }}
             >
               {tr(t.whatsapp)}
@@ -481,7 +481,7 @@ function Index() {
           [isHe ? "left" : "right"]: "1.5rem",
           background: "var(--accent)",
           color: "var(--accent-ink)",
-          borderRadius: "999px",
+          borderRadius: "4px",
           fontWeight: 500,
         } as React.CSSProperties}
         onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
@@ -504,7 +504,7 @@ function Index() {
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              style={{ borderRadius: "var(--radius-soft)" }}
+              style={{ border: "none" }}
             />
           </div>
         </div>
