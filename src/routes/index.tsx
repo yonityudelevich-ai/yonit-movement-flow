@@ -140,22 +140,42 @@ const t = {
 
 const videos = [
   {
+    videoId: "RUnk-txGc7Y",
+    isShort: true,
+    title_en: "Gentle Seated Movement",
+    title_he: "תנועה עדינה בישיבה",
+    desc_en: "A private Feldenkrais lesson — slow, mindful movement in a seated position.",
+    desc_he: "שיעור פלדנקרייז פרטי — תנועה איטית ומודעת בישיבה.",
+  },
+  {
+    videoId: "KW3tgg9NRQU",
+    isShort: true,
+    title_en: "Pelvic Awareness, Lying Down",
+    title_he: "מודעות לאגן, בשכיבה",
+    desc_en: "A moment of gentle pelvic awareness work, lying down, from a private session.",
+    desc_he: "רגע של תשומת לב עדינה לאגן, בשכיבה, מתוך מפגש פרטי.",
+  },
+  {
     videoId: "dQw4w9WgXcQ",
+    isShort: false,
     desc_he: "רצף עדין על הרצפה, ממוקד בנשימה ובעמוד השדרה.",
     desc_en: "A gentle floor sequence focused on breath and the spine.",
   },
   {
     videoId: "dQw4w9WgXcQ",
+    isShort: false,
     desc_he: "עבודה רכה עם האגן והירכיים, להרגעה ולוויסות.",
     desc_en: "Soft work with the pelvis and hips, for grounding and regulation.",
   },
   {
     videoId: "dQw4w9WgXcQ",
+    isShort: false,
     desc_he: "תנועות קטנות לכתפיים ולצוואר, לשחרור מתח יומיומי.",
     desc_en: "Small movements for the shoulders and neck, releasing everyday tension.",
   },
   {
     videoId: "dQw4w9WgXcQ",
+    isShort: false,
     desc_he: "מפגש קצר על הקשבה לגוף לפני שמתחילים לנוע.",
     desc_en: "A short session on listening to the body before beginning to move.",
   },
@@ -289,6 +309,8 @@ function Index() {
               <VideoCard
                 key={i}
                 videoId={v.videoId}
+                isShort={!!v.isShort}
+                title={v.isShort ? (isHe ? v.title_he : v.title_en) : undefined}
                 desc={isHe ? v.desc_he : v.desc_en}
                 onPlay={() => setActiveVideo(v.videoId)}
               />
@@ -596,17 +618,23 @@ function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => voi
   );
 }
 
-function VideoCard({ videoId, desc, onPlay }: { videoId: string; desc: string; onPlay: () => void }) {
+function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string; isShort?: boolean; title?: string; desc: string; onPlay: () => void }) {
+  const thumbUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+  const linkUrl = isShort ? `https://youtube.com/shorts/${videoId}` : `https://www.youtube.com/watch?v=${videoId}`;
+  const aspectClass = isShort ? "aspect-[9/16]" : "aspect-video";
+
   return (
     <div>
-      <button
-        onClick={onPlay}
+      <a
+        href={linkUrl}
+        target="_blank"
+        rel="noreferrer"
         className="group block w-full overflow-hidden relative"
         style={{ borderRadius: "var(--radius-soft)" }}
       >
-        <div className="aspect-video w-full overflow-hidden" style={{ background: "var(--accent-soft)" }}>
+        <div className={`${aspectClass} w-full overflow-hidden`} style={{ background: "var(--accent-soft)" }}>
           <img
-            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+            src={thumbUrl}
             alt=""
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
@@ -622,8 +650,11 @@ function VideoCard({ videoId, desc, onPlay }: { videoId: string; desc: string; o
             ▶
           </span>
         </span>
-      </button>
-      <p className="mt-4 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+      </a>
+      {title ? (
+        <p className="mt-3 text-base" style={{ color: "var(--ink)", fontWeight: 600 }}>{title}</p>
+      ) : null}
+      <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
     </div>
   );
 }
