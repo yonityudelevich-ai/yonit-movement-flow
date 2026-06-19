@@ -316,9 +316,9 @@ function Index() {
       <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src={aboutAsset.url}
+            src={aboutFace}
             alt="Yonit Yudelevich"
-            className="aspect-[4/5] w-full object-cover"
+            className="w-full object-cover"
             loading="lazy"
           />
           <div>
