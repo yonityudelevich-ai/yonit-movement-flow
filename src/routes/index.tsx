@@ -262,17 +262,23 @@ function Index() {
                 fontSize: "clamp(2.75rem, 8vw, 5.5rem)",
                 lineHeight: 1.05,
                 color: "#FFF",
+                fontWeight: 300,
                 textShadow: "0 2px 24px rgba(0,0,0,0.45)",
               }}
             >
               {tr(t.heroName)}
             </h1>
-            <p
+            <h2
               className="text-base sm:text-lg tracking-[0.2em] uppercase"
-              style={{ color: "rgba(255,255,255,0.92)", textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontWeight: 700,
+                color: "#FFF",
+                textShadow: "0 1px 12px rgba(0,0,0,0.55)",
+              }}
             >
               {tr(t.heroHeadline)}
-            </p>
+            </h2>
           </div>
           <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 sm:pb-14">
             <div className="max-w-3xl mx-auto text-center" style={{ color: "#FFF" }}>
