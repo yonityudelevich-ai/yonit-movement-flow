@@ -563,7 +563,6 @@ function Field({
     className: "w-full px-4 py-3 text-sm bg-transparent outline-none focus:border-[var(--accent)] transition-colors",
     style: {
       border: "1px solid var(--line)",
-      borderRadius: "var(--radius-soft)",
       background: "var(--surface)",
       color: "var(--ink)",
     } as React.CSSProperties,
@@ -580,7 +579,7 @@ function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => voi
   return (
     <div
       className="flex text-xs overflow-hidden"
-      style={{ border: "1px solid var(--line)", borderRadius: "999px" }}
+      style={{ border: "1px solid var(--line)" }}
     >
       {(["he", "en"] as const).map((l) => (
         <button
