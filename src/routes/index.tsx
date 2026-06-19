@@ -446,29 +446,6 @@ function Index() {
                 </div>
               </form>
             )}
-            <div className="mt-6 text-center">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block px-6 py-3 text-sm transition-colors"
-                style={{
-                  border: "2px solid var(--accent)",
-                  color: "var(--accent)",
-                  borderRadius: "4px",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "var(--accent)";
-                }}
-              >
-                {tr(t.whatsapp)}
-              </a>
-            </div>
           </div>
         </div>
       </section>
