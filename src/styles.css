@@ -93,18 +93,18 @@
 
 :root {
   --radius: 0.625rem;
-  /* Calm sage palette */
-  --bg: #F7F6F1;
-  --bg-alt: #E2E6DE;
-  --surface: #FDFCF8;
-  --ink: #2E3B29;
-  --ink-soft: #5A6B53;
-  --accent: #6B8F5E;
-  --accent-hover: #4F6B47;
-  --accent-ink: #F7F6F1;
-  --accent-soft: #C8D4BF;
-  --quiet: #8A9786;
-  --line: #C8D4BF;
+  /* Denim & midnight palette */
+  --bg: #0F1B2D;
+  --bg-alt: #18263D;
+  --surface: #1E2E47;
+  --ink: #EAEEF5;
+  --ink-soft: #A8B4C6;
+  --accent: #5B7FB2;
+  --accent-hover: #466799;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #2A3B5A;
+  --quiet: #6B7E99;
+  --line: #2A3B5A;
   --font-heading: "Cascadia Code", "Tinos", Georgia, serif;
   --font-body: "M PLUS Rounded 1c", system-ui, sans-serif;
   --heading-weight: 500;
@@ -184,10 +184,10 @@
    so the sage values win the cascade. */
 :root,
 .dark {
-  --accent: #6B8F5E;
-  --accent-hover: #4F6B47;
-  --accent-ink: #F7F6F1;
-  --accent-soft: #C8D4BF;
+  --accent: #5B7FB2;
+  --accent-hover: #466799;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #2A3B5A;
 }
 
 @layer base {
