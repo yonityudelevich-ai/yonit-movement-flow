@@ -5,10 +5,10 @@ import heroAsset from "../assets/hero.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yonit Yodelevich · Movement Therapy" },
-      { name: "description", content: "Movement, body, and presence — a personal and group space with Yonit Yodelevich." },
-      { property: "og:title", content: "Yonit Yodelevich · Movement Therapy" },
-      { property: "og:description", content: "Movement, body, and presence — a personal and group space with Yonit Yodelevich." },
+      { title: "Yonit Yudelevich · Movement Therapy" },
+      { name: "description", content: "Movement, body, and presence — a personal and group space with Yonit Yudelevich." },
+      { property: "og:title", content: "Yonit Yudelevich · Movement Therapy" },
+      { property: "og:description", content: "Movement, body, and presence — a personal and group space with Yonit Yudelevich." },
     ],
   }),
   component: Index,
@@ -31,7 +31,7 @@ const t = {
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
   heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
-  heroName: { he: "יונית יודלביץ'", en: "Yonit Yodelevich" },
+  heroName: { he: "יונית יודלביץ'", en: "Yonit Yudelevich" },
   bridge: {
     he: "קצת מהתנועה עצמה, לפני הכל.",
     en: "A glimpse of the movement itself, before anything else.",
@@ -226,7 +226,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-3" style={{ color: "var(--ink)" }}>
           <div className="text-sm tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
-            Yonit Yodelevich
+            Yonit Yudelevich
           </div>
           <div className="flex items-center gap-2">
             <LangSwitcher lang={lang} setLang={setLang} />
@@ -495,7 +495,7 @@ function Index() {
       </section>
 
       <footer className="py-10 text-center text-xs" style={{ color: "var(--ink-soft)" }}>
-        © {new Date().getFullYear()} Yonit Yodelevich
+        © {new Date().getFullYear()} Yonit Yudelevich
       </footer>
 
       {/* Floating contact */}
