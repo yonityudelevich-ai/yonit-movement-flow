@@ -149,6 +149,16 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* Brand overrides — must come AFTER the shadcn token blocks above
+   so the terracotta values win the cascade. */
+:root,
+.dark {
+  --accent: #C17A4F;
+  --accent-hover: #A8623A;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E2B594;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
