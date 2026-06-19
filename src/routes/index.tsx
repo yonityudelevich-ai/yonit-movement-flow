@@ -317,13 +317,11 @@ function Index() {
       {/* About */}
       <section className="py-24" style={{ background: "var(--bg-alt)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div
-            className="aspect-[4/5] w-full"
-            style={{
-              borderRadius: "var(--radius-soft)",
-              background: "linear-gradient(160deg, var(--accent-soft), var(--bg))",
-            }}
-            aria-hidden
+          <img
+            src={aboutAsset.url}
+            alt="Yonit Yudelevich"
+            className="aspect-[4/5] w-full object-cover"
+            loading="lazy"
           />
           <div>
             <SectionLabel>{isHe ? "היכרות" : "Introduction"}</SectionLabel>
