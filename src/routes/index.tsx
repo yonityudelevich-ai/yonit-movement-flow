@@ -247,7 +247,7 @@ function Index() {
                 textShadow: "0 2px 24px rgba(0,0,0,0.45)",
               }}
             >
-              {tr(t.heroName)}
+            {tr(t.heroName)}
             </h1>
             <h2
               className="tracking-[0.08em]"
@@ -260,6 +260,18 @@ function Index() {
               }}
             >
               {tr(t.heroHeadline)}
+            </h2>
+            <h2
+              className="mt-4"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
+                fontWeight: 300,
+                color: "#FFF",
+                textShadow: "0 1px 12px rgba(0,0,0,0.55)",
+              }}
+            >
+              {tr(t.heroSub)}
             </h2>
             <div className="h-8" />
             <a href="#contact" onClick={scrollTo("contact")}>
