@@ -204,7 +204,9 @@
   --accent-hover: #3DB8F0;
   --accent-ink: #0A0F1A;
   --accent-soft: #1E3A5F;
-  --heading: #5AC8FA;
+  --heading: #E0A92B;
+  --ink: #E0A92B;
+  --ink-soft: #C7983C;
 }
 
 @layer base {
