@@ -261,9 +261,9 @@ function Index() {
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
-                fontWeight: 300,
+                fontWeight: 500,
                 color: "#E0A92B",
-                textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
+                textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
               {tr(t.heroHeadline)}
@@ -273,9 +273,9 @@ function Index() {
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
-                fontWeight: 300,
+                fontWeight: 500,
                 color: "#C7983C",
-                textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
+                textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
               {tr(t.heroSub)}
