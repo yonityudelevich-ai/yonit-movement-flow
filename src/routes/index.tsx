@@ -151,12 +151,15 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
+  {
+    videoId: "KW3tgg9NRQU",
+    isShort: true,
+    title_en: "Awareness Through Movement",
+    title_he: "מודעות באמצעות תנועה",
+    desc_en: "Movement and Research",
+    desc_he: "תנועה ומחקר",
+  },
 ];
-
-const videoCaption = {
-  he: "תנועה ומחקר",
-  en: "Movement and Research",
-};
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
