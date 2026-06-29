@@ -222,19 +222,19 @@
     line-height: 1.7;
   }
 
-  h1, h2 {
+  h1 {
+    font-family: var(--font-heading);
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-tracking);
+    color: #E0A92B;
+    line-height: 1.25;
+  }
+
+  h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: var(--heading-weight);
     letter-spacing: var(--heading-tracking);
     color: var(--heading);
-    line-height: 1.25;
-  }
-
-  h3, h4 {
-    font-family: var(--font-heading);
-    font-weight: var(--heading-weight);
-    letter-spacing: var(--heading-tracking);
-    color: var(--ink);
     line-height: 1.25;
   }
 }
