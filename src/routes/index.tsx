@@ -235,7 +235,15 @@ function Index() {
                 "linear-gradient(to bottom, rgba(10,15,26,0.25) 0%, rgba(10,15,26,0.05) 35%, rgba(10,15,26,0.05) 60%, rgba(10,15,26,0.35) 100%)",
             }}
           />
-          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "var(--heading)" }}>
+          <div
+            className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
+            style={{
+              color: "var(--heading)",
+              background: "rgba(10,15,26,0.55)",
+              padding: "2rem 1.5rem",
+              backdropFilter: "blur(4px)",
+            }}
+          >
             <h1
               className="mb-4"
               style={{
@@ -244,7 +252,7 @@ function Index() {
                 lineHeight: 1.05,
                 color: "var(--heading)",
                 fontWeight: 700,
-                textShadow: "0 2px 24px rgba(0,0,0,0.45)",
+                textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
             {tr(t.heroName)}
@@ -256,7 +264,7 @@ function Index() {
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 300,
                 color: "var(--heading)",
-                textShadow: "0 1px 12px rgba(0,0,0,0.55)",
+                textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
               {tr(t.heroHeadline)}
@@ -268,7 +276,7 @@ function Index() {
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 300,
                 color: "var(--heading)",
-                textShadow: "0 1px 12px rgba(0,0,0,0.55)",
+                textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
               {tr(t.heroSub)}
