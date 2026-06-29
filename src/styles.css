@@ -122,6 +122,7 @@
   --font-heading: "Cascadia Mono", "Tinos", Georgia, serif;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
   --font-hebrew: "David Libre", "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  --font-name: "Special Elite", "Courier New", monospace;
   --heading-weight: 500;
   --heading-tracking: 0em;
   --radius-soft: 1.25rem;
