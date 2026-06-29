@@ -309,7 +309,7 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               className="underline underline-offset-4"
-              style={{ color: "var(--accent)" }}
+              style={{ color: "var(--heading)" }}
             >
               {tr(t.videosMore)} →
             </a>
