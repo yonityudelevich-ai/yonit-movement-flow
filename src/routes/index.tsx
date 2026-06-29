@@ -537,7 +537,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       className="text-center text-xs uppercase tracking-[0.35em] mb-4"
-      style={{ color: "var(--accent)" }}
+      style={{ color: "var(--heading)" }}
     >
       {children}
     </p>
