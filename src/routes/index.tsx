@@ -632,7 +632,9 @@ function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string;
       {title ? (
         <p className="mt-3 text-base" style={{ color: "var(--ink)", fontWeight: 600 }}>{title}</p>
       ) : null}
-      <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+      {desc ? (
+        <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+      ) : null}
     </div>
   );
 }
