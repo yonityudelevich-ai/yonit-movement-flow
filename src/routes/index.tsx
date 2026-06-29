@@ -334,7 +334,7 @@ function Index() {
             <AccentRule />
             <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "#E8D9C0" }}>{p}</p>
+              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
           </div>
         </div>
@@ -347,7 +347,7 @@ function Index() {
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "#E8D9C0", whiteSpace: "pre-line" }}>
+          <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
@@ -369,8 +369,8 @@ function Index() {
                   }}
                 >
                   <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{card.body}</p>
+                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
             })}
@@ -385,7 +385,7 @@ function Index() {
             {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "#E8D9C0" }}>{item}</span>
+                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
               </li>
             ))}
           </ul>
