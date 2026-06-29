@@ -428,7 +428,7 @@ function Index() {
       <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src={contactPhoto}
+            src={contactPhoto.url}
             alt="Yonit Yudelevich"
             className="w-full object-cover"
             style={{ filter: "saturate(1.35) contrast(1.05)" }}
