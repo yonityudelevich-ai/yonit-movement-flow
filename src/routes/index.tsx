@@ -4,6 +4,7 @@ import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
 import contactPhoto from "../assets/contact-photo.jpg.asset.json";
+import cvAsset from "../assets/cv.doc.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -140,6 +141,7 @@ const t = {
     he: "היי יונית, הגעתי דרך האתר ואשמח לתאם שיחה קצרה כדי לבדוק אם זה מתאים לי.",
     en: "Hi Yonit, I came through your website and I'd love to schedule a short call to see if this is a good fit for me.",
   },
+  cvLink: { he: "קורות חיים", en: "Curriculum Vitae" },
 };
 
 const videos = [
@@ -332,7 +334,7 @@ function Index() {
             <AccentRule />
             <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "var(--ink-soft)" }}>{p}</p>
+              <p key={i} className="mb-4" style={{ color: "#E8D9C0" }}>{p}</p>
             ))}
           </div>
         </div>
@@ -438,7 +440,7 @@ function Index() {
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
-            <p className="mb-10" style={{ color: "var(--ink-soft)" }}>{tr(t.contactSub)}</p>
+            <p className="mb-10" style={{ color: "#E8D9C0" }}>{tr(t.contactSub)}</p>
             {sent ? (
               <div
                 className="p-8 text-center"
@@ -460,8 +462,24 @@ function Index() {
         </div>
       </section>
 
-      <footer className="py-10 text-center text-xs" style={{ color: "var(--ink-soft)", borderTop: "1px solid var(--line)" }}>
-        © {new Date().getFullYear()} Yonit Yudelevich
+      <footer className="py-10 text-center" style={{ borderTop: "1px solid var(--line)" }}>
+        <a
+          href={cvAsset.url}
+          target="_blank"
+          rel="noreferrer"
+          download
+          className="inline-block mb-4 underline underline-offset-4 tracking-wider"
+          style={{
+            fontFamily: "'Special Elite', 'Courier New', monospace",
+            color: "var(--heading)",
+            fontSize: "1rem",
+          }}
+        >
+          {tr(t.cvLink)} ↓
+        </a>
+        <div className="text-xs" style={{ color: "#E8D9C0" }}>
+          © {new Date().getFullYear()} Yonit Yudelevich
+        </div>
       </footer>
 
       {/* Floating WhatsApp */}
@@ -628,7 +646,7 @@ function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string;
         <p className="mt-3 text-base" style={{ color: "var(--ink)", fontWeight: 600 }}>{title}</p>
       ) : null}
       {desc ? (
-        <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+        <p className="mt-2 text-sm" style={{ color: "#E8D9C0" }}>{desc}</p>
       ) : null}
     </div>
   );
