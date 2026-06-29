@@ -251,7 +251,7 @@ function Index() {
                 fontFamily: "var(--font-name)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
-                color: "var(--heading)",
+                color: "#E0A92B",
                 fontWeight: 700,
                 textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
@@ -264,7 +264,7 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "#E0A92B",
+                color: "var(--heading)",
                 textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
@@ -276,7 +276,7 @@ function Index() {
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 500,
-                color: "#C7983C",
+                color: "var(--ink)",
                 textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
@@ -334,7 +334,7 @@ function Index() {
             <AccentRule />
             <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "#E8D9C0" }}>{p}</p>
+              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
           </div>
         </div>
@@ -347,7 +347,7 @@ function Index() {
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "#E8D9C0", whiteSpace: "pre-line" }}>
+          <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
@@ -369,8 +369,8 @@ function Index() {
                   }}
                 >
                   <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{card.body}</p>
+                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
             })}
@@ -385,7 +385,7 @@ function Index() {
             {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "#E8D9C0" }}>{item}</span>
+                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -402,13 +402,13 @@ function Index() {
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
               <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{tr(t.guidanceIntro)}</p>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
               <ul className="space-y-2">
                 {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                    <span style={{ color: "#E8D9C0" }}>{item}</span>
+                    <span style={{ color: "var(--ink)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -418,8 +418,8 @@ function Index() {
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
               <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{tr(t.rehabBody)}</p>
+              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
             </div>
           </div>
         </div>
@@ -440,7 +440,7 @@ function Index() {
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
-            <p className="mb-10" style={{ color: "#E8D9C0" }}>{tr(t.contactSub)}</p>
+            <p className="mb-10" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
             {sent ? (
               <div
                 className="p-8 text-center"
@@ -477,7 +477,7 @@ function Index() {
         >
           {tr(t.cvLink)} ↓
         </a>
-        <div className="text-xs" style={{ color: "#E8D9C0" }}>
+        <div className="text-xs" style={{ color: "var(--ink-soft)" }}>
           © {new Date().getFullYear()} Yonit Yudelevich
         </div>
       </footer>
@@ -646,7 +646,7 @@ function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string;
         <p className="mt-3 text-base" style={{ color: "var(--ink)", fontWeight: 600 }}>{title}</p>
       ) : null}
       {desc ? (
-        <p className="mt-2 text-sm" style={{ color: "#E8D9C0" }}>{desc}</p>
+        <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
       ) : null}
     </div>
   );
