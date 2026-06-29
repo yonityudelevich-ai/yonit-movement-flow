@@ -148,18 +148,18 @@ const videos = [
   {
     videoId: "RUnk-txGc7Y",
     isShort: true,
-    title_en: "Awareness Through Movement",
-    title_he: "מודעות באמצעות תנועה",
+    title_en: "Listening and Learning",
+    title_he: "הקשבה ולמידה",
     desc_en: "",
     desc_he: "",
   },
   {
     videoId: "KW3tgg9NRQU",
     isShort: true,
-    title_en: "Awareness Through Movement",
-    title_he: "מודעות באמצעות תנועה",
-    desc_en: "Movement and Research",
-    desc_he: "תנועה ומחקר",
+    title_en: "Listening and Learning",
+    title_he: "הקשבה ולמידה",
+    desc_en: "",
+    desc_he: "",
   },
 ];
 
