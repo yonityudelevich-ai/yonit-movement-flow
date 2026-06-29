@@ -151,12 +151,15 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
+  {
+    videoId: "KW3tgg9NRQU",
+    isShort: true,
+    title_en: "Awareness Through Movement",
+    title_he: "מודעות באמצעות תנועה",
+    desc_en: "Movement and Research",
+    desc_he: "תנועה ומחקר",
+  },
 ];
-
-const videoCaption = {
-  he: "תנועה ומחקר",
-  en: "Movement and Research",
-};
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
@@ -299,11 +302,6 @@ function Index() {
                 onPlay={() => setActiveVideo(v.videoId)}
               />
             ))}
-            <div className="flex items-center justify-center p-6" style={{ border: "1px solid var(--line)" }}>
-              <p className="text-xl sm:text-2xl text-center" style={{ color: "var(--heading)" }}>
-                {isHe ? videoCaption.he : videoCaption.en}
-              </p>
-            </div>
           </div>
           <div className="text-center mt-12">
             <a
