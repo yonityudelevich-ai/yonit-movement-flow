@@ -146,8 +146,8 @@ const videos = [
   {
     videoId: "RUnk-txGc7Y",
     isShort: true,
-    title_en: "Gentle Seated Movement",
-    title_he: "תנועה עדינה בישיבה",
+    title_en: "Awareness Through Movement",
+    title_he: "מודעות באמצעות תנועה",
     desc_en: "A private Feldenkrais lesson — slow, mindful movement in a seated position.",
     desc_he: "שיעור פלדנקרייז פרטי — תנועה איטית ומודעת בישיבה.",
   },
