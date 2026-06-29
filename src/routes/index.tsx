@@ -340,13 +340,13 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+        <div className="max-w-5xl mx-auto px-6">
           <SectionLabel>{isHe ? "תחילת דרך" : "Beginning"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <p className="text-center mb-16 max-w-3xl mx-auto" style={{ color: "var(--ink-soft)", whiteSpace: "pre-line" }}>
+          <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "#E8D9C0", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
@@ -354,21 +354,22 @@ function Index() {
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {t.approaches.map((c, i) => {
               const card = isHe ? c.he : c.en;
               return (
                 <div
                   key={i}
-                  className="p-8"
+                  className="p-8 flex flex-col h-full"
                   style={{
                     background: "var(--surface)",
                     border: "1px solid var(--line)",
+                    minHeight: "220px",
                   }}
                 >
                   <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-                  <h3 className="text-xl mb-3">{card.title}</h3>
-                  <p style={{ color: "var(--ink-soft)" }}>{card.body}</p>
+                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{card.body}</p>
                 </div>
               );
             })}
@@ -379,11 +380,11 @@ function Index() {
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <ul className="space-y-4 max-w-3xl mx-auto">
+          <ul className="space-y-4 max-w-3xl mx-auto" style={{ fontFamily: "Tinos, Georgia, serif" }}>
             {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span style={{ color: "var(--ink)" }}>{item}</span>
+                <span className="text-lg" style={{ color: "#E8D9C0" }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -391,32 +392,35 @@ function Index() {
       </section>
 
       {/* Guidance */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionLabel>{isHe ? "למטפלים" : "For Therapists"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.guidanceTitle)}</h2>
-          <AccentRule center />
-          <div className="h-10" />
-          <p className="text-center mb-8" style={{ color: "var(--ink-soft)" }}>{tr(t.guidanceIntro)}</p>
-          <ul className="space-y-4">
-            {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span style={{ color: "var(--ink)" }}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Rehabilitation */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <SectionLabel>{isHe ? "שיקום" : "Rehabilitation"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.rehabTitle)}</h2>
-          <AccentRule center />
-          <div className="h-10" />
-          <p style={{ color: "var(--ink-soft)" }}>{tr(t.rehabBody)}</p>
+      {/* Guidance + Rehab as matching cards */}
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
+              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{tr(t.guidanceIntro)}</p>
+              <ul className="space-y-2">
+                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                    <span style={{ color: "#E8D9C0" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
+              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "#F2E3C7", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "#E8D9C0" }}>{tr(t.rehabBody)}</p>
+            </div>
+          </div>
         </div>
       </section>
 
