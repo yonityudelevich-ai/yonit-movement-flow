@@ -59,75 +59,72 @@ const t = {
       "My work combines several approaches, but the foundation is always the same: listening to the body, personal adaptation, and a pace that respects the person in front of me. There's no striving here and no right or wrong — just space to learn the body again, safely.",
     ],
   },
-  howTitle: { he: "איך אני עובדת", en: "How I Work" },
-  how: [
+  howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
+  howIntro: {
+    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו.\n\nבהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
+    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now.\n\nBased on that, one therapeutic approach is chosen from several body-based ways of working.",
+  },
+  approachesLabel: { he: "גישות העבודה", en: "Approaches" },
+  approaches: [
     {
-      he: { title: "הקשבה לגוף", body: "מתחילים מאיפה שאת נמצאת, ולא ממה ש\"צריך\". הגוף מוביל, ואני מלווה." },
-      en: { title: "Listening to the Body", body: "We start from where you are, not from what \"should\" be. The body leads, and I accompany it." },
+      he: { title: "טיפול בתנועה", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא מילולי, ותהליכי עיבוד של חוויה רגשית וגופנית בתוך הקשר הטיפולי." },
+      en: { title: "Movement Therapy", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work is done through movement, verbal and non-verbal connection, and processing of emotional and physical experience within the therapeutic relationship." },
     },
     {
-      he: { title: "תנועה מותאמת", body: "תנועה עדינה ומדויקת שמאפשרת חיבור, ויסות ושיקום — בלי כוח ובלי לחץ." },
-      en: { title: "Adapted Movement", body: "Gentle, precise movement that supports connection, regulation, and recovery — without force and without pressure." },
+      he: { title: "פלדנקרייז", body: "שיטה חינוכית-תנועתית המתמקדת בשיפור ארגון התנועה, יעילות תפקודית והפחתת מאמץ דרך חקירה עדינה של תנועה ותשומת לב." },
+      en: { title: "Feldenkrais", body: "An educational-movement method focusing on improving movement organization, functional efficiency, and reducing effort through gentle exploration of movement and attention." },
     },
     {
-      he: { title: "חזרה לנוכחות וביטחון", body: "המטרה היא לא רק לזוז, אלא להרגיש שוב בטחון ונוכחות בתוך הגוף." },
-      en: { title: "Returning to Presence and Safety", body: "The goal isn't only to move, but to feel safety and presence within the body again." },
+      he: { title: "יוגה רגישה", body: "תרגול יוגה מותאם, מבוסס הקשבה לגוף, לתמיכה בוויסות מערכת העצבים, עיבוד מצבי דחק וליווי תהליכי שיקום." },
+      en: { title: "Trauma-Sensitive Yoga", body: "An adapted yoga practice based on body listening, supporting nervous-system regulation, processing stress states, and accompanying rehabilitation processes." },
+    },
+    {
+      he: { title: "תנועה ספונטנית ואינטגרציה", body: "עבודה דרך תנועה חופשית ומונחית, המאפשרת ביטוי, עיבוד חוויה ואינטגרציה בין גוף, רגש ותודעה." },
+      en: { title: "Spontaneous Movement & Integration", body: "Work through free and guided movement, allowing expression, processing of experience, and integration between body, emotion, and awareness." },
     },
   ],
-  whoTitle: { he: "למי זה מתאים", en: "Who It's For" },
-  who: {
+  approachesBasedLabel: { he: "גישות העבודה מבוססות על", en: "Approaches are based on" },
+  approachesBased: {
     he: [
-      "נשים שמחפשות חיבור מחודש לגוף",
-      "מי שחווה מתח, עומס או תחושת ניתוק",
-      "אנשים שמתמודדים עם כאב, פציעה או מגבלה תנועתית",
-      "נשים אחרי לידה, סביב האגן או בתקופות של שינוי גופני",
-      "ילדים ונוער שזקוקים לעבודה תנועתית רגישה",
-      "מי שמחפש תנועה עדינה, לא הישגית",
+      "הקשבה לגוף ולחוויה כפי שהיא מופיעה כאן ועכשיו",
+      "קצב עבודה מותאם, ללא כפייה או מאמץ מיותר",
+      "תהליך התפתחותי מבוסס התנסות ולא רק הבנה תאורטית",
+      "חיבור בין חוויה גופנית לבין עיבוד והבנה",
+      "חיזוק ויסות, יציבות ותחושת בטחון פנימי",
+      "תהליך מדויק ופשוט המתהווה מתוך מה שנוכח",
     ],
     en: [
-      "Women looking to reconnect with their body",
-      "Anyone experiencing stress, strain, or a sense of disconnection",
-      "People dealing with pain, injury, or limited mobility",
-      "Women postpartum, around the pelvis, or during periods of physical change",
-      "Children and teens who need sensitive movement work",
-      "Anyone seeking gentle, non-competitive movement",
+      "Listening to the body and experience as it appears here and now",
+      "A pace adapted to you, without force or unnecessary effort",
+      "A developmental process based on experience, not only theoretical understanding",
+      "Connection between physical experience and processing/understanding",
+      "Strengthening regulation, stability, and inner sense of safety",
+      "A precise and simple process emerging from what is present",
     ],
   },
-  servicesTitle: { he: "מפגשים ושירותים", en: "Sessions & Services" },
-  services: {
+  guidanceTitle: { he: "הדרכה וליווי", en: "Guidance & Accompaniment" },
+  guidanceIntro: {
+    he: "הדרכה וליווי של מטפלים בתהליכי למידה, התפתחות והעמקה מקצועית.",
+    en: "Guidance and accompaniment of therapists in learning, development, and professional deepening processes.",
+  },
+  guidance: {
     he: [
-      "מפגשים אישיים", "שיעורים קבוצתיים", "סדנאות לנשים", "תנועה טיפולית",
-      "פילאטיס שיקומי", "פלדנקרייז", "יוגה רגישה לטראומה",
-      "עבודה עם ילדים ונוער", "עבודה עם פציעות ושיקום",
+      "לימוד ועיגון תיאורטי של עבודה מבוססת גוף",
+      "חקירה והעמקה של תהליכים קליניים",
+      "הדרכה פרטנית וקבוצתית",
+      "מנטורינג למטפלים בתחילת דרכם ובתהליכי התפתחות מקצועית",
     ],
     en: [
-      "Individual sessions", "Group classes", "Workshops for women", "Therapeutic movement",
-      "Rehabilitative Pilates", "Feldenkrais", "Trauma-sensitive yoga",
-      "Work with children and teens", "Work with injuries and rehabilitation",
+      "Learning and theoretical grounding of body-based work",
+      "Exploration and deepening of clinical processes",
+      "Individual and group supervision",
+      "Mentoring for therapists at the beginning of their path and in professional development",
     ],
   },
-  servicesNote: {
-    he: "אפשר לתאם שיחה קצרה כדי לבדוק מה הכי מתאים לך.",
-    en: "You're welcome to schedule a short call to find what fits you best.",
-  },
-  trustTitle: { he: "אמון וניסיון", en: "Trust & Experience" },
-  trust: {
-    he: [
-      "מעל 20 שנות ניסיון בתנועה",
-      "מעל 13 שנות עבודה במסגרות חינוכיות",
-      "כ-12 שנות עבודה עם חיילים פצועים",
-      "הכשרה בטיפול בתנועה",
-      "פלדנקרייז, פילאטיס שיקומי, יוגה רגישה לטראומה",
-      "ניסיון בעבודה פרטנית וקבוצתית",
-    ],
-    en: [
-      "Over 20 years of experience in movement",
-      "Over 13 years working in educational settings",
-      "About 12 years working with wounded soldiers",
-      "Training in movement therapy",
-      "Feldenkrais, rehabilitative Pilates, trauma-sensitive yoga",
-      "Experience in both one-on-one and group work",
-    ],
+  rehabTitle: { he: "ליווי תהליכי שיקום וכאב כרוני", en: "Rehabilitation & Chronic Pain" },
+  rehabBody: {
+    he: "ליווי תהליכי שיקום והתמודדות עם כאב כרוני, תוך עבודה מבוססת גוף המאפשרת חקירה של דפוסים תנועתיים, הפחתת עומס, חיזוק ויסות ושיפור איכות החיים.",
+    en: "Accompaniment of rehabilitation processes and coping with chronic pain, through body-based work that allows exploration of movement patterns, reducing strain, strengthening regulation, and improving quality of life.",
   },
   contactTitle: { he: "רוצה לבדוק אם זה מתאים לך?", en: "Want to see if this is right for you?" },
   contactSub: {
@@ -344,13 +341,21 @@ function Index() {
 
       {/* How */}
       <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-6xl mx-auto px-6">
-          <SectionLabel>{isHe ? "הגישה" : "Approach"}</SectionLabel>
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionLabel>{isHe ? "תחילת דרך" : "Beginning"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="grid md:grid-cols-3 gap-8">
-            {t.how.map((c, i) => {
+          <p className="text-center mb-16 max-w-3xl mx-auto" style={{ color: "var(--ink-soft)", whiteSpace: "pre-line" }}>
+            {tr(t.howIntro)}
+          </p>
+
+          <SectionLabel>{isHe ? "גישות" : "Approaches"}</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {t.approaches.map((c, i) => {
               const card = isHe ? c.he : c.en;
               return (
                 <div
@@ -368,18 +373,14 @@ function Index() {
               );
             })}
           </div>
-        </div>
-      </section>
 
-      {/* Who */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionLabel>{isHe ? "קהל" : "For You"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.whoTitle)}</h2>
+          <div className="h-20" />
+          <SectionLabel>{isHe ? "ביסוס" : "Foundation"}</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <ul className="space-y-4">
-            {(isHe ? t.who.he : t.who.en).map((item, i) => (
+          <ul className="space-y-4 max-w-3xl mx-auto">
+            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
                 <span style={{ color: "var(--ink)" }}>{item}</span>
@@ -389,46 +390,33 @@ function Index() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <SectionLabel>{isHe ? "מה אני מציעה" : "Offerings"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.servicesTitle)}</h2>
+      {/* Guidance */}
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionLabel>{isHe ? "למטפלים" : "For Therapists"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.guidanceTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {(isHe ? t.services.he : t.services.en).map((s, i) => (
-              <span
-                key={i}
-                className="px-5 py-2 text-sm"
-                style={{
-                  border: "1px solid var(--line)",
-                  color: "var(--ink)",
-                  background: "var(--surface)",
-                }}
-              >
-                {s}
-              </span>
+          <p className="text-center mb-8" style={{ color: "var(--ink-soft)" }}>{tr(t.guidanceIntro)}</p>
+          <ul className="space-y-4">
+            {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                <span style={{ color: "var(--ink)" }}>{item}</span>
+              </li>
             ))}
-          </div>
-          <p className="text-sm" style={{ color: "var(--ink-soft)" }}>{tr(t.servicesNote)}</p>
+          </ul>
         </div>
       </section>
 
-      {/* Trust */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>{isHe ? "רקע" : "Background"}</SectionLabel>
-          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.trustTitle)}</h2>
+      {/* Rehabilitation */}
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <SectionLabel>{isHe ? "שיקום" : "Rehabilitation"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.rehabTitle)}</h2>
           <AccentRule center />
-          <div className="h-8" />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
-            {(isHe ? t.trust.he : t.trust.en).map((item, i) => (
-              <div key={i} className="text-center text-sm sm:text-base" style={{ color: "var(--ink-soft)" }}>
-                {item}
-              </div>
-            ))}
-          </div>
+          <div className="h-10" />
+          <p style={{ color: "var(--ink-soft)" }}>{tr(t.rehabBody)}</p>
         </div>
       </section>
 
