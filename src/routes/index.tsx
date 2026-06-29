@@ -235,14 +235,14 @@ function Index() {
                 "linear-gradient(to bottom, rgba(10,15,26,0.25) 0%, rgba(10,15,26,0.05) 35%, rgba(10,15,26,0.05) 60%, rgba(10,15,26,0.35) 100%)",
             }}
           />
-          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "#FFF" }}>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center" style={{ color: "var(--heading)" }}>
             <h1
               className="mb-4"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
-                color: "#FFF",
+                color: "var(--heading)",
                 fontWeight: 700,
                 textShadow: "0 2px 24px rgba(0,0,0,0.45)",
               }}
@@ -255,7 +255,7 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 300,
-                color: "#FFF",
+                color: "var(--heading)",
                 textShadow: "0 1px 12px rgba(0,0,0,0.55)",
               }}
             >
@@ -267,7 +267,7 @@ function Index() {
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 300,
-                color: "#FFF",
+                color: "var(--heading)",
                 textShadow: "0 1px 12px rgba(0,0,0,0.55)",
               }}
             >
