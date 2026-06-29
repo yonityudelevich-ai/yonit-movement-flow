@@ -262,7 +262,7 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 300,
-                color: "#A8C8E6",
+                color: "#E0A92B",
                 textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
@@ -274,7 +274,7 @@ function Index() {
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 300,
-                color: "#8FB8D4",
+                color: "#C7983C",
                 textShadow: "0 2px 24px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
@@ -309,7 +309,7 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               className="underline underline-offset-4"
-              style={{ color: "var(--accent)" }}
+              style={{ color: "var(--heading)" }}
             >
               {tr(t.videosMore)} →
             </a>
@@ -537,7 +537,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       className="text-center text-xs uppercase tracking-[0.35em] mb-4"
-      style={{ color: "var(--accent)" }}
+      style={{ color: "var(--heading)" }}
     >
       {children}
     </p>

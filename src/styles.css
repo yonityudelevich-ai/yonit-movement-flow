@@ -111,8 +111,8 @@
   --bg: #0A0F1A;
   --bg-alt: #0F1522;
   --surface: #141C2B;
-  --ink: #E2E8F0;
-  --ink-soft: #94A3B8;
+  --ink: #E0A92B;
+  --ink-soft: #C7983C;
   --accent: #7BA3C9;
   --accent-hover: #8FB8D4;
   --accent-ink: #0A0F1A;
@@ -202,9 +202,11 @@
 .dark {
   --accent: #5AC8FA;
   --accent-hover: #3DB8F0;
-  --accent-ink: #0A0F1A;
+  --accent-ink: #E0A92B;
   --accent-soft: #1E3A5F;
-  --heading: #5AC8FA;
+  --heading: #E0A92B;
+  --ink: #E0A92B;
+  --ink-soft: #C7983C;
 }
 
 @layer base {
