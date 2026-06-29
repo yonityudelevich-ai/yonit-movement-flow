@@ -341,13 +341,21 @@ function Index() {
 
       {/* How */}
       <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-6xl mx-auto px-6">
-          <SectionLabel>{isHe ? "הגישה" : "Approach"}</SectionLabel>
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionLabel>{isHe ? "תחילת דרך" : "Beginning"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="grid md:grid-cols-3 gap-8">
-            {t.how.map((c, i) => {
+          <p className="text-center mb-16 max-w-3xl mx-auto" style={{ color: "var(--ink-soft)", whiteSpace: "pre-line" }}>
+            {tr(t.howIntro)}
+          </p>
+
+          <SectionLabel>{isHe ? "גישות" : "Approaches"}</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
+          <AccentRule center />
+          <div className="h-10" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {t.approaches.map((c, i) => {
               const card = isHe ? c.he : c.en;
               return (
                 <div
@@ -365,18 +373,14 @@ function Index() {
               );
             })}
           </div>
-        </div>
-      </section>
 
-      {/* Who */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <SectionLabel>{isHe ? "קהל" : "For You"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.whoTitle)}</h2>
+          <div className="h-20" />
+          <SectionLabel>{isHe ? "ביסוס" : "Foundation"}</SectionLabel>
+          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <ul className="space-y-4">
-            {(isHe ? t.who.he : t.who.en).map((item, i) => (
+          <ul className="space-y-4 max-w-3xl mx-auto">
+            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
                 <span style={{ color: "var(--ink)" }}>{item}</span>
@@ -386,46 +390,33 @@ function Index() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <SectionLabel>{isHe ? "מה אני מציעה" : "Offerings"}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.servicesTitle)}</h2>
+      {/* Guidance */}
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6">
+          <SectionLabel>{isHe ? "למטפלים" : "For Therapists"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.guidanceTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {(isHe ? t.services.he : t.services.en).map((s, i) => (
-              <span
-                key={i}
-                className="px-5 py-2 text-sm"
-                style={{
-                  border: "1px solid var(--line)",
-                  color: "var(--ink)",
-                  background: "var(--surface)",
-                }}
-              >
-                {s}
-              </span>
+          <p className="text-center mb-8" style={{ color: "var(--ink-soft)" }}>{tr(t.guidanceIntro)}</p>
+          <ul className="space-y-4">
+            {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                <span style={{ color: "var(--ink)" }}>{item}</span>
+              </li>
             ))}
-          </div>
-          <p className="text-sm" style={{ color: "var(--ink-soft)" }}>{tr(t.servicesNote)}</p>
+          </ul>
         </div>
       </section>
 
-      {/* Trust */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>{isHe ? "רקע" : "Background"}</SectionLabel>
-          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.trustTitle)}</h2>
+      {/* Rehabilitation */}
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <SectionLabel>{isHe ? "שיקום" : "Rehabilitation"}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.rehabTitle)}</h2>
           <AccentRule center />
-          <div className="h-8" />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
-            {(isHe ? t.trust.he : t.trust.en).map((item, i) => (
-              <div key={i} className="text-center text-sm sm:text-base" style={{ color: "var(--ink-soft)" }}>
-                {item}
-              </div>
-            ))}
-          </div>
+          <div className="h-10" />
+          <p style={{ color: "var(--ink-soft)" }}>{tr(t.rehabBody)}</p>
         </div>
       </section>
 
