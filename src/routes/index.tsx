@@ -149,7 +149,7 @@ const videos = [
     title_en: "Awareness Through Movement",
     title_he: "מודעות באמצעות תנועה",
     desc_en: "A private Feldenkrais lesson — slow, mindful movement in a seated position.",
-    desc_he: "שיעור פלדנקרייז פרטי — תנועה איטית ומודעת בישיבה.",
+    desc_he: "",
   },
   {
     videoId: "KW3tgg9NRQU",
@@ -632,7 +632,9 @@ function VideoCard({ videoId, isShort, title, desc, onPlay }: { videoId: string;
       {title ? (
         <p className="mt-3 text-base" style={{ color: "var(--ink)", fontWeight: 600 }}>{title}</p>
       ) : null}
-      <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+      {desc ? (
+        <p className="mt-2 text-sm" style={{ color: "var(--ink-soft)" }}>{desc}</p>
+      ) : null}
     </div>
   );
 }
