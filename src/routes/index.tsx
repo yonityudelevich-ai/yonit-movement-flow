@@ -240,8 +240,10 @@ function Index() {
           <div
             className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
             style={{
-              color: "var(--heading)",
-              background: "transparent",
+              color: "#FDF6E3",
+              background: "rgba(10,15,26,0.35)",
+              backdropFilter: "blur(8px)",
+              WebkitBackdropFilter: "blur(8px)",
               padding: "2rem 1.5rem",
             }}
           >
@@ -264,8 +266,8 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "var(--heading)",
-                textShadow: "0 1px 2px rgba(0,0,0,0.6)",
+                color: "#FDF6E3",
+                textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
               {tr(t.heroHeadline)}
@@ -276,8 +278,8 @@ function Index() {
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 500,
-                color: "var(--ink)",
-                textShadow: "0 1px 2px rgba(0,0,0,0.6)",
+                color: "#F4E8D0",
+                textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
               {tr(t.heroSub)}
