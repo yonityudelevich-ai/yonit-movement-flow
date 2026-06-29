@@ -154,8 +154,8 @@ const videos = [
 ];
 
 const videoCaption = {
-  he: "תשומת לב ולמידה, האגן",
-  en: "Attention and Learning, the Pelvis",
+  he: "תנועה ומחקר",
+  en: "Movement and Research",
 };
 
 function Index() {
