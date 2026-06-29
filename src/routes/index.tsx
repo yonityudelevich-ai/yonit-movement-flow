@@ -251,7 +251,7 @@ function Index() {
                 fontFamily: "var(--font-name)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
-                color: "var(--heading)",
+                color: "#E0A92B",
                 fontWeight: 700,
                 textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
@@ -264,7 +264,7 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "#E0A92B",
+                color: "var(--heading)",
                 textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
@@ -276,7 +276,7 @@ function Index() {
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 500,
-                color: "#C7983C",
+                color: "var(--ink)",
                 textShadow: "0 1px 2px rgba(0,0,0,0.6)",
               }}
             >
