@@ -299,6 +299,11 @@ function Index() {
                 onPlay={() => setActiveVideo(v.videoId)}
               />
             ))}
+            <div className="flex items-center justify-center p-6" style={{ border: "1px solid var(--line)" }}>
+              <p className="text-xl sm:text-2xl text-center" style={{ color: "var(--heading)" }}>
+                {isHe ? videoCaption.he : videoCaption.en}
+              </p>
+            </div>
           </div>
           <div className="text-center mt-12">
             <a
