@@ -239,9 +239,8 @@ function Index() {
             className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
             style={{
               color: "var(--heading)",
-              background: "rgba(10,15,26,0.7)",
+              background: "transparent",
               padding: "2rem 1.5rem",
-              backdropFilter: "blur(6px)",
             }}
           >
             <h1
