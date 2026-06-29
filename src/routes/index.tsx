@@ -4,7 +4,7 @@ import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutAsset from "../assets/about.jpg.asset.json";
 import aboutNew from "../assets/about-new.jpg.asset.json";
-import contactPhoto from "../assets/contact-photo.jpg";
+import contactPhoto from "../assets/contact-photo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -428,7 +428,7 @@ function Index() {
       <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src={contactPhoto}
+            src={contactPhoto.url}
             alt="Yonit Yudelevich"
             className="w-full object-cover"
             style={{ filter: "saturate(1.35) contrast(1.05)" }}
