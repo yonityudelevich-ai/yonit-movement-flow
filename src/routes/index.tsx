@@ -3,7 +3,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutAsset from "../assets/about.jpg.asset.json";
-import aboutFace from "../assets/about-face.jpg";
+import aboutNew from "../assets/about-new.jpg.asset.json";
 import contactPhoto from "../assets/contact-photo.jpg";
 
 export const Route = createFileRoute("/")({
@@ -322,7 +322,7 @@ function Index() {
       <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
-            src={aboutFace}
+            src={aboutNew.url}
             alt="Yonit Yudelevich"
             className="w-full object-cover"
             loading="lazy"
