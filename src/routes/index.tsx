@@ -151,15 +151,12 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
-  {
-    videoId: "KW3tgg9NRQU",
-    isShort: true,
-    title_en: "Pelvic Awareness, Lying Down",
-    title_he: "מודעות לאגן, בשכיבה",
-    desc_en: "A moment of gentle pelvic awareness work, lying down, from a private session.",
-    desc_he: "רגע של תשומת לב עדינה לאגן, בשכיבה, מתוך מפגש פרטי.",
-  },
 ];
+
+const videoCaption = {
+  he: "תשומת לב ולמידה, האגן",
+  en: "Attention and Learning, the Pelvis",
+};
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
@@ -302,6 +299,11 @@ function Index() {
                 onPlay={() => setActiveVideo(v.videoId)}
               />
             ))}
+            <div className="flex items-center justify-center p-6" style={{ border: "1px solid var(--line)" }}>
+              <p className="text-xl sm:text-2xl text-center" style={{ color: "var(--heading)" }}>
+                {isHe ? videoCaption.he : videoCaption.en}
+              </p>
+            </div>
           </div>
           <div className="text-center mt-12">
             <a
