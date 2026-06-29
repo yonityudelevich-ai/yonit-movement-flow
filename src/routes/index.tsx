@@ -148,16 +148,16 @@ const videos = [
   {
     videoId: "RUnk-txGc7Y",
     isShort: true,
-    title_en: "Listening and Learning",
-    title_he: "הקשבה ולמידה",
+    title_en: "Listening",
+    title_he: "הקשבה",
     desc_en: "",
     desc_he: "",
   },
   {
     videoId: "KW3tgg9NRQU",
     isShort: true,
-    title_en: "Listening and Learning",
-    title_he: "הקשבה ולמידה",
+    title_en: "Learning",
+    title_he: "למידה",
     desc_en: "",
     desc_he: "",
   },
@@ -253,7 +253,7 @@ function Index() {
                 fontFamily: "var(--font-name)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
-                color: "#E0A92B",
+                color: "var(--heading)",
                 fontWeight: 700,
                 textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
@@ -472,7 +472,7 @@ function Index() {
           download
           className="inline-block mb-4 underline underline-offset-4 tracking-wider"
           style={{
-            fontFamily: "'Special Elite', 'Courier New', monospace",
+            fontFamily: "'Courier Prime', 'Courier New', monospace",
             color: "var(--heading)",
             fontSize: "1rem",
           }}
