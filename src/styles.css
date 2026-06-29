@@ -197,16 +197,16 @@
 }
 
 /* Brand overrides — must come AFTER the shadcn token blocks above
-   so the jeans values win the cascade. */
+   so the pastel values win the cascade. */
 :root,
 .dark {
-  --accent: #5AC8FA;
-  --accent-hover: #3DB8F0;
-  --accent-ink: #E0A92B;
+  --accent: #9FC9E8;
+  --accent-hover: #B8D8F2;
+  --accent-ink: #0A0F1A;
   --accent-soft: #1E3A5F;
-  --heading: #E0A92B;
-  --ink: #E0A92B;
-  --ink-soft: #C7983C;
+  --heading: #C9B8D9;
+  --ink: #F2E8D8;
+  --ink-soft: #C9C0B3;
 }
 
 @layer base {
