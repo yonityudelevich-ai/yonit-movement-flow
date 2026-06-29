@@ -3,7 +3,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutAsset from "../assets/about.jpg.asset.json";
-import aboutNew from "../assets/about-new.jpg.asset.json";
+import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
 import contactPhoto from "../assets/contact-photo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
