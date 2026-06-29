@@ -25,10 +25,10 @@ const WHATSAPP_NUMBER = "972500000000";
 
 const t = {
   nav: { he: "צרי קשר", en: "Contact" },
-  heroHeadline: { he: "טיפול בתנועה, פלדנקרייז תהליכים סומטיים מבוססי גוף- תודעה", en: "Movement Therapy,Awareness Through Movement" },
+  heroHeadline: { he: "טיפול בתנועה שיטת פלדנקרייז יוגה רגישה", en: "Movement Therapy, Feldenkrais Method, Trauma-Sensitive Yoga" },
   heroSub: {
-    he: "",
-    en: "A personal and group space for working with the body through movement, breath, and listening.",
+    he: "לעבוד דרך הגוף לפגוש את עצמך ולנוע עם החיים",
+    en: "Working through the body, meeting yourself, and moving with life.",
   },
   heroSmall: {
     he: "",
