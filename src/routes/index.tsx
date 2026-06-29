@@ -280,10 +280,6 @@ function Index() {
             >
               {tr(t.heroSub)}
             </h2>
-            <div className="h-8" />
-            <a href="#contact" onClick={scrollTo("contact")}>
-              <Btn>{tr(t.heroCta)}</Btn>
-            </a>
           </div>
         </div>
       </section>
