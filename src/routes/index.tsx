@@ -366,6 +366,23 @@ function Index() {
             ))}
           </div>
         </div>
+
+        {/* Poem */}
+        <div className="max-w-3xl mx-auto px-6 mt-16">
+          <div
+            className="p-8 sm:p-10 text-center"
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--line)",
+              fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace",
+              color: "var(--ink)",
+            }}
+          >
+            <p className="text-base sm:text-lg leading-loose whitespace-pre-line">
+              {(isHe ? t.poem.he : t.poem.en).join("\n")}
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* How */}
