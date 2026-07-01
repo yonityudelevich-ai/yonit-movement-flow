@@ -54,9 +54,13 @@ const t = {
       "בואו כפי שאתם.",
     ],
     en: [
-      "I've worked with movement and the body for more than two decades — in educational, rehabilitative, and personal settings.",
-      "Over the years I've met people in very different situations: after an injury, under stress or strain, during periods of physical change, or simply wanting to feel their body again.",
-      "My work combines several approaches, but the foundation is always the same: listening to the body, personal adaptation, and a pace that respects the person in front of me. There's no striving here and no right or wrong — just space to learn the body again, safely.",
+      "My name is Yonit Yudelevich Asulin. I am a movement therapist (M.A.), a Feldenkrais teacher, and a facilitator of body-based processes, with more than 25 years of experience in therapeutic, rehabilitative, and individual and group process work in Israel and around the world.",
+      "Over the years I have accompanied children, adolescents, and adults through a wide range of life situations — people coping with trauma, life crises, physical and emotional pain, rehabilitation processes, significant changes and transitions, alongside curious movement lovers seeking to cultivate personal wellbeing, deepen their connection with themselves, and rediscover simple joy through movement.",
+      "My work combines movement therapy, the Feldenkrais Method, body-based somatic approaches, trauma-informed practice through trauma-sensitive yoga, conscious movement, dance, and accompaniment of individual and group processes.",
+      "Throughout my life, movement has been a natural language for understanding, expression, and connection — a way to meet myself and the world. My journeys around the world and my ability to support people through movement reinforced my understanding that the body and movement are a significant gateway to processes of change, healing, and development. Out of my personal and professional journey, I continue to explore the connection between body, soul, and movement, and the human capacity to develop, change, and grow throughout life.",
+      "The body carries within it the story of our lives — memories, emotions, patterns, pain, but also resources, resilience, and a natural ability for healing, development, and growth. Often people arrive out of pain, curiosity, or a sense that something is asking to change. Sometimes it is a longing to understand why a certain area of the body continues to hurt, sometimes a desire to find a way to cope with overload, stress, or emotions clearly felt in the body, and sometimes simply a wish to feel more connected to oneself.",
+      "Alongside my private clinic and group facilitation, I teach and guide therapists in professional training programs in Israel and around the world. During my travels around the world I also opened an online clinic, and today I accompany, teach, and guide people and groups from anywhere in the world.",
+      "Come as you are.",
     ],
   },
   poem: {
