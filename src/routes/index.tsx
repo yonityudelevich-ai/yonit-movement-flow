@@ -366,16 +366,19 @@ function Index() {
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Poem */}
-        <div className="max-w-3xl mx-auto px-6 mt-16">
+      {/* Poem — independent box below About */}
+      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6">
           <div
-            className="p-8 sm:p-10 text-center"
+            className="p-8 sm:p-12 text-center"
             style={{
               background: "var(--surface)",
               border: "1px solid var(--line)",
               fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace",
               color: "var(--ink)",
+              boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
             }}
           >
             <p className="text-base sm:text-lg leading-loose whitespace-pre-line">
