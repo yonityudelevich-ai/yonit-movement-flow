@@ -59,6 +59,32 @@ const t = {
       "My work combines several approaches, but the foundation is always the same: listening to the body, personal adaptation, and a pace that respects the person in front of me. There's no striving here and no right or wrong — just space to learn the body again, safely.",
     ],
   },
+  poem: {
+    he: [
+      "ליעביר",
+      "פעם ביום כדאי שאדם",
+      "ישען על דבר-מה.",
+      "יניח את גופו",
+      "על רהיט או על אדמה",
+      "או על קיר",
+      "את משקלו יעביר",
+      "ממנו הלאה",
+      "בלי שייצטרך להחזיר.",
+      "מיטל הורובסקי",
+    ],
+    en: [
+      "To Transfer",
+      "Once a day it is good for a person",
+      "to lean on something.",
+      "To place their body",
+      "on a piece of furniture or on the ground",
+      "or on a wall.",
+      "To transfer their weight",
+      "away from it",
+      "without needing to return it.",
+      "Meital Horovski",
+    ],
+  },
   howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
   howIntro: {
     he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו.\n\nבהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
@@ -338,6 +364,23 @@ function Index() {
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
+          </div>
+        </div>
+
+        {/* Poem */}
+        <div className="max-w-3xl mx-auto px-6 mt-16">
+          <div
+            className="p-8 sm:p-10 text-center"
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--line)",
+              fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace",
+              color: "var(--ink)",
+            }}
+          >
+            <p className="text-base sm:text-lg leading-loose whitespace-pre-line">
+              {(isHe ? t.poem.he : t.poem.en).join("\n")}
+            </p>
           </div>
         </div>
       </section>
