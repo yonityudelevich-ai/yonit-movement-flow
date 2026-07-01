@@ -54,36 +54,26 @@ const t = {
       "בואו כפי שאתם.",
     ],
     en: [
-      "I've worked with movement and the body for more than two decades — in educational, rehabilitative, and personal settings.",
-      "Over the years I've met people in very different situations: after an injury, under stress or strain, during periods of physical change, or simply wanting to feel their body again.",
-      "My work combines several approaches, but the foundation is always the same: listening to the body, personal adaptation, and a pace that respects the person in front of me. There's no striving here and no right or wrong — just space to learn the body again, safely.",
+      "My name is Yonit Yudelevich Asulin. I am a movement therapist (M.A.), a Feldenkrais teacher, and a facilitator of body-based processes, with more than 25 years of experience in therapeutic, rehabilitative, and individual and group process work in Israel and around the world.",
+      "Over the years I have accompanied children, adolescents, and adults through a wide range of life situations — people coping with trauma, life crises, physical and emotional pain, rehabilitation processes, significant changes and transitions, alongside curious movement lovers seeking to cultivate personal wellbeing, deepen their connection with themselves, and rediscover simple joy through movement.",
+      "My work combines movement therapy, the Feldenkrais Method, body-based somatic approaches, trauma-informed practice through trauma-sensitive yoga, conscious movement, dance, and accompaniment of individual and group processes.",
+      "Throughout my life, movement has been a natural language for understanding, expression, and connection — a way to meet myself and the world. My journeys around the world and my ability to support people through movement reinforced my understanding that the body and movement are a significant gateway to processes of change, healing, and development. Out of my personal and professional journey, I continue to explore the connection between body, soul, and movement, and the human capacity to develop, change, and grow throughout life.",
+      "The body carries within it the story of our lives — memories, emotions, patterns, pain, but also resources, resilience, and a natural ability for healing, development, and growth. Often people arrive out of pain, curiosity, or a sense that something is asking to change. Sometimes it is a longing to understand why a certain area of the body continues to hurt, sometimes a desire to find a way to cope with overload, stress, or emotions clearly felt in the body, and sometimes simply a wish to feel more connected to oneself.",
+      "Alongside my private clinic and group facilitation, I teach and guide therapists in professional training programs in Israel and around the world. During my travels around the world I also opened an online clinic, and today I accompany, teach, and guide people and groups from anywhere in the world.",
+      "Come as you are.",
     ],
   },
   poem: {
-    he: [
-      "ליעביר",
-      "פעם ביום כדאי שאדם",
-      "ישען על דבר-מה.",
-      "יניח את גופו",
-      "על רהיט או על אדמה",
-      "או על קיר",
-      "את משקלו יעביר",
-      "ממנו הלאה",
-      "בלי שייצטרך להחזיר.",
-      "מיטל הורובסקי",
-    ],
-    en: [
-      "To Transfer",
-      "Once a day it is good for a person",
-      "to lean on something.",
-      "To place their body",
-      "on a piece of furniture or on the ground",
-      "or on a wall.",
-      "To transfer their weight",
-      "away from it",
-      "without needing to return it.",
-      "Meital Horovski",
-    ],
+    he: {
+      title: "להעביר",
+      body: "פעם ביום כדאי שאדם\nישען על דבר-מה.\nיניח את גופו\nעל רהיט או על אדמה\nאו על קיר\nאת משקלו יעביר\nממנו הלאה\nבלי שייצטרך להחזיר.",
+      author: "מיטל הורובסקי",
+    },
+    en: {
+      title: "To Transfer",
+      body: "Once a day it is good for a person\nto lean on something.\nTo place their body\non a piece of furniture or on the ground\nor on a wall.\nTo transfer their weight\naway from it\nwithout needing to return it.",
+      author: "Meital Horovski",
+    },
   },
   howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
   howIntro: {
@@ -381,9 +371,18 @@ function Index() {
               boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
             }}
           >
-            <p className="text-base sm:text-lg leading-loose whitespace-pre-line">
-              {(isHe ? t.poem.he : t.poem.en).join("\n")}
-            </p>
+            {(() => {
+              const poem = isHe ? t.poem.he : t.poem.en;
+              return (
+                <>
+                  <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)" }}>{poem.title}</h3>
+                  <p className="text-base sm:text-lg leading-loose whitespace-pre-line">{poem.body}</p>
+                  <div className="mt-8 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
+                    <p className="text-sm sm:text-base" style={{ color: "var(--heading)" }}>— {poem.author}</p>
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       </section>
