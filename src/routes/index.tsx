@@ -71,8 +71,8 @@ const t = {
       en: { title: "Movement Therapy", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work is done through movement, verbal and non-verbal connection, and processing of emotional and physical experience within the therapeutic relationship." },
     },
     {
-      he: { title: "פלדנקרייז", body: "שיטה חינוכית-תנועתית המתמקדת בשיפור ארגון התנועה, יעילות תפקודית והפחתת מאמץ דרך חקירה עדינה של תנועה ותשומת לב." },
-      en: { title: "Feldenkrais", body: "An educational-movement method focusing on improving movement organization, functional efficiency, and reducing effort through gentle exploration of movement and attention." },
+      he: { title: "פלדנקרייז", body: "שיטת פלדנקרייז מזמינה את הגוף והמוח ללמוד מחדש – ללא מאמץ, ללא כאב ומתוך סקרנות והקשבה. באמצעות רצפי תנועה עדינים ומדויקים מתעוררת יכולתו הטבעית של המוח ליצור דפוסים חדשים, לשחרר הרגלים מגבילים ולשפר את איכות התנועה והתפקוד. התרגול מסייע להפחית כאבים ומתחים, לשפר שיווי משקל, יציבה וגמישות, ולהגביר את תחושת החופש, היציבות והביטחון בגוף. מעבר לתנועה עצמה, פלדנקרייז היא דרך לפתח מודעות עמוקה יותר לעצמנו, לווסת את מערכת העצבים ולגלות אפשרויות חדשות להתנהלות רגועה, יעילה ונעימה יותר בחיי היומיום." },
+      en: { title: "Feldenkrais", body: "The Feldenkrais Method invites the body and mind to learn anew — without effort, without pain, and out of curiosity and listening. Through gentle and precise movement sequences, the brain's natural ability to create new patterns awakens, releasing limiting habits and improving the quality of movement and function. The practice helps reduce pain and tension, improve balance, posture and flexibility, and increase the sense of freedom, stability and confidence in the body. Beyond movement itself, Feldenkrais is a way to develop deeper awareness of ourselves, to regulate the nervous system and discover new possibilities for calmer, more efficient and pleasant daily life." },
     },
     {
       he: { title: "יוגה רגישה", body: "תרגול יוגה מותאם, מבוסס הקשבה לגוף, לתמיכה בוויסות מערכת העצבים, עיבוד מצבי דחק וליווי תהליכי שיקום." },
