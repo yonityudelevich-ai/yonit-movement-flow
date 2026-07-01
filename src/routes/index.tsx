@@ -367,9 +367,18 @@ function Index() {
               boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
             }}
           >
-            <p className="text-base sm:text-lg leading-loose whitespace-pre-line">
-              {(isHe ? t.poem.he : t.poem.en).join("\n")}
-            </p>
+            {(() => {
+              const poem = isHe ? t.poem.he : t.poem.en;
+              return (
+                <>
+                  <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)" }}>{poem.title}</h3>
+                  <p className="text-base sm:text-lg leading-loose whitespace-pre-line">{poem.body}</p>
+                  <div className="mt-8 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
+                    <p className="text-sm sm:text-base" style={{ color: "var(--heading)" }}>— {poem.author}</p>
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       </section>
