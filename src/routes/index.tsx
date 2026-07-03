@@ -355,11 +355,11 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2.5 text-sm transition-colors"
               style={{
                 background: "var(--accent)",
                 color: "var(--accent-ink)",
-                borderRadius: "6px",
+                borderRadius: "2px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
@@ -372,7 +372,7 @@ function Index() {
                 e.currentTarget.style.color = "var(--accent-ink)";
               }}
             >
-              <WhatsAppIcon size={14} />
+              <WhatsAppIcon size={16} />
               {tr(t.heroCta)}
             </a>
           </div>
