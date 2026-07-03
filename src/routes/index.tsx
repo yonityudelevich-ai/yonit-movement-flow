@@ -261,12 +261,9 @@ function Index() {
             }}
           />
           <div
-            className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
+            className="relative z-20 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
             style={{
               color: "#F0EEE9",
-              background: "rgba(10,15,26,0.35)",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(8px)",
               padding: "2rem 1.5rem",
             }}
           >
