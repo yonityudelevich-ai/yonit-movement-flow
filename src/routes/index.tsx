@@ -595,16 +595,6 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
   );
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p
-      className="text-center text-xs uppercase tracking-[0.35em] mb-4"
-      style={{ color: "var(--heading)" }}
-    >
-      {children}
-    </p>
-  );
-}
 
 function AccentRule({ center }: { center?: boolean }) {
   return (
