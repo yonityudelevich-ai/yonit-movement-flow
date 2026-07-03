@@ -442,7 +442,7 @@ function Index() {
               <img
                 src={yonitPortrait.url}
                 alt={tr(t.heroName)}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 style={{ border: "1px solid var(--line)" }}
                 loading="lazy"
               />
