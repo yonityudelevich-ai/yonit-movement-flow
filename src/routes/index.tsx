@@ -374,17 +374,15 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <div className="grid md:grid-cols-2 gap-6">
             {t.approaches.map((c, i) => {
@@ -399,9 +397,8 @@ function Index() {
                     minHeight: "220px",
                   }}
                 >
-                  <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{card.body}</p>
+                  <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
             })}
@@ -409,9 +406,8 @@ function Index() {
 
           <div className="h-20" />
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
-          <AccentRule center />
           <div className="h-10" />
-          <ul className="space-y-4 max-w-3xl mx-auto" style={{ fontFamily: "Tinos, Georgia, serif" }}>
+          <ul className="space-y-4 max-w-3xl mx-auto">
             {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
