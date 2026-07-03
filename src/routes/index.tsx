@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
-import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
 
 export const Route = createFileRoute("/")({
