@@ -469,7 +469,7 @@ function Index() {
       <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "2rem 0" }}>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
               <div className="flex items-center gap-3 flex-wrap">
