@@ -339,6 +339,31 @@ function Index() {
             >
               {t.heroTopics[lang].join("  •  ")}
             </p>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-7 py-3 text-base transition-colors"
+              style={{
+                background: "var(--surface)",
+                color: "var(--ink)",
+                border: "1px solid var(--line)",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.borderColor = "var(--accent)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--surface)";
+                e.currentTarget.style.borderColor = "var(--line)";
+              }}
+            >
+              <WhatsAppIcon size={18} />
+              {tr(t.heroCta)}
+            </a>
           </div>
         </div>
       </section>
