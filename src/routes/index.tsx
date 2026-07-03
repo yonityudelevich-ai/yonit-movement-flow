@@ -352,32 +352,32 @@ function Index() {
 
       {/* About */}
       <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src={aboutNew.url}
-            alt="Yonit Yudelevich"
-            className="w-full object-cover"
-            loading="lazy"
-          />
-          <div>
-            <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
-            <div className="h-6" />
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
+          <div className="h-6" />
+          <div className="w-full">
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
-            <div className="mt-6">
-              <a
-                href={cvAsset.url}
-                target="_blank"
-                rel="noreferrer"
-                download
-                className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
-                style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
-              >
-                {tr(t.cvLink)} ↓
-              </a>
-            </div>
           </div>
+          <div className="mt-6 mb-10">
+            <a
+              href={cvAsset.url}
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
+              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+            >
+              {tr(t.cvLink)} ↓
+            </a>
+          </div>
+          <img
+            src={aboutNew.url}
+            alt="Yonit Yudelevich"
+            className="w-full max-w-4xl mx-auto object-cover"
+            loading="lazy"
+          />
         </div>
       </section>
 
