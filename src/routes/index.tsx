@@ -143,7 +143,7 @@ const t = {
       "Mentoring for therapists at the beginning of their path and in professional development",
     ],
   },
-  whoForTitle: { he: "מי זה מתאים לו?", en: "Who is this for?" },
+  whoForTitle: { he: "למי זה מתאים?", en: "Who is this for?" },
   whoForItems: {
     he: [
       "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
@@ -379,34 +379,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Who this is for + approaches principles */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
-            <ul className="space-y-4 mb-16">
-              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-16 max-w-3xl">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
-            <ul className="space-y-4">
-              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
 
       <Quote data={isHe ? quotes[0].he : quotes[0].en} />
 
@@ -503,9 +475,53 @@ function Index() {
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
+          {/* Who this is for chips */}
+          <div className="text-center mb-8">
+            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 text-sm"
+                  style={{
+                    background: "var(--accent-soft)",
+                    color: "var(--ink)",
+                    borderRadius: "9999px",
+                    fontFamily: "var(--font-heading)",
+                    fontWeight: 500,
+                  }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
+
+          {/* Approaches principles chips */}
+          <div className="text-center mb-10">
+            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 text-sm"
+                  style={{
+                    background: "var(--accent-soft)",
+                    color: "var(--ink)",
+                    borderRadius: "9999px",
+                    fontFamily: "var(--font-heading)",
+                    fontWeight: 500,
+                  }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {t.approaches.map((c, i) => {
