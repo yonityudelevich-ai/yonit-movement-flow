@@ -487,7 +487,7 @@ function Index() {
                 {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
-                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                    <span className="text-base leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
