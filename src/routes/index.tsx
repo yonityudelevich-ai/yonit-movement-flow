@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useState } from "react";
 import heroAsset from "../assets/hero.jpg.asset.json";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
-import contactPhoto from "../assets/contact-photo.jpg.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -20,12 +19,18 @@ export const Route = createFileRoute("/")({
 
 type Lang = "he" | "en";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-const WHATSAPP_NUMBER = "972500000000";
+const WHATSAPP_NUMBER = "972508937753";
+const PHONE_DISPLAY = "+972 50-893-7753";
+const PHONE_TEL = "+972508937753";
+const EMAIL = "YonitYudelevich@gmail.com";
 
 const t = {
   nav: { he: "צרי קשר", en: "Contact" },
   heroHeadline: { he: "טיפול בתנועה שיטת פלדנקרייז יוגה רגישה", en: "Movement Therapy, Feldenkrais Method, Trauma-Sensitive Yoga" },
+  heroTopics: {
+    he: ["טיפול בתנועה", "שיטת פלדנקרייז", "יוגה רגישה"],
+    en: ["Movement Therapy", "Feldenkrais Method", "Trauma-Sensitive Yoga"],
+  },
   heroSub: {
     he: "לעבוד דרך הגוף לפגוש את עצמך ולנוע עם החיים",
     en: "Working through the body, meeting yourself, and moving with life.",
@@ -147,17 +152,32 @@ const t = {
     he: "שלחי לי הודעה קצרה ואחזור אלייך לתיאום שיחה.",
     en: "Send me a short message and I'll get back to you to schedule a call.",
   },
-  name: { he: "שם", en: "Name" },
-  contactField: { he: "אימייל או טלפון", en: "Email or Phone" },
-  message: { he: "הודעה", en: "Message" },
-  send: { he: "שליחה", en: "Send" },
-  sent: { he: "תודה, אחזור אלייך בקרוב.", en: "Thank you — I'll be in touch soon." },
+  contactWhatsappNote: {
+    he: "אפשר גם ליצור קשר בוואטסאפ.",
+    en: "You can also reach me on WhatsApp.",
+  },
+  contactPhoneLabel: { he: "טלפון", en: "Phone" },
+  contactEmailLabel: { he: "אימייל", en: "Email" },
   whatsapp: { he: "צרי קשר ב-WhatsApp", en: "Message Me on WhatsApp" },
   whatsappMsg: {
     he: "היי יונית, הגעתי דרך האתר ואשמח לתאם שיחה קצרה כדי לבדוק אם זה מתאים לי.",
     en: "Hi Yonit, I came through your website and I'd love to schedule a short call to see if this is a good fit for me.",
   },
   cvLink: { he: "קורות חיים", en: "Curriculum Vitae" },
+  navLinks: {
+    he: [
+      { id: "about", label: "מי אני" },
+      { id: "how", label: "איך מתחילים" },
+      { id: "videos", label: "וידאו" },
+      { id: "contact", label: "צרי קשר" },
+    ],
+    en: [
+      { id: "about", label: "About" },
+      { id: "how", label: "How to Begin" },
+      { id: "videos", label: "Videos" },
+      { id: "contact", label: "Contact" },
+    ],
+  },
 };
 
 const videos = [
