@@ -555,42 +555,41 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
 
-          {/* Logistics */}
-          <div className="max-w-3xl mx-auto mb-16 p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.logisticsTitle)}</h3>
-            <div className="space-y-3">
+          {/* Logistics + contact info */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="space-y-3 mb-12">
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsFormat)}</p>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsLength)}</p>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsBooking)}</p>
             </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
-            <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
-              <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
-                {PHONE_DISPLAY}
-              </a>
-              <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
-              <div className="mt-3">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={tr(t.whatsapp)}
-                  title={tr(t.whatsapp)}
-                  className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
-                  style={{ color: "var(--accent)" }}
-                >
-                  <WhatsAppIcon size={22} />
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
+              <div className="flex-1">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
+                <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                  {PHONE_DISPLAY}
+                </a>
+                <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
+                <div className="mt-3">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={tr(t.whatsapp)}
+                    title={tr(t.whatsapp)}
+                    className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
+                    style={{ color: "var(--accent)" }}
+                  >
+                    <WhatsAppIcon size={22} />
+                  </a>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
+                <a href={`mailto:${EMAIL}`} className="text-xl break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+                  {EMAIL}
                 </a>
               </div>
-            </div>
-            <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
-              <a href={`mailto:${EMAIL}`} className="text-xl break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
-                {EMAIL}
-              </a>
             </div>
           </div>
         </div>
