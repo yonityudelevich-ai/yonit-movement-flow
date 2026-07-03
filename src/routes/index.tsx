@@ -206,8 +206,6 @@ const videos = [
   },
 ];
 
-function Index() {
-
 const quotes: { he: { text: string; author: string }; en: { text: string; author: string } }[] = [
   {
     he: { text: "יונית היא מטפלת יוצאת דופן. העבודה איתה שינתה את הקשר שלי עם הגוף שלי.", author: "שם הממליץ/ה" },
