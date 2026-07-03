@@ -143,10 +143,20 @@ const t = {
       "Mentoring for therapists at the beginning of their path and in professional development",
     ],
   },
-  rehabTitle: { he: "ליווי תהליכי שיקום וכאב כרוני", en: "Rehabilitation & Chronic Pain" },
-  rehabBody: {
-    he: "ליווי תהליכי שיקום והתמודדות עם כאב כרוני, תוך עבודה מבוססת גוף המאפשרת חקירה של דפוסים תנועתיים, הפחתת עומס, חיזוק ויסות ושיפור איכות החיים.",
-    en: "Accompaniment of rehabilitation processes and coping with chronic pain, through body-based work that allows exploration of movement patterns, reducing strain, strengthening regulation, and improving quality of life.",
+  whoForTitle: { he: "מי זה מתאים לו?", en: "Who is this for?" },
+  whoForItems: {
+    he: [
+      "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
+      "מבוגרים המחפשים רווחה, ויסות וחיבור מחודש לגוף",
+      "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית והדרכה",
+      "כל מי שמרגיש שמשהו מבקש להשתנות – ומוכן לעבוד דרך הגוף",
+    ],
+    en: [
+      "Women, children, and adolescents facing pain, trauma, or life transitions",
+      "Adults seeking well-being, regulation, and a renewed connection with the body",
+      "Therapists and professionals wanting professional deepening and guidance",
+      "Anyone who feels something wants to change — and is ready to work through the body",
+    ],
   },
   contactTitle: { he: "רוצה לבדוק אם זה מתאים לך?", en: "Want to see if this is right for you?" },
   contactSub: {
