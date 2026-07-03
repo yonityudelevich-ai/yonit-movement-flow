@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
-import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -360,7 +360,7 @@ function Index() {
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
           </div>
-          <div className="mt-6 mb-10">
+          <div className="mt-6">
             <a
               href={cvAsset.url}
               target="_blank"
@@ -369,15 +369,9 @@ function Index() {
               className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
               style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
             >
-              {tr(t.cvLink)} ↓
+              {tr(t.cvLink)} <Download size={18} />
             </a>
           </div>
-          <img
-            src={aboutNew.url}
-            alt="Yonit Yudelevich"
-            className="w-full max-w-4xl mx-auto object-cover"
-            loading="lazy"
-          />
         </div>
       </section>
 
