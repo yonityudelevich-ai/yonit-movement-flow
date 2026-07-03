@@ -592,7 +592,7 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="contact" className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
 
