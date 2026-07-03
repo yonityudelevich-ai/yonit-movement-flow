@@ -376,28 +376,13 @@ function Index() {
         </div>
       </section>
 
-      {/* Guidance + Rehab cards (moved up, directly below hero) */}
+      {/* Rehab highlight card */}
       <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="max-w-3xl">
             <div
               className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
-              <ul className="space-y-2">
-                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                    <span style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "220px" }}
             >
               <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
