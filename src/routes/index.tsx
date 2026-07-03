@@ -241,16 +241,16 @@ const videos = [
 
 const quotes: { he: { text: string; author: string }; en: { text: string; author: string } }[] = [
   {
-    he: { text: "יונית היא מטפלת יוצאת דופן. העבודה איתה שינתה את הקשר שלי עם הגוף שלי.", author: "שם הממליץ/ה" },
-    en: { text: "Yonit is an exceptional therapist. Working with her transformed my relationship with my body.", author: "Client name" },
+    he: { text: "טיפול פרטני עם יונית זו חוויה בלתי נשכחת. כבר אחרי הטיפול הראשון הרגשתי הקלה משמעותית בכאב ובעיקר שקט עמוק שנשאר איתי ימים.", author: "קרן כהן" },
+    en: { text: "A private session with Yonit is an unforgettable experience. Already after the first session I felt significant relief from pain and, above all, a deep calm that stayed with me for days.", author: "Keren Cohen" },
   },
   {
-    he: { text: "המרחב שיונית יוצרת הוא בטוח, עדין ומדויק. מומלץ בחום.", author: "שם הממליץ/ה" },
-    en: { text: "The space Yonit creates is safe, gentle and precise. Highly recommended.", author: "Client name" },
+    he: { text: "ההנחייה שלך גם פותחת צהר לחיבור בין הגוף לתודעה. חוויה שנשארת איתנו גם לאורך זמן, לאחר השיעור.", author: "סיוון נמר" },
+    en: { text: "Your guidance also opens a gateway to the connection between body and awareness. An experience that stays with us over time, long after the lesson.", author: "Sivan Namir" },
   },
   {
-    he: { text: "נוכחות רגישה, ידע עמוק, ולב פתוח — יונית נותנת יותר ממה שאפשר לתאר במילים.", author: "שם הממליץ/ה" },
-    en: { text: "Sensitive presence, deep knowledge, and an open heart — Yonit gives more than words can describe.", author: "Client name" },
+    he: { text: "יונית מביאה מקצועיות והכרות מעוררת השראה עם אנטומיה, שיקום ותנועה.", author: "שם הממליץ/ה" },
+    en: { text: "Yonit brings professionalism and inspiring familiarity with anatomy, rehabilitation, and movement.", author: "Client name" },
   },
 ];
 
