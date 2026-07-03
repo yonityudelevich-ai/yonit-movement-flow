@@ -315,7 +315,6 @@ function Index() {
       {/* Videos */}
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
-          <SectionLabel>{isHe ? "וידאו" : "Video"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
@@ -355,7 +354,6 @@ function Index() {
             loading="lazy"
           />
           <div>
-            <SectionLabel>{isHe ? "היכרות" : "Introduction"}</SectionLabel>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
@@ -398,7 +396,6 @@ function Index() {
       {/* How */}
       <section className="py-24" style={{ borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>{isHe ? "תחילת דרך" : "Beginning"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
@@ -406,7 +403,6 @@ function Index() {
             {tr(t.howIntro)}
           </p>
 
-          <SectionLabel>{isHe ? "גישות" : "Approaches"}</SectionLabel>
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
@@ -432,7 +428,6 @@ function Index() {
           </div>
 
           <div className="h-20" />
-          <SectionLabel>{isHe ? "ביסוס" : "Foundation"}</SectionLabel>
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
@@ -491,7 +486,6 @@ function Index() {
             loading="lazy"
           />
           <div>
-            <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
@@ -601,16 +595,6 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
   );
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p
-      className="text-center text-xs uppercase tracking-[0.35em] mb-4"
-      style={{ color: "var(--heading)" }}
-    >
-      {children}
-    </p>
-  );
-}
 
 function AccentRule({ center }: { center?: boolean }) {
   return (
