@@ -166,13 +166,13 @@ const t = {
   navLinks: {
     he: [
       { id: "about", label: "מי אני" },
-      { id: "how", label: "איך מתחילים" },
+      { id: "how", label: "גישות העבודה" },
       { id: "videos", label: "וידאו" },
       { id: "contact", label: "צרי קשר" },
     ],
     en: [
       { id: "about", label: "About" },
-      { id: "how", label: "How to Begin" },
+      { id: "how", label: "Approaches" },
       { id: "videos", label: "Videos" },
       { id: "contact", label: "Contact" },
     ],
@@ -400,14 +400,12 @@ function Index() {
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
+          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.approachesLabel)}</h2>
           <div className="h-10" />
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
-          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
-          <div className="h-10" />
           <div className="grid md:grid-cols-2 gap-6">
             {t.approaches.map((c, i) => {
               const card = isHe ? c.he : c.en;
