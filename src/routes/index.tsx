@@ -486,7 +486,6 @@ function Index() {
             loading="lazy"
           />
           <div>
-            <SectionLabel>{isHe ? "יצירת קשר" : "Contact"}</SectionLabel>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
