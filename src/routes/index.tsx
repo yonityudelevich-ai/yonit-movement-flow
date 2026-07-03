@@ -571,9 +571,9 @@ function Index() {
             })}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl text-center mt-16" style={{ color: "var(--heading)" }}>
+          <p className="text-center mt-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)" }}>
             {tr(t.howSuitableForAll)}
-          </h2>
+          </p>
         </div>
       </section>
 
