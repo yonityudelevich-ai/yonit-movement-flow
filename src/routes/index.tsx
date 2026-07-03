@@ -428,7 +428,6 @@ function Index() {
           </div>
 
           <div className="h-20" />
-          <SectionLabel>{isHe ? "ביסוס" : "Foundation"}</SectionLabel>
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
