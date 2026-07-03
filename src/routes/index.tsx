@@ -152,8 +152,8 @@ const t = {
     en: "Send me a short message and I'll get back to you to schedule a call.",
   },
   contactWhatsappNote: {
-    he: "אפשר גם ליצור קשר בוואטסאפ.",
-    en: "You can also reach me on WhatsApp.",
+    he: "אפשר גם ליצור קשר בוואטסאפ",
+    en: "You can also reach me on WhatsApp",
   },
   contactPhoneLabel: { he: "טלפון", en: "Phone" },
   contactEmailLabel: { he: "אימייל", en: "Email" },
