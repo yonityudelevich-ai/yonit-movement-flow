@@ -185,8 +185,8 @@
 .dark {
   --ink: #FFFFFF;
   --ink-soft: #E8E8E8;
-  --quote-bg: #2A1F42;
-  --quote-border: #4A3669;
+  --quote-bg: #1E2D42;
+  --quote-border: #3A5A7C;
   --font-body-he: "Assistant", "Miriam Libre", system-ui, sans-serif;
   --font-heading-he: "Miriam Libre", "Assistant", system-ui, sans-serif;
 }
