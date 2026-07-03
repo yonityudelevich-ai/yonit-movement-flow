@@ -488,15 +488,6 @@ function Index() {
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-6">{tr(t.approachesLabel)}</h2>
-          <ul className="space-y-4 max-w-3xl mx-auto mb-16">
-            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-              </li>
-            ))}
-          </ul>
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
