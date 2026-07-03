@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
 
+function WhatsAppIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.978 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.13 1.588 5.931L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -87,20 +95,20 @@ const t = {
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
   approaches: [
     {
-      he: { title: "טיפול בתנועה", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא־מילולי, ועיבוד חוויות רגשיות וגופניות בתוך מערכת יחסים טיפולית בטוחה. באמצעות הקשבה לאותות עדינים של הגוף ותרגומם לתנועה מודעת, הגישה מסייעת בשחרור מתחים כבושים, בבניית ביטוי עצמי אותנטי, ובחיזוק הקשר בין גוף, נפש ורגש." },
-      en: { title: "Movement Therapy", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work unfolds through movement, verbal and non-verbal connection, and the ongoing processing of emotional and physical experience within a safe therapeutic relationship. By tuning into subtle bodily signals and translating them into conscious movement, this approach helps release held tension, build authentic self-expression, and strengthen the connection between body, mind, and emotion." },
+      he: { title: "טיפול בתנועה", for: "מתאים ל: כאב כרוני · מתח · חרדה · חקירה עצמית", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא־מילולי, ועיבוד חוויות רגשיות וגופניות בתוך מערכת יחסים טיפולית בטוחה. באמצעות הקשבה לאותות עדינים של הגוף ותרגומם לתנועה מודעת, הגישה מסייעת בשחרור מתחים כבושים, בבניית ביטוי עצמי אותנטי, ובחיזוק הקשר בין גוף, נפש ורגש." },
+      en: { title: "Movement Therapy", for: "Good for: chronic pain · stress · anxiety · self-exploration", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work unfolds through movement, verbal and non-verbal connection, and the ongoing processing of emotional and physical experience within a safe therapeutic relationship. By tuning into subtle bodily signals and translating them into conscious movement, this approach helps release held tension, build authentic self-expression, and strengthen the connection between body, mind, and emotion." },
     },
     {
-      he: { title: "פלדנקרייז", body: "שיטת פלדנקרייז מזמינה את הגוף והמוח ללמוד מחדש – ללא מאמץ, ללא כאב, מתוך סקרנות והקשבה. רצפי תנועה עדינים ומדויקים מעוררים את יכולת המוח ליצור דפוסים חדשים, לשחרר הרגלים מגבילים ולשפר את איכות התנועה. התרגול מקל על כאב ומתח, משפר שיווי משקל, יציבה וגמישות, ומחזק את תחושת החופש והביטחון בגוף. מעבר לתנועה עצמה, פלדנקרייז מעמיקה מודעות עצמית, מווסתת את מערכת העצבים, ופותחת אפשרויות חדשות לחיי יומיום רגועים יותר." },
-      en: { title: "Feldenkrais", body: "The Feldenkrais Method invites body and mind to learn anew — without effort, without pain, through curiosity and listening. Gentle, precise movement sequences awaken the brain's natural ability to form new patterns, releasing limiting habits and improving movement quality. The practice eases pain and tension, improves balance, posture and flexibility, and builds a stronger sense of freedom and stability in the body. Beyond movement itself, Feldenkrais deepens self-awareness, regulates the nervous system, and opens new possibilities for a calmer daily life." },
+      he: { title: "פלדנקרייז", for: "מתאים ל: יציבה · תנועה · כאב גב · הרגלים מגבילים", body: "שיטת פלדנקרייז מזמינה את הגוף והמוח ללמוד מחדש – ללא מאמץ, ללא כאב, מתוך סקרנות והקשבה. רצפי תנועה עדינים ומדויקים מעוררים את יכולת המוח ליצור דפוסים חדשים, לשחרר הרגלים מגבילים ולשפר את איכות התנועה. התרגול מקל על כאב ומתח, משפר שיווי משקל, יציבה וגמישות, ומחזק את תחושת החופש והביטחון בגוף. מעבר לתנועה עצמה, פלדנקרייז מעמיקה מודעות עצמית, מווסתת את מערכת העצבים, ופותחת אפשרויות חדשות לחיי יומיום רגועים יותר." },
+      en: { title: "Feldenkrais", for: "Good for: posture · movement · back pain · limiting habits", body: "The Feldenkrais Method invites body and mind to learn anew — without effort, without pain, through curiosity and listening. Gentle, precise movement sequences awaken the brain's natural ability to form new patterns, releasing limiting habits and improving movement quality. The practice eases pain and tension, improves balance, posture and flexibility, and builds a stronger sense of freedom and stability in the body. Beyond movement itself, Feldenkrais deepens self-awareness, regulates the nervous system, and opens new possibilities for a calmer daily life." },
     },
     {
-      he: { title: "יוגה רגישה", body: "יוגה רגישת־טראומה היא גישה עדינה, מבוססת ידע עדכני על מערכת העצבים, טראומה ורגש. במקום לשאוף לביצוע מדויק של תנוחה, הדגש הוא על הקשבה לגוף, פיתוח תחושת ביטחון פנימית, וזיהוי מה שנכון עבורנו בכל רגע. באמצעות תנועה מודעת, נשימה, בחירה וקצב אישי, התרגול מסייע להפחתת מתח, לוויסות מערכת העצבים ולהעמקת תחושת הנוכחות והחיבור לעצמנו. מתאימה לכל מי שמחפש מרחב בטוח לתרגול – בין אם מתמודד עם עומס וסטרס, ובין אם מתוך רצון לטפח רווחה וחוסן." },
-      en: { title: "Trauma-Sensitive Yoga", body: "Trauma-sensitive yoga is a gentle approach grounded in current understanding of the nervous system, trauma, and emotional regulation. Rather than striving for a perfect pose, the emphasis is on listening to the body, building an inner sense of safety, and identifying what feels right in each moment. Through mindful movement, breath, choice, and personal pace, the practice reduces stress, supports nervous-system regulation, and deepens presence and self-connection. It's suitable for anyone seeking a safe space to practice — whether coping with overload, or simply cultivating well-being." },
+      he: { title: "יוגה רגישה", for: "מתאים ל: ויסות · טראומה · עומס נפשי · חוסן", body: "יוגה רגישת־טראומה היא גישה עדינה, מבוססת ידע עדכני על מערכת העצבים, טראומה ורגש. במקום לשאוף לביצוע מדויק של תנוחה, הדגש הוא על הקשבה לגוף, פיתוח תחושת ביטחון פנימית, וזיהוי מה שנכון עבורנו בכל רגע. באמצעות תנועה מודעת, נשימה, בחירה וקצב אישי, התרגול מסייע להפחתת מתח, לוויסות מערכת העצבים ולהעמקת תחושת הנוכחות והחיבור לעצמנו. מתאימה לכל מי שמחפש מרחב בטוח לתרגול – בין אם מתמודד עם עומס וסטרס, ובין אם מתוך רצון לטפח רווחה וחוסן." },
+      en: { title: "Trauma-Sensitive Yoga", for: "Good for: regulation · trauma · emotional load · resilience", body: "Trauma-sensitive yoga is a gentle approach grounded in current understanding of the nervous system, trauma, and emotional regulation. Rather than striving for a perfect pose, the emphasis is on listening to the body, building an inner sense of safety, and identifying what feels right in each moment. Through mindful movement, breath, choice, and personal pace, the practice reduces stress, supports nervous-system regulation, and deepens presence and self-connection. It's suitable for anyone seeking a safe space to practice — whether coping with overload, or simply cultivating well-being." },
     },
     {
-      he: { title: "תנועה ספונטנית ואינטגרציה", body: "עבודה דרך תנועה חופשית ומונחית, המאפשרת ביטוי אותנטי, עיבוד חוויה ואינטגרציה בין גוף, רגש ותודעה. במקום לעקוב אחר צורות קבועות, התנועה נובעת מהדחפים הפנימיים של האדם, וחושפת בהדרגה דפוסי מתח, רגשות לא מדוברים ומשאבים נשכחים. מרחב חקירה זה תומך בשחרור רגשי, בגילוי עצמי ובתחושת חיוניות מחודשת – ומסייע להתחבר מחדש לחוכמה ולקצב הטבעיים של הגוף, בקצב האישי של כל אחד." },
-      en: { title: "Spontaneous Movement & Integration", body: "Work through free and guided movement that allows authentic expression, processing of experience, and integration between body, emotion, and awareness. Rather than following fixed forms, the movement arises from the individual's inner impulses, gradually revealing tension patterns, unspoken feelings, and forgotten resources. This space of exploration supports emotional release, self-discovery, and a renewed sense of aliveness — helping reconnect with the body's natural wisdom and rhythm, at each person's own pace." },
+      he: { title: "תנועה ספונטנית ואינטגרציה", for: "מתאים ל: ביטוי אותנטי · שחרור רגשי · יצירתיות · חיבור לגוף", body: "עבודה דרך תנועה חופשית ומונחית, המאפשרת ביטוי אותנטי, עיבוד חוויה ואינטגרציה בין גוף, רגש ותודעה. במקום לעקוב אחר צורות קבועות, התנועה נובעת מהדחפים הפנימיים של האדם, וחושפת בהדרגה דפוסי מתח, רגשות לא מדוברים ומשאבים נשכחים. מרחב חקירה זה תומך בשחרור רגשי, בגילוי עצמי ובתחושת חיוניות מחודשת – ומסייע להתחבר מחדש לחוכמה ולקצב הטבעיים של הגוף, בקצב האישי של כל אחד." },
+      en: { title: "Spontaneous Movement & Integration", for: "Good for: authentic expression · emotional release · creativity · body connection", body: "Work through free and guided movement that allows authentic expression, processing of experience, and integration between body, emotion, and awareness. Rather than following fixed forms, the movement arises from the individual's inner impulses, gradually revealing tension patterns, unspoken feelings, and forgotten resources. This space of exploration supports emotional release, self-discovery, and a renewed sense of aliveness — helping reconnect with the body's natural wisdom and rhythm, at each person's own pace." },
     },
   ],
   approachesBasedLabel: { he: "גישות העבודה מבוססות על", en: "Approaches are based on" },
@@ -157,6 +165,15 @@ const t = {
   },
   contactPhoneLabel: { he: "טלפון", en: "Phone" },
   contactEmailLabel: { he: "אימייל", en: "Email" },
+  logisticsTitle: { he: "פרטי מפגש", en: "Session Details" },
+  logisticsFormat: { he: "פגישות פרטניות או קבוצתיות — פנים אל פנים או בזום", en: "Individual or group sessions — in-person or via Zoom" },
+  logisticsLength: { he: "משך טיפולי אופייני: 45–60 דקות", en: "Typical session length: 45–60 minutes" },
+  logisticsBooking: { he: "לתיאום: שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "To book: send a WhatsApp or email, and I'll reply within 24 hours" },
+  trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
+  trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening." },
+  trainingFormat: { he: "פורמט: מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים", en: "Format: individual or group sessions, in-person or online" },
+  trainingAudience: { he: "קהל יעד: מטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש", en: "Audience: licensed therapists and body-mind professionals" },
+  trainingCta: { he: "לתיאום שיחת היכרות", en: "Schedule an introductory conversation" },
   whatsapp: { he: "צרי קשר ב-WhatsApp", en: "Message Me on WhatsApp" },
   whatsappMsg: {
     he: "היי יונית, הגעתי דרך האתר ואשמח לתאם שיחה קצרה כדי לבדוק אם זה מתאים לי.",
@@ -330,32 +347,42 @@ function Index() {
             >
               {t.heroTopics[lang].join("  •  ")}
             </p>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-7 py-3 text-base transition-colors"
+              style={{
+                background: "var(--surface)",
+                color: "var(--ink)",
+                border: "1px solid var(--line)",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.borderColor = "var(--accent)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--surface)";
+                e.currentTarget.style.borderColor = "var(--line)";
+              }}
+            >
+              <WhatsAppIcon size={18} />
+              {tr(t.heroCta)}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Guidance + Rehab cards (moved up, directly below hero) */}
+      {/* Rehab highlight card */}
       <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="max-w-3xl">
             <div
               className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
-              <ul className="space-y-2">
-                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                    <span style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "220px" }}
             >
               <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
@@ -392,14 +419,29 @@ function Index() {
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
           </div>
-          <div className="mt-6">
+          <div className="mt-8">
             <a
               href={cvAsset.url}
               target="_blank"
               rel="noreferrer"
               download
-              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
-              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
+              style={{
+                background: "var(--accent-soft)",
+                color: "var(--ink)",
+                border: "1px solid var(--line)",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.color = "var(--ink)";
+              }}
             >
               {tr(t.cvLink)} <Download size={18} />
             </a>
@@ -471,7 +513,8 @@ function Index() {
                     minHeight: "220px",
                   }}
                 >
-                  <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <h3 className="text-xl mb-2" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="text-sm mb-4" style={{ color: "var(--accent)", fontFamily: "var(--font-heading)", fontWeight: 500 }}>{card.for}</p>
                   <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
@@ -480,18 +523,70 @@ function Index() {
         </div>
       </section>
 
+      {/* Training & Mentorship */}
+      <section id="training" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl mb-4">{tr(t.trainingSectionTitle)}</h2>
+            <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
+            <div className="p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
+              <div className="space-y-4">
+                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingFormat)}</p>
+                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingAudience)}</p>
+              </div>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 transition-colors"
+                style={{
+                  background: "var(--accent-soft)",
+                  color: "var(--ink)",
+                  border: "1px solid var(--line)",
+                  borderRadius: "9999px",
+                  fontFamily: "var(--font-heading)",
+                  fontWeight: 600,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.color = "var(--ink)";
+                }}
+              >
+                <WhatsAppIcon size={18} />
+                {tr(t.trainingCta)}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
+
+          {/* Logistics */}
+          <div className="max-w-3xl mx-auto mb-16 p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
+            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.logisticsTitle)}</h3>
+            <div className="space-y-3">
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsFormat)}</p>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsLength)}</p>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsBooking)}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
               <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
                 {PHONE_DISPLAY}
               </a>
               <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
-              <div className="mt-2">
+              <div className="mt-3">
                 <a
                   href={whatsappHref}
                   target="_blank"
@@ -499,11 +594,9 @@ function Index() {
                   aria-label={tr(t.whatsapp)}
                   title={tr(t.whatsapp)}
                   className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
-                  style={{ color: "#25D366" }}
+                  style={{ color: "var(--accent)" }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.978 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.13 1.588 5.931L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
+                  <WhatsAppIcon size={22} />
                 </a>
               </div>
             </div>
