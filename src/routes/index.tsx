@@ -589,12 +589,10 @@ function Index() {
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
 
           {/* Logistics + contact info */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="space-y-3 mb-12">
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsFormat)}</p>
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsLength)}</p>
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsBooking)}</p>
-            </div>
+          <div className="max-w-5xl mx-auto mb-12">
+            <p className="text-lg leading-relaxed mb-12" style={{ color: "var(--ink)" }}>
+              {tr(t.logisticsFormat)}. {tr(t.logisticsLength)}. {tr(t.logisticsBooking)}.
+            </p>
 
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
               <div className="flex-1">
