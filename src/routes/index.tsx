@@ -253,21 +253,17 @@ function Index() {
           >
             <source src={heroVideo.url} type="video/mp4" />
           </video>
-          {/* Scrim for legibility */}
+          {/* Dark overlay for legibility */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 z-10"
             style={{
-              background:
-                "linear-gradient(to bottom, rgba(10,15,26,0.25) 0%, rgba(10,15,26,0.05) 35%, rgba(10,15,26,0.05) 60%, rgba(10,15,26,0.35) 100%)",
+              background: "rgba(10,15,26,0.55)",
             }}
           />
           <div
-            className="relative z-10 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
+            className="relative z-20 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
             style={{
               color: "#F0EEE9",
-              background: "rgba(10,15,26,0.35)",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(8px)",
               padding: "2rem 1.5rem",
             }}
           >
@@ -279,7 +275,6 @@ function Index() {
                 lineHeight: 1.05,
                 color: "var(--heading)",
                 fontWeight: 700,
-                textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
             {tr(t.heroName)}
@@ -291,7 +286,6 @@ function Index() {
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
                 color: "#F0EEE9",
-                textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
               {tr(t.heroHeadline)}
@@ -303,7 +297,6 @@ function Index() {
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 500,
                 color: "#E2DED6",
-                textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
               {tr(t.heroSub)}
@@ -316,7 +309,6 @@ function Index() {
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {videos.map((v, i) => (
@@ -355,7 +347,6 @@ function Index() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
-            <AccentRule />
             <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
@@ -381,17 +372,15 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
 
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <div className="grid md:grid-cols-2 gap-6">
             {t.approaches.map((c, i) => {
@@ -406,9 +395,8 @@ function Index() {
                     minHeight: "220px",
                   }}
                 >
-                  <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-                  <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{card.body}</p>
+                  <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
             })}
@@ -416,9 +404,8 @@ function Index() {
 
           <div className="h-20" />
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
-          <AccentRule center />
           <div className="h-10" />
-          <ul className="space-y-4 max-w-3xl mx-auto" style={{ fontFamily: "Tinos, Georgia, serif" }}>
+          <ul className="space-y-4 max-w-3xl mx-auto">
             {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
@@ -431,16 +418,15 @@ function Index() {
 
       {/* Guidance */}
       {/* Guidance + Rehab as matching cards */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div
               className="p-8 flex flex-col h-full"
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
-              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
               <ul className="space-y-2">
                 {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -454,9 +440,8 @@ function Index() {
               className="p-8 flex flex-col h-full"
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
-              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
             </div>
           </div>
         </div>
@@ -474,7 +459,6 @@ function Index() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
-            <AccentRule />
             <div className="h-6" />
             <p className="mb-10" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
             {sent ? (
@@ -583,13 +567,6 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
 }
 
 
-function AccentRule({ center }: { center?: boolean }) {
-  return (
-    <div className={center ? "flex justify-center" : ""}>
-      <span className="block w-12 h-[2px]" style={{ background: "var(--accent)" }} />
-    </div>
-  );
-}
 
 function Field({
   name, label, required, as,
