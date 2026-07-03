@@ -571,7 +571,7 @@ function Index() {
                   }}
                 >
                   <h3 className="text-xl mb-2" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="text-sm mb-4" style={{ color: "var(--accent)", fontFamily: "var(--font-heading)", fontWeight: 500 }}>{card.for}</p>
+                  <p className="text-sm mb-4" style={{ color: "var(--accent)", fontFamily: "var(--font-heading)", fontWeight: 500, whiteSpace: "pre-line" }}>{card.for}</p>
                   <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
