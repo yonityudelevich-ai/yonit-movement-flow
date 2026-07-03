@@ -247,7 +247,7 @@ function Index() {
       {/* Top toggles */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4" style={{ color: "var(--ink)" }}>
-          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "var(--heading)" }}>
+          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF", fontWeight: 700 }}>
             {tr(t.heroName)}
           </a>
           <nav className="hidden sm:flex items-center gap-5 text-sm" style={{ fontFamily: "var(--font-heading)" }}>
@@ -257,7 +257,7 @@ function Index() {
                 href={`#${l.id}`}
                 onClick={scrollTo(l.id)}
                 className="transition-colors hover:opacity-80"
-                style={{ color: "var(--ink)" }}
+                style={{ color: "var(--ink)", fontWeight: 600 }}
               >
                 {l.label}
               </a>
