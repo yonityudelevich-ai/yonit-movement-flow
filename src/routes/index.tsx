@@ -418,16 +418,15 @@ function Index() {
 
       {/* Guidance */}
       {/* Guidance + Rehab as matching cards */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
+      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div
               className="p-8 flex flex-col h-full"
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
-              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
               <ul className="space-y-2">
                 {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -441,9 +440,8 @@ function Index() {
               className="p-8 flex flex-col h-full"
               style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
             >
-              <div className="w-10 h-[2px] mb-5" style={{ background: "var(--accent)" }} />
-              <h3 className="text-xl mb-3" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ fontFamily: "Tinos, Georgia, serif", color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
             </div>
           </div>
         </div>
