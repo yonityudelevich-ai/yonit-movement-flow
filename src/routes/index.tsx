@@ -426,20 +426,18 @@ function Index() {
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
               style={{
-                background: "var(--accent-soft)",
+                background: "var(--bg)",
                 color: "var(--ink)",
-                border: "1px solid var(--line)",
-                borderRadius: "9999px",
+                border: "1px solid var(--accent)",
+                borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
-                e.currentTarget.style.color = "var(--accent-ink)";
+                e.currentTarget.style.background = "var(--accent-soft)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.color = "var(--ink)";
+                e.currentTarget.style.background = "var(--bg)";
               }}
             >
               {tr(t.cvLink)} <Download size={18} />
