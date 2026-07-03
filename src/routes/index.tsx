@@ -148,12 +148,14 @@ const t = {
     he: [
       "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
       "מבוגרים המחפשים רווחה, ויסות וחיבור מחודש לגוף",
+      "רקדנים, אנשי תנועה ומקצועות גוף המחפשים להעמיק את הקשר עם הגוף בעבודה ובחיים",
       "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית והדרכה",
       "כל מי שמרגיש שמשהו מבקש להשתנות – ומוכן לעבוד דרך הגוף",
     ],
     en: [
       "Women, children, and adolescents facing pain, trauma, or life transitions",
       "Adults seeking well-being, regulation, and a renewed connection with the body",
+      "Dancers, movement practitioners, and body professionals seeking to deepen their connection with the body in work and life",
       "Therapists and professionals wanting professional deepening and guidance",
       "Anyone who feels something wants to change — and is ready to work through the body",
     ],
@@ -174,7 +176,7 @@ const t = {
   logisticsLength: { he: "משך טיפולי אופייני: 60–75 דקות", en: "Typical session length: 60–75 minutes" },
   logisticsBooking: { he: "שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "Send a WhatsApp or email, and I'll reply within 24 hours" },
   trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
-  trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening." },
+  trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית. הפורמט כולל מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים, ומיועד למטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening. The format includes individual or group sessions, in-person or online, and is intended for licensed therapists and body-mind professionals." },
   trainingFormat: { he: "פורמט: מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים", en: "Format: individual or group sessions, in-person or online" },
   trainingAudience: { he: "קהל יעד: מטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש", en: "Audience: licensed therapists and body-mind professionals" },
   trainingCta: { he: "לתיאום שיחת היכרות", en: "Schedule an introductory conversation" },
@@ -440,47 +442,43 @@ function Index() {
       {/* Audience & approach principles */}
       <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-sm"
-                  style={{
-                    background: "transparent",
-                    color: "var(--ink)",
-                    border: "1px solid var(--accent)",
-                    borderRadius: "9999px",
-                    fontFamily: "var(--font-heading)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Who this is for */}
+            <div
+              className="p-8"
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--line)",
+              }}
+            >
+              <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
+              <ul className="space-y-4">
+                {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
+                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
 
-          <div className="text-center">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-sm"
-                  style={{
-                    background: "transparent",
-                    color: "var(--ink)",
-                    border: "1px solid var(--accent)",
-                    borderRadius: "9999px",
-                    fontFamily: "var(--font-heading)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
+            {/* Approaches principles */}
+            <div
+              className="p-8"
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--line)",
+              }}
+            >
+              <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
+              <ul className="space-y-4">
+                {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
+                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -557,36 +555,30 @@ function Index() {
           <div className="max-w-3xl">
             <h2 className="text-3xl sm:text-4xl mb-4">{tr(t.trainingSectionTitle)}</h2>
             <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
-            <div className="p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
-              <div className="space-y-4">
-                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingFormat)}</p>
-                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingAudience)}</p>
-              </div>
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
-                style={{
-                  background: "var(--accent)",
-                  color: "var(--accent-ink)",
-                  borderRadius: "2px",
-                  fontFamily: "var(--font-heading)",
-                  fontWeight: 600,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent-hover)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--accent)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
-                }}
-              >
-                <WhatsAppIcon size={14} />
-                {tr(t.trainingCta)}
-              </a>
-            </div>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
+              style={{
+                background: "var(--accent)",
+                color: "var(--accent-ink)",
+                borderRadius: "2px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent-hover)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+            >
+              <WhatsAppIcon size={14} />
+              {tr(t.trainingCta)}
+            </a>
           </div>
         </div>
       </section>
