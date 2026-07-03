@@ -81,8 +81,8 @@ const t = {
   },
   howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
   howIntro: {
-    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו.\n\nבהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
-    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now.\n\nBased on that, one therapeutic approach is chosen from several body-based ways of working.",
+    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו. בהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
+    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now. Based on that, one therapeutic approach is chosen from several body-based ways of working.",
   },
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
   approaches: [
@@ -469,7 +469,7 @@ function Index() {
       <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "2rem 0" }}>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
               <div className="flex items-center gap-3 flex-wrap">
