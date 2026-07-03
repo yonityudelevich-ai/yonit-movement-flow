@@ -253,12 +253,11 @@ function Index() {
           >
             <source src={heroVideo.url} type="video/mp4" />
           </video>
-          {/* Scrim for legibility */}
+          {/* Dark overlay for legibility */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 z-10"
             style={{
-              background:
-                "linear-gradient(to bottom, rgba(10,15,26,0.25) 0%, rgba(10,15,26,0.05) 35%, rgba(10,15,26,0.05) 60%, rgba(10,15,26,0.35) 100%)",
+              background: "rgba(10,15,26,0.55)",
             }}
           />
           <div
