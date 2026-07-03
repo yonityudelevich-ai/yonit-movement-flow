@@ -208,6 +208,12 @@ html[dir="rtl"] h4 {
   font-family: var(--font-heading-he);
 }
 
+html[lang="he"],
+html[dir="rtl"] {
+  --font-heading: var(--font-heading-he);
+  --font-typewriter: var(--font-heading-he);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
