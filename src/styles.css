@@ -82,7 +82,7 @@
   /* Pastel on dark-jeans palette. H1 (main heading) stays mustard yellow; everything else uses soft pastels. */
   --bg: #0A0F1A;
   --bg-alt: #0F1522;
-  --surface: #141C2B;
+  --surface: #1A1425;
   --ink: #F2E8D8;
   --ink-soft: #C9C0B3;
   --accent: #9FC9E8;
@@ -90,7 +90,7 @@
   --accent-ink: #0A0F1A;
   --accent-soft: #1E3A5F;
   --quiet: #A8B8C8;
-  --line: #1E3A5F;
+  --line: #2A1F3D;
   --font-heading: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
   --font-typewriter: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
