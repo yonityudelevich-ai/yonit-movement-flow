@@ -172,11 +172,11 @@
    so the pastel values win the cascade. */
 :root,
 .dark {
-  --accent: #B888D8;
-  --accent-hover: #C9A0E8;
-  --accent-ink: #0E0817;
-  --accent-soft: #3B2A55;
-  --heading: #C49BE0;
+  --accent: #5B8DB8;
+  --accent-hover: #7AA3C9;
+  --accent-ink: #0A1628;
+  --accent-soft: #2A3F5A;
+  --heading: #6B9AC4;
   --ink: #F3EFE7;
   --ink-soft: #D6D1C5;
 }
