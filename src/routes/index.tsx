@@ -459,7 +459,6 @@ function Index() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
-            <AccentRule />
             <div className="h-6" />
             <p className="mb-10" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
             {sent ? (
