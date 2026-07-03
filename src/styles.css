@@ -80,17 +80,17 @@
 :root {
   --radius: 0.625rem;
   /* Pastel on dark-jeans palette. H1 (main heading) stays mustard yellow; everything else uses soft pastels. */
-  --bg: #0A0F1A;
-  --bg-alt: #0F1522;
-  --surface: #1A1425;
+  --bg: #0E0817;
+  --bg-alt: #14101F;
+  --surface: #1E1630;
   --ink: #F2E8D8;
   --ink-soft: #C9C0B3;
-  --accent: #9FC9E8;
-  --accent-hover: #B8D8F2;
-  --accent-ink: #0A0F1A;
-  --accent-soft: #1E3A5F;
-  --quiet: #A8B8C8;
-  --line: #2A1F3D;
+  --accent: #B888D8;
+  --accent-hover: #C9A0E8;
+  --accent-ink: #0E0817;
+  --accent-soft: #3B2A55;
+  --quiet: #B0A8C0;
+  --line: #2E2242;
   --font-heading: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
   --font-typewriter: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
@@ -174,7 +174,7 @@
 .dark {
   --accent: #B888D8;
   --accent-hover: #C9A0E8;
-  --accent-ink: #0A0F1A;
+  --accent-ink: #0E0817;
   --accent-soft: #3B2A55;
   --heading: #C49BE0;
   --ink: #F3EFE7;
@@ -185,8 +185,15 @@
 .dark {
   --ink: #FFFFFF;
   --ink-soft: #E8E8E8;
-  --quote-bg: #2A1B3D;
-  --quote-border: #3B2A55;
+  --quote-bg: #2C1B42;
+  --quote-border: #4A2E6E;
+  --font-body-he: "Assistant", system-ui, sans-serif;
+}
+
+html[lang="he"] body,
+html[dir="rtl"] body {
+  font-family: var(--font-body-he);
+  font-weight: 400;
 }
 
 @layer base {
