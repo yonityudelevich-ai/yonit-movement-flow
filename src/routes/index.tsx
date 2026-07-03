@@ -365,6 +365,18 @@ function Index() {
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
+            <div className="mt-6">
+              <a
+                href={cvAsset.url}
+                target="_blank"
+                rel="noreferrer"
+                download
+                className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
+                style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+              >
+                {tr(t.cvLink)} ↓
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -462,52 +474,36 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
-          <div className="h-4" />
-          <p className="mb-8" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
-          <div
-            className="p-8 space-y-5"
-            style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
-          >
-            <div>
-              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
-              <a href={`tel:${PHONE_TEL}`} className="text-lg" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
-                {PHONE_DISPLAY}
-              </a>
+      <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "2rem 0" }}>
+            <div className="flex-1">
+              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
+              <div className="flex items-center gap-3 flex-wrap">
+                <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr" }}>
+                  {PHONE_DISPLAY}
+                </a>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={tr(t.whatsapp)}
+                  title={tr(t.whatsapp)}
+                  className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
+                  style={{ color: "#25D366" }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.978 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.13 1.588 5.931L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </a>
+              </div>
+              <div className="text-xs mt-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
-              <a href={`mailto:${EMAIL}`} className="text-lg break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+            <div className="flex-1">
+              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
+              <a href={`mailto:${EMAIL}`} className="text-xl break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
                 {EMAIL}
-              </a>
-            </div>
-            <p className="text-sm" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</p>
-            <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
-                style={{ background: "#25D366", color: "#fff", borderRadius: "4px", fontWeight: 600 }}
-              >
-                {tr(t.whatsapp)}
-              </a>
-              <a
-                href={cvAsset.url}
-                target="_blank"
-                rel="noreferrer"
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
-                style={{
-                  background: "var(--accent)",
-                  color: "var(--accent-ink)",
-                  borderRadius: "4px",
-                  fontWeight: 600,
-                }}
-              >
-                {tr(t.cvLink)} ↓
               </a>
             </div>
           </div>
