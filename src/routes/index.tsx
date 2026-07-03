@@ -275,7 +275,6 @@ function Index() {
                 lineHeight: 1.05,
                 color: "var(--heading)",
                 fontWeight: 700,
-                textShadow: "0 2px 30px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)",
               }}
             >
             {tr(t.heroName)}
