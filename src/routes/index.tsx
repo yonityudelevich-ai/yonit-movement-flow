@@ -160,7 +160,7 @@ const t = {
   contactPhoneLabel: { he: "טלפון", en: "Phone" },
   contactEmailLabel: { he: "אימייל", en: "Email" },
   logisticsTitle: { he: "פרטי מפגש", en: "Session Details" },
-  logisticsFormat: { he: "פגישות פרטניות או קבוצתיות — פנים אל פנים או בזום", en: "Individual or group sessions — in-person or via Zoom" },
+  logisticsFormat: { he: "פגישות פרטניות או קבוצתיות, פנים אל פנים או בזום", en: "Individual or group sessions, in-person or via Zoom" },
   logisticsLength: { he: "משך טיפולי אופייני: 45–60 דקות", en: "Typical session length: 45–60 minutes" },
   logisticsBooking: { he: "לתיאום: שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "To book: send a WhatsApp or email, and I'll reply within 24 hours" },
   trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
@@ -345,23 +345,24 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 mt-8 px-7 py-3 text-base transition-colors"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2 text-sm transition-colors"
               style={{
-                background: "var(--bg)",
+                background: "var(--accent-soft)",
                 color: "var(--ink)",
-                border: "1px solid var(--accent)",
                 borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--bg)";
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.color = "var(--ink)";
               }}
             >
-              <WhatsAppIcon size={18} />
+              <WhatsAppIcon size={16} />
               {tr(t.heroCta)}
             </a>
           </div>
@@ -424,23 +425,24 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               download
-              className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm transition-colors"
               style={{
-                background: "var(--bg)",
+                background: "var(--accent-soft)",
                 color: "var(--ink)",
-                border: "1px solid var(--accent)",
                 borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--bg)";
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.color = "var(--ink)";
               }}
             >
-              {tr(t.cvLink)} <Download size={18} />
+              {tr(t.cvLink)} <Download size={16} />
             </a>
           </div>
         </div>
@@ -526,23 +528,24 @@ function Index() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-6 py-3 transition-colors"
+                className="inline-flex items-center gap-2 mt-8 px-5 py-2 text-sm transition-colors"
                 style={{
-                  background: "var(--bg)",
+                  background: "var(--accent-soft)",
                   color: "var(--ink)",
-                  border: "1px solid var(--accent)",
                   borderRadius: "6px",
                   fontFamily: "var(--font-heading)",
                   fontWeight: 600,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--bg)";
+                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.color = "var(--ink)";
                 }}
               >
-                <WhatsAppIcon size={18} />
+                <WhatsAppIcon size={16} />
                 {tr(t.trainingCta)}
               </a>
             </div>
@@ -555,42 +558,41 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
 
-          {/* Logistics */}
-          <div className="max-w-3xl mx-auto mb-16 p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.logisticsTitle)}</h3>
-            <div className="space-y-3">
+          {/* Logistics + contact info */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="space-y-3 mb-12">
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsFormat)}</p>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsLength)}</p>
               <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.logisticsBooking)}</p>
             </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
-            <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
-              <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
-                {PHONE_DISPLAY}
-              </a>
-              <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
-              <div className="mt-3">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={tr(t.whatsapp)}
-                  title={tr(t.whatsapp)}
-                  className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
-                  style={{ color: "var(--accent)" }}
-                >
-                  <WhatsAppIcon size={22} />
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
+              <div className="flex-1">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
+                <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                  {PHONE_DISPLAY}
+                </a>
+                <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
+                <div className="mt-3">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={tr(t.whatsapp)}
+                    title={tr(t.whatsapp)}
+                    className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
+                    style={{ color: "var(--accent)" }}
+                  >
+                    <WhatsAppIcon size={22} />
+                  </a>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
+                <a href={`mailto:${EMAIL}`} className="text-xl break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+                  {EMAIL}
                 </a>
               </div>
-            </div>
-            <div className="flex-1">
-              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
-              <a href={`mailto:${EMAIL}`} className="text-xl break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
-                {EMAIL}
-              </a>
             </div>
           </div>
         </div>
