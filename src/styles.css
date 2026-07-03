@@ -200,6 +200,7 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     line-height: 1.7;
+    font-weight: 300;
   }
 
   h1 {
