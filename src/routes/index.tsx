@@ -274,7 +274,7 @@ function Index() {
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "var(--heading)",
-                fontWeight: 700,
+                fontWeight: 400,
               }}
             >
             {tr(t.heroName)}
