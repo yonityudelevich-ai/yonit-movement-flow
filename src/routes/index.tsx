@@ -364,32 +364,19 @@ function Index() {
         </div>
       </section>
 
-      {/* Poem — independent box below About */}
+      {/* Poem — independent below About */}
       <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <div
-            className="p-8 sm:p-12 text-center"
-            style={{
-              background: "var(--surface)",
-              border: "1px solid var(--line)",
-              fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace",
-              color: "var(--ink)",
-              boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
-            }}
-          >
-            {(() => {
-              const poem = isHe ? t.poem.he : t.poem.en;
-              return (
-                <>
-                  <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)" }}>{poem.title}</h3>
-                  <p className="text-base sm:text-lg leading-loose whitespace-pre-line">{poem.body}</p>
-                  <div className="mt-8 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
-                    <p className="text-sm sm:text-base" style={{ color: "var(--heading)" }}>— {poem.author}</p>
-                  </div>
-                </>
-              );
-            })()}
-          </div>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          {(() => {
+            const poem = isHe ? t.poem.he : t.poem.en;
+            return (
+              <>
+                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.title}</h3>
+                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.body}</p>
+                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.author}</p>
+              </>
+            );
+          })()}
         </div>
       </section>
 
