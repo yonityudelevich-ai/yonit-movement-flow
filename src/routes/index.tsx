@@ -309,7 +309,6 @@ function Index() {
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
-          <AccentRule center />
           <div className="h-10" />
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {videos.map((v, i) => (
