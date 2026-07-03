@@ -39,7 +39,7 @@ const t = {
     en: ["Movement Therapy", "Feldenkrais Method", "Trauma-Sensitive Yoga"],
   },
   heroSub: {
-    he: "לעבוד דרך הגוף לפגוש את עצמך ולנוע עם החיים",
+    he: "לעבוד דרך הגוף, לפגוש את עצמך ולנוע עם החיים",
     en: "Working through the body, meeting yourself, and moving with life.",
   },
   heroSmall: {
@@ -143,10 +143,20 @@ const t = {
       "Mentoring for therapists at the beginning of their path and in professional development",
     ],
   },
-  rehabTitle: { he: "ליווי תהליכי שיקום וכאב כרוני", en: "Rehabilitation & Chronic Pain" },
-  rehabBody: {
-    he: "ליווי תהליכי שיקום והתמודדות עם כאב כרוני, תוך עבודה מבוססת גוף המאפשרת חקירה של דפוסים תנועתיים, הפחתת עומס, חיזוק ויסות ושיפור איכות החיים.",
-    en: "Accompaniment of rehabilitation processes and coping with chronic pain, through body-based work that allows exploration of movement patterns, reducing strain, strengthening regulation, and improving quality of life.",
+  whoForTitle: { he: "מי זה מתאים לו?", en: "Who is this for?" },
+  whoForItems: {
+    he: [
+      "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
+      "מבוגרים המחפשים רווחה, ויסות וחיבור מחודש לגוף",
+      "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית והדרכה",
+      "כל מי שמרגיש שמשהו מבקש להשתנות – ומוכן לעבוד דרך הגוף",
+    ],
+    en: [
+      "Women, children, and adolescents facing pain, trauma, or life transitions",
+      "Adults seeking well-being, regulation, and a renewed connection with the body",
+      "Therapists and professionals wanting professional deepening and guidance",
+      "Anyone who feels something wants to change — and is ready to work through the body",
+    ],
   },
   contactTitle: { he: "רוצה לבדוק אם זה מתאים לך?", en: "Want to see if this is right for you?" },
   contactSub: {
@@ -345,36 +355,43 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2 text-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
               style={{
-                background: "var(--accent-soft)",
-                color: "var(--ink)",
+                background: "var(--accent)",
+                color: "var(--accent-ink)",
                 borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.background = "var(--accent-hover)";
                 e.currentTarget.style.color = "var(--accent-ink)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.color = "var(--ink)";
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
               }}
             >
-              <WhatsAppIcon size={16} />
+              <WhatsAppIcon size={14} />
               {tr(t.heroCta)}
             </a>
           </div>
         </div>
       </section>
 
-      {/* Rehab + approaches principles */}
+      {/* Who this is for + approaches principles */}
       <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="max-w-3xl">
-            <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-            <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
+            <ul className="space-y-4 mb-16">
+              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="mt-16 max-w-3xl">
@@ -425,24 +442,24 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               download
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
               style={{
-                background: "var(--accent-soft)",
-                color: "var(--ink)",
+                background: "var(--accent)",
+                color: "var(--accent-ink)",
                 borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.background = "var(--accent-hover)";
                 e.currentTarget.style.color = "var(--accent-ink)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.color = "var(--ink)";
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
               }}
             >
-              {tr(t.cvLink)} <Download size={16} />
+              {tr(t.cvLink)} <Download size={14} />
             </a>
           </div>
         </div>
@@ -528,24 +545,24 @@ function Index() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-5 py-2 text-sm transition-colors"
+                className="inline-flex items-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
                 style={{
-                  background: "var(--accent-soft)",
-                  color: "var(--ink)",
+                  background: "var(--accent)",
+                  color: "var(--accent-ink)",
                   borderRadius: "6px",
                   fontFamily: "var(--font-heading)",
                   fontWeight: 600,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.background = "var(--accent-hover)";
                   e.currentTarget.style.color = "var(--accent-ink)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--accent-soft)";
-                  e.currentTarget.style.color = "var(--ink)";
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
                 }}
               >
-                <WhatsAppIcon size={16} />
+                <WhatsAppIcon size={14} />
                 {tr(t.trainingCta)}
               </a>
             </div>
