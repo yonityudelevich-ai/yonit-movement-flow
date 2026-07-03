@@ -79,18 +79,18 @@
 
 :root {
   --radius: 0.625rem;
-  /* Pastel on dark-jeans palette. H1 (main heading) stays mustard yellow; everything else uses soft pastels. */
-  --bg: #0E0817;
-  --bg-alt: #14101F;
-  --surface: #1E1630;
+  /* Blue-jeans on dark palette. H1 (main heading) stays mustard yellow; everything else uses soft blue jeans tones. */
+  --bg: #0A1628;
+  --bg-alt: #111E33;
+  --surface: #1A2A42;
   --ink: #F2E8D8;
   --ink-soft: #C9C0B3;
-  --accent: #B888D8;
-  --accent-hover: #C9A0E8;
-  --accent-ink: #0E0817;
-  --accent-soft: #3B2A55;
+  --accent: #5B8DB8;
+  --accent-hover: #7AA3C9;
+  --accent-ink: #0A1628;
+  --accent-soft: #2A3F5A;
   --quiet: #B0A8C0;
-  --line: #3B2A55;
+  --line: #2A3F5A;
   --font-heading: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
   --font-typewriter: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
