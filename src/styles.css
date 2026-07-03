@@ -187,13 +187,13 @@
   --ink-soft: #E8E8E8;
   --quote-bg: #2C1B42;
   --quote-border: #4A2E6E;
-  --font-body-he: "Assistant", system-ui, sans-serif;
+  --font-body-he: var(--font-heading);
 }
 
 html[lang="he"] body,
 html[dir="rtl"] body {
   font-family: var(--font-body-he);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 @layer base {
