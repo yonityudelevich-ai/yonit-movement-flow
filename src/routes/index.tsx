@@ -379,34 +379,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Who this is for + approaches principles */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
-            <ul className="space-y-4 mb-16">
-              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-16 max-w-3xl">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
-            <ul className="space-y-4">
-              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
 
       <Quote data={isHe ? quotes[0].he : quotes[0].en} />
 
