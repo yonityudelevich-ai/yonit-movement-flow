@@ -406,7 +406,7 @@ function Index() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
           <div className="h-6" />
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             <div className="md:col-span-2 space-y-4">
               {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
                 <p key={i} style={{ color: "var(--ink)" }}>{p}</p>
