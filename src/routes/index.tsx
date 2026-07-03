@@ -396,7 +396,6 @@ function Index() {
       {/* How */}
       <section className="py-24" style={{ borderTop: "1px solid var(--line)", fontFamily: "Tinos, Georgia, serif" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>{isHe ? "תחילת דרך" : "Beginning"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
