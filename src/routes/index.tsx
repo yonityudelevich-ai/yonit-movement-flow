@@ -39,7 +39,7 @@ const t = {
     en: ["Movement Therapy", "Feldenkrais Method", "Trauma-Sensitive Yoga"],
   },
   heroSub: {
-    he: "לעבוד דרך הגוף לפגוש את עצמך ולנוע עם החיים",
+    he: "לעבוד דרך הגוף, לפגוש את עצמך ולנוע עם החיים",
     en: "Working through the body, meeting yourself, and moving with life.",
   },
   heroSmall: {
