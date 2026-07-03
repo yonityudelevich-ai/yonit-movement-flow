@@ -347,20 +347,18 @@ function Index() {
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 mt-8 px-7 py-3 text-base transition-colors"
               style={{
-                background: "var(--surface)",
+                background: "var(--bg)",
                 color: "var(--ink)",
-                border: "1px solid var(--line)",
-                borderRadius: "9999px",
+                border: "1px solid var(--accent)",
+                borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.borderColor = "var(--accent)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--surface)";
-                e.currentTarget.style.borderColor = "var(--line)";
+                e.currentTarget.style.background = "var(--bg)";
               }}
             >
               <WhatsAppIcon size={18} />
@@ -428,20 +426,18 @@ function Index() {
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
               style={{
-                background: "var(--accent-soft)",
+                background: "var(--bg)",
                 color: "var(--ink)",
-                border: "1px solid var(--line)",
-                borderRadius: "9999px",
+                border: "1px solid var(--accent)",
+                borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
-                e.currentTarget.style.color = "var(--accent-ink)";
+                e.currentTarget.style.background = "var(--accent-soft)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.color = "var(--ink)";
+                e.currentTarget.style.background = "var(--bg)";
               }}
             >
               {tr(t.cvLink)} <Download size={18} />
@@ -532,20 +528,18 @@ function Index() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 mt-8 px-6 py-3 transition-colors"
                 style={{
-                  background: "var(--accent-soft)",
+                  background: "var(--bg)",
                   color: "var(--ink)",
-                  border: "1px solid var(--line)",
-                  borderRadius: "9999px",
+                  border: "1px solid var(--accent)",
+                  borderRadius: "6px",
                   fontFamily: "var(--font-heading)",
                   fontWeight: 600,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
+                  e.currentTarget.style.background = "var(--accent-soft)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--accent-soft)";
-                  e.currentTarget.style.color = "var(--ink)";
+                  e.currentTarget.style.background = "var(--bg)";
                 }}
               >
                 <WhatsAppIcon size={18} />
@@ -657,7 +651,7 @@ function Quote({ data }: { data: { text: string; author: string } }) {
       <div className="max-w-3xl mx-auto px-6 text-center">
         <p
           className="text-xl sm:text-2xl leading-relaxed"
-          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)", fontStyle: "italic" }}
+          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)" }}
         >
           "{data.text}"
         </p>
