@@ -88,7 +88,7 @@ const t = {
     en: "Movement therapy is suitable for every person and every age, and is tailored personally to the needs, abilities, and unique pace of each individual.",
   },
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
-  howSuitableForAll: { he: "מתאים לכל אחת ואחד ובכל גיל", en: "Suitable for everyone, at any age" },
+  howSuitableForAll: { he: "טיפול בתנועה מתאים לכל אדם ובכל גיל", en: "Movement therapy is suitable for every person and every age" },
   approaches: [
     {
       he: { title: "טיפול בתנועה", for: "כאב כרוני · מתח · חרדה · חקירה עצמית", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא־מילולי, ועיבוד חוויות רגשיות וגופניות בתוך מערכת יחסים טיפולית בטוחה. באמצעות הקשבה לאותות עדינים של הגוף ותרגומם לתנועה מודעת, הגישה מסייעת בשחרור מתחים כבושים, בבניית ביטוי עצמי אותנטי, ובחיזוק הקשר בין גוף, נפש ורגש." },
