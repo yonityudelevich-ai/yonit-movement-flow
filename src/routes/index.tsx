@@ -315,7 +315,6 @@ function Index() {
       {/* Videos */}
       <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
-          <SectionLabel>{isHe ? "וידאו" : "Video"}</SectionLabel>
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <AccentRule center />
           <div className="h-10" />
