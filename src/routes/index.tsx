@@ -270,7 +270,7 @@ function Index() {
             <h1
               className="mb-4"
               style={{
-                fontFamily: "var(--font-name)",
+                fontFamily: "var(--font-typewriter)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "var(--heading)",
@@ -362,9 +362,9 @@ function Index() {
             const poem = isHe ? t.poem.he : t.poem.en;
             return (
               <>
-                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.title}</h3>
-                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.body}</p>
-                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "'Special Elite', 'Courier Prime', 'Courier New', monospace" }}>{poem.author}</p>
+                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.title}</h3>
+                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "var(--font-typewriter)" }}>{poem.body}</p>
+                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.author}</p>
               </>
             );
           })()}

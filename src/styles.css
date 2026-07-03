@@ -12,34 +12,6 @@
   font-style: italic;
   font-display: swap;
 }
-@font-face {
-  font-family: "Tinos";
-  src: url("./assets/fonts/Tinos-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Tinos";
-  src: url("./assets/fonts/Tinos-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Tinos";
-  src: url("./assets/fonts/Tinos-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Tinos";
-  src: url("./assets/fonts/Tinos-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
 
 @import "tailwindcss" source(none);
 
@@ -119,9 +91,9 @@
   --accent-soft: #1E3A5F;
   --quiet: #A8B8C8;
   --line: #1E3A5F;
-  --font-heading: "Cascadia Mono", "Tinos", Georgia, serif;
+  --font-heading: "Special Elite", "Courier Prime", "Courier New", monospace;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
-  --font-hebrew: "David Libre", "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  --font-typewriter: "Special Elite", "Courier Prime", "Courier New", monospace;
   --font-name: "Courier Prime", "Courier New", monospace;
   --heading-weight: 500;
   --heading-tracking: 0em;
