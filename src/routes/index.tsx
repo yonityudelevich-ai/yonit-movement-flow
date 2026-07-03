@@ -209,7 +209,6 @@ const videos = [
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
-  const [sent, setSent] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const isHe = lang === "he";
@@ -322,7 +321,7 @@ function Index() {
       </section>
 
       {/* Videos */}
-      <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <div className="h-10" />
@@ -353,7 +352,7 @@ function Index() {
       </section>
 
       {/* About */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
             src={aboutNew.url}
@@ -388,7 +387,7 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <div className="h-10" />
