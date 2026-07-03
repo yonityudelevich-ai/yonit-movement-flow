@@ -419,14 +419,29 @@ function Index() {
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
             ))}
           </div>
-          <div className="mt-6">
+          <div className="mt-8">
             <a
               href={cvAsset.url}
               target="_blank"
               rel="noreferrer"
               download
-              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
-              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
+              style={{
+                background: "var(--accent-soft)",
+                color: "var(--ink)",
+                border: "1px solid var(--line)",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.color = "var(--ink)";
+              }}
             >
               {tr(t.cvLink)} <Download size={18} />
             </a>
