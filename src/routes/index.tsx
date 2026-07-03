@@ -297,7 +297,6 @@ function Index() {
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
                 fontWeight: 500,
                 color: "#E2DED6",
-                textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
               {tr(t.heroSub)}
