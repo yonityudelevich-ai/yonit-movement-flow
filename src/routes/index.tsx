@@ -423,7 +423,7 @@ function Index() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
           <div className="h-6" />
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-2 space-y-4">
               {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
                 <p key={i} style={{ color: "var(--ink)" }}>{p}</p>
@@ -456,14 +456,14 @@ function Index() {
               </div>
             </div>
             <div
-              className="md:col-span-1 overflow-hidden"
-              style={{ border: "1px solid var(--line)", lineHeight: 0 }}
+              className="md:col-span-1 overflow-hidden md:sticky md:top-24"
+              style={{ border: "1px solid var(--line)", lineHeight: 0, aspectRatio: "3 / 4" }}
             >
               <img
                 src={yonitPortrait.url}
                 alt={tr(t.heroName)}
                 className="block w-full h-full object-cover"
-                style={{ transform: "scale(1.05)", transformOrigin: "center top" }}
+                style={{ objectPosition: "center top" }}
                 loading="lazy"
               />
             </div>
