@@ -403,7 +403,6 @@ function Index() {
             {tr(t.howIntro)}
           </p>
 
-          <SectionLabel>{isHe ? "גישות" : "Approaches"}</SectionLabel>
           <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesLabel)}</h2>
           <AccentRule center />
           <div className="h-10" />
