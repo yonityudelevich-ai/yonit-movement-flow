@@ -84,8 +84,8 @@ const t = {
   },
   howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
   howIntro: {
-    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו. בהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
-    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now. Based on that, one therapeutic approach is chosen from several body-based ways of working.",
+    he: "טיפול בתנועה מתאים לכל אדם ובכל גיל, ומותאם באופן אישי לצרכים, ליכולות ולקצב הייחודי של כל מטופל.",
+    en: "Movement therapy is suitable for every person and every age, and is tailored personally to the needs, abilities, and unique pace of each individual.",
   },
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
   howSuitableForAll: { he: "מתאים לכל אחת ואחד ובכל גיל", en: "Suitable for everyone, at any age" },
