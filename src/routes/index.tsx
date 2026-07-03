@@ -438,7 +438,7 @@ function Index() {
       </section>
 
       {/* Audience & approach principles */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
@@ -489,7 +489,7 @@ function Index() {
       <Quote data={isHe ? quotes[1].he : quotes[1].en} />
 
       {/* Videos */}
-      <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="videos" className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <div className="h-10" />
@@ -522,7 +522,7 @@ function Index() {
       <Quote data={isHe ? quotes[2].he : quotes[2].en} />
 
       {/* How */}
-      <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="how" className="py-24" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
@@ -592,7 +592,7 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="contact" className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h2 className="text-3xl sm:text-4xl mb-10 text-center">{tr(t.contactTitle)}</h2>
 
@@ -687,16 +687,16 @@ function Index() {
 
 function Quote({ data }: { data: { text: string; author: string } }) {
   return (
-    <section className="py-16" style={{ background: "var(--quote-bg)", borderTop: "1px solid var(--quote-border)", borderBottom: "1px solid var(--quote-border)" }}>
+    <section className="py-10" style={{ background: "var(--quote-bg)", borderTop: "1px solid var(--quote-border)", borderBottom: "1px solid var(--quote-border)" }}>
       <div className="max-w-3xl mx-auto px-6 text-center">
         <p
-          className="text-xl sm:text-2xl leading-relaxed"
-          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)" }}
+          className="text-base sm:text-lg leading-relaxed"
+          style={{ color: "var(--ink-soft)", fontFamily: "var(--font-typewriter)" }}
         >
           "{data.text}"
         </p>
-        <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
-          — {data.author}
+        <p className="mt-4 text-sm tracking-widest uppercase" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+          {data.author}
         </p>
       </div>
     </section>
