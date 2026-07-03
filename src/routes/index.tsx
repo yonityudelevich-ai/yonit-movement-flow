@@ -438,7 +438,7 @@ function Index() {
       </section>
 
       {/* Audience & approach principles */}
-      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
