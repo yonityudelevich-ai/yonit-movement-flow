@@ -166,13 +166,13 @@ const t = {
   navLinks: {
     he: [
       { id: "about", label: "מי אני" },
-      { id: "how", label: "איך מתחילים" },
+      { id: "how", label: "גישות העבודה" },
       { id: "videos", label: "וידאו" },
       { id: "contact", label: "צרי קשר" },
     ],
     en: [
       { id: "about", label: "About" },
-      { id: "how", label: "How to Begin" },
+      { id: "how", label: "Approaches" },
       { id: "videos", label: "Videos" },
       { id: "contact", label: "Contact" },
     ],
