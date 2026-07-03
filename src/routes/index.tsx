@@ -370,17 +370,24 @@ function Index() {
         </div>
       </section>
 
-      {/* Rehab highlight card */}
+      {/* Rehab + approaches principles */}
       <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "220px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
-            </div>
+            <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+            <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+          </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
+            <ul className="space-y-4">
+              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                  <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -481,15 +488,6 @@ function Index() {
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-6">{tr(t.approachesLabel)}</h2>
-          <ul className="space-y-4 max-w-3xl mx-auto mb-16">
-            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-              </li>
-            ))}
-          </ul>
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
