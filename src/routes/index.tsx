@@ -486,10 +486,7 @@ function Index() {
               <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
               <ul className="space-y-4">
                 {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
-                    <span className="text-base leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
+                  <li key={i} className="text-base leading-relaxed" style={{ color: "var(--ink)" }}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -505,10 +502,7 @@ function Index() {
               <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
               <ul className="space-y-4">
                 {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
-                    <span className="text-base leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
+                  <li key={i} className="text-base leading-relaxed" style={{ color: "var(--ink)" }}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -572,7 +566,7 @@ function Index() {
                   }}
                 >
                   <h3 className="text-xl mb-2" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
-                  <p className="text-sm mb-4" style={{ color: "var(--accent)", fontFamily: "var(--font-heading)", fontWeight: 500 }}>{card.for}</p>
+                  <p className="text-sm mb-4" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", fontWeight: 500 }}>{card.for}</p>
                   <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
