@@ -526,7 +526,7 @@ function Index() {
             {tr(t.howIntro)}
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {t.approaches.map((c, i) => {
               const card = isHe ? c.he : c.en;
               return (
