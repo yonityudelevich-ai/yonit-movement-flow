@@ -567,13 +567,6 @@ function Btn({ children, full, type = "button" }: { children: React.ReactNode; f
 }
 
 
-function AccentRule({ center }: { center?: boolean }) {
-  return (
-    <div className={center ? "flex justify-center" : ""}>
-      <span className="block w-12 h-[2px]" style={{ background: "var(--accent)" }} />
-    </div>
-  );
-}
 
 function Field({
   name, label, required, as,
