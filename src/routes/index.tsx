@@ -81,8 +81,8 @@ const t = {
   },
   howTitle: { he: "איך מתחילים?", en: "How to Begin?" },
   howIntro: {
-    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו.\n\nבהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
-    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now.\n\nBased on that, one therapeutic approach is chosen from several body-based ways of working.",
+    he: "התהליך מתחיל בשיחת היכרות קצרה, שבה אנחנו מתמקדים יחד במה שמביא אותך ובהבנה של הצורך המרכזי שלך כאן ועכשיו. בהתאם לכך נבחרת גישה טיפולית אחת מתוך מספר דרכי עבודה מבוססות גוף.",
+    en: "The process begins with a short introductory conversation, in which we focus together on what brings you here and on understanding your central need right now. Based on that, one therapeutic approach is chosen from several body-based ways of working.",
   },
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
   approaches: [
