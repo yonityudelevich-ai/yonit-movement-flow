@@ -91,9 +91,9 @@
   --accent-soft: #1E3A5F;
   --quiet: #A8B8C8;
   --line: #1E3A5F;
-  --font-heading: "Special Elite", "Courier Prime", "Courier New", monospace;
+  --font-heading: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
   --font-body: "Cascadia Mono", system-ui, sans-serif;
-  --font-typewriter: "Special Elite", "Courier Prime", "Courier New", monospace;
+  --font-typewriter: "Special Elite", "Miriam Libre", "Courier Prime", "Courier New", monospace;
   --font-name: "Courier Prime", "Courier New", monospace;
   --heading-weight: 500;
   --heading-tracking: 0em;
