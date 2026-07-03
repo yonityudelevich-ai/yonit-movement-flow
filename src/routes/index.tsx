@@ -149,17 +149,17 @@ const t = {
   whoForItems: {
     he: [
       "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
-      "מבוגרים המחפשים רווחה, ויסות וחיבור מחודש לגוף",
+      "מבוגרים במצבי דחק המבקשים ויסות וחיבור מחודש לגוף",
+      "מבוגרים המבקשים להעמיק מודעות גופנית ולנוע בחופשיות ובקלות",
       "רקדנים, אנשי תנועה ומקצועות גוף המחפשים להעמיק את הקשר עם הגוף בעבודה ובחיים",
-      "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית והדרכה",
-      "כל מי שמרגיש שמשהו מבקש להשתנות – ומוכן לעבוד דרך הגוף",
+      "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית ובהדרכה",
     ],
     en: [
       "Women, children, and adolescents facing pain, trauma, or life transitions",
-      "Adults seeking well-being, regulation, and a renewed connection with the body",
+      "Adults experiencing stress seeking regulation and a renewed connection with the body",
+      "Adults seeking to deepen body awareness and move with freedom and ease",
       "Dancers, movement practitioners, and body professionals seeking to deepen their connection with the body in work and life",
-      "Therapists and professionals wanting professional deepening and guidance",
-      "Anyone who feels something wants to change — and is ready to work through the body",
+      "Therapists and professionals interested in professional deepening and guidance",
     ],
   },
   contactTitle: { he: "רוצה לבדוק אם זה מתאים לך?", en: "Want to see if this is right for you?" },
