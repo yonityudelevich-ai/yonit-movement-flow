@@ -489,7 +489,7 @@ function Index() {
       <Quote data={isHe ? quotes[1].he : quotes[1].en} />
 
       {/* Videos */}
-      <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="videos" className="py-16" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <div className="h-10" />
