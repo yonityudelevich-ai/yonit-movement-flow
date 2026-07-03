@@ -185,8 +185,8 @@
 .dark {
   --ink: #FFFFFF;
   --ink-soft: #E8E8E8;
-  --quote-bg: #2C1B42;
-  --quote-border: #4A2E6E;
+  --quote-bg: #0A0512;
+  --quote-border: #1E1630;
   --font-body-he: var(--font-heading);
 }
 
