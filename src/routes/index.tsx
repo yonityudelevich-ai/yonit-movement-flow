@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
+import yonitPortrait from "../assets/yonit-about-portrait.jpg.asset.json";
 
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
   return (
