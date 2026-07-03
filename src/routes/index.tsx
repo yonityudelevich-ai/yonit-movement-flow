@@ -528,23 +528,24 @@ function Index() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-6 py-3 transition-colors"
+                className="inline-flex items-center gap-2 mt-8 px-5 py-2 text-sm transition-colors"
                 style={{
-                  background: "var(--bg)",
+                  background: "var(--accent-soft)",
                   color: "var(--ink)",
-                  border: "1px solid var(--accent)",
                   borderRadius: "6px",
                   fontFamily: "var(--font-heading)",
                   fontWeight: 600,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--bg)";
+                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.color = "var(--ink)";
                 }}
               >
-                <WhatsAppIcon size={18} />
+                <WhatsAppIcon size={16} />
                 {tr(t.trainingCta)}
               </a>
             </div>
