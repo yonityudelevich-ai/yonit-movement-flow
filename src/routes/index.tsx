@@ -290,7 +290,7 @@ function Index() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "#FDF6E3",
+                color: "#F0EEE9",
                 textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.8)",
               }}
             >
