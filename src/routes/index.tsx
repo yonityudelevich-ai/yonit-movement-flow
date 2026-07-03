@@ -442,47 +442,43 @@ function Index() {
       {/* Audience & approach principles */}
       <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-sm"
-                  style={{
-                    background: "transparent",
-                    color: "var(--ink)",
-                    border: "1px solid var(--accent)",
-                    borderRadius: "9999px",
-                    fontFamily: "var(--font-heading)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Who this is for */}
+            <div
+              className="p-8"
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--line)",
+              }}
+            >
+              <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.whoForTitle)}</h3>
+              <ul className="space-y-4">
+                {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
+                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
 
-          <div className="text-center">
-            <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-sm"
-                  style={{
-                    background: "transparent",
-                    color: "var(--ink)",
-                    border: "1px solid var(--accent)",
-                    borderRadius: "9999px",
-                    fontFamily: "var(--font-heading)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
+            {/* Approaches principles */}
+            <div
+              className="p-8"
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--line)",
+              }}
+            >
+              <h3 className="text-xl mb-5" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.approachesLabel)}</h3>
+              <ul className="space-y-4">
+                {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
+                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
