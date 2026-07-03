@@ -270,7 +270,7 @@ function Index() {
             <h1
               className="mb-4"
               style={{
-                fontFamily: "var(--font-name)",
+                fontFamily: "var(--font-typewriter)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
                 lineHeight: 1.05,
                 color: "var(--heading)",
