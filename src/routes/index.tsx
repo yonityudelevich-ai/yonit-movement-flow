@@ -237,6 +237,14 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
+  {
+    videoId: "4pHndw-BaSQ",
+    isShort: false,
+    title_en: "",
+    title_he: "",
+    desc_en: "",
+    desc_he: "",
+  },
 ];
 
 const quotes: { he: { text: string; author: string }; en: { text: string; author: string } }[] = [
@@ -319,7 +327,7 @@ function Index() {
           <div
             className="absolute inset-0 z-10"
             style={{
-              background: "rgba(14,8,23,0.55)",
+            background: "rgba(5,13,24,0.55)",
             }}
           />
           <div
