@@ -87,8 +87,8 @@ const t = {
   approachesLabel: { he: "גישות העבודה", en: "Approaches" },
   approaches: [
     {
-      he: { title: "טיפול בתנועה", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא מילולי, ותהליכי עיבוד של חוויה רגשית וגופנית בתוך הקשר הטיפולי." },
-      en: { title: "Movement Therapy", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work is done through movement, verbal and non-verbal connection, and processing of emotional and physical experience within the therapeutic relationship." },
+      he: { title: "טיפול בתנועה", body: "גישה טיפולית מבוססת גוף ותנועה, המוכרת על ידי האיגוד האמריקאי לטיפול בתנועה (ADTA). העבודה נעשית דרך תנועה, קשר מילולי ולא־מילולי, ועיבוד חוויות רגשיות וגופניות בתוך מערכת יחסים טיפולית בטוחה. באמצעות הקשבה לאותות עדינים של הגוף ותרגומם לתנועה מודעת, הגישה מסייעת בשחרור מתחים כבושים, בבניית ביטוי עצמי אותנטי, ובחיזוק הקשר בין גוף, נפש ורגש." },
+      en: { title: "Movement Therapy", body: "A body- and movement-based therapeutic approach recognized by the American Dance Therapy Association (ADTA). The work unfolds through movement, verbal and non-verbal connection, and the ongoing processing of emotional and physical experience within a safe therapeutic relationship. By tuning into subtle bodily signals and translating them into conscious movement, this approach helps release held tension, build authentic self-expression, and strengthen the connection between body, mind, and emotion." },
     },
     {
       he: { title: "פלדנקרייז", body: "שיטת פלדנקרייז מזמינה את הגוף והמוח ללמוד מחדש – ללא מאמץ, ללא כאב ומתוך סקרנות והקשבה. באמצעות רצפי תנועה עדינים ומדויקים מתעוררת יכולתו הטבעית של המוח ליצור דפוסים חדשים, לשחרר הרגלים מגבילים ולשפר את איכות התנועה והתפקוד. התרגול מסייע להפחית כאבים ומתחים, לשפר שיווי משקל, יציבה וגמישות, ולהגביר את תחושת החופש, היציבות והביטחון בגוף. מעבר לתנועה עצמה, פלדנקרייז היא דרך לפתח מודעות עמוקה יותר לעצמנו, לווסת את מערכת העצבים ולגלות אפשרויות חדשות להתנהלות רגועה, יעילה ונעימה יותר בחיי היומיום." },
