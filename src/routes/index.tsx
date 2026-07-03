@@ -564,51 +564,6 @@ function Index() {
   );
 }
 
-function Btn({ children, full, type = "button" }: { children: React.ReactNode; full?: boolean; type?: "button" | "submit" }) {
-  return (
-    <button
-      type={type}
-      className={`px-8 py-3.5 text-sm tracking-wide transition-colors ${full ? "w-full" : ""}`}
-      style={{
-        background: "var(--accent)",
-        color: "var(--accent-ink)",
-        borderRadius: "4px",
-        border: "none",
-        boxShadow: "none",
-        fontWeight: 600,
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
-      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
-    >
-      {children}
-    </button>
-  );
-}
-
-
-
-function Field({
-  name, label, required, as,
-}: { name: string; label: string; required?: boolean; as?: "textarea" }) {
-  const shared = {
-    name,
-    required,
-    placeholder: label,
-    className: "w-full px-4 py-3 text-sm bg-transparent outline-none focus:border-[var(--accent)] transition-colors",
-    style: {
-      border: "1px solid var(--line)",
-      background: "var(--surface)",
-      color: "var(--ink)",
-    } as React.CSSProperties,
-  };
-  return (
-    <label className="block">
-      <span className="sr-only">{label}</span>
-      {as === "textarea" ? <textarea rows={5} {...shared} /> : <input type="text" {...shared} />}
-    </label>
-  );
-}
-
 function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
   return (
     <div
