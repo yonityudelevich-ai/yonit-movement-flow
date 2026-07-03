@@ -555,36 +555,30 @@ function Index() {
           <div className="max-w-3xl">
             <h2 className="text-3xl sm:text-4xl mb-4">{tr(t.trainingSectionTitle)}</h2>
             <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
-            <div className="p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
-              <div className="space-y-4">
-                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingFormat)}</p>
-                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingAudience)}</p>
-              </div>
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
-                style={{
-                  background: "var(--accent)",
-                  color: "var(--accent-ink)",
-                  borderRadius: "2px",
-                  fontFamily: "var(--font-heading)",
-                  fontWeight: 600,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--accent-hover)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--accent)";
-                  e.currentTarget.style.color = "var(--accent-ink)";
-                }}
-              >
-                <WhatsAppIcon size={14} />
-                {tr(t.trainingCta)}
-              </a>
-            </div>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
+              style={{
+                background: "var(--accent)",
+                color: "var(--accent-ink)",
+                borderRadius: "2px",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 600,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--accent-hover)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
+              }}
+            >
+              <WhatsAppIcon size={14} />
+              {tr(t.trainingCta)}
+            </a>
           </div>
         </div>
       </section>
