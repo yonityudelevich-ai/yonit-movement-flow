@@ -177,6 +177,14 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
+  {
+    videoId: "tWOz2OCQIZY",
+    isShort: true,
+    title_en: "Presence",
+    title_he: "נוכחות",
+    desc_en: "",
+    desc_he: "",
+  },
 ];
 
 function Index() {
