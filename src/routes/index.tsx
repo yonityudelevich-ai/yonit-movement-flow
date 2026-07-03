@@ -228,6 +228,22 @@ const videos = [
     desc_en: "",
     desc_he: "",
   },
+  {
+    videoId: "MVE6CVj-xP8",
+    isShort: false,
+    title_en: "",
+    title_he: "",
+    desc_en: "",
+    desc_he: "",
+  },
+  {
+    videoId: "PHPTul7cqIc",
+    isShort: false,
+    title_en: "",
+    title_he: "",
+    desc_en: "",
+    desc_he: "",
+  },
 ];
 
 const quotes: { he: { text: string; author: string }; en: { text: string; author: string } }[] = [
