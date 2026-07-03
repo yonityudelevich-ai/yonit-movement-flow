@@ -347,7 +347,6 @@ function Index() {
           />
           <div>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
-            <AccentRule />
             <div className="h-6" />
             {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
               <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
