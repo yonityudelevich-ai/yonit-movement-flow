@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState, type FormEvent } from "react";
-import heroAsset from "../assets/hero.jpg.asset.json";
+import { useEffect, useState } from "react";
 import heroVideo from "../assets/hero-video.mp4.asset.json";
 import aboutNew from "../assets/yonit-about-portrait.jpg.asset.json";
-import contactPhoto from "../assets/contact-photo.jpg.asset.json";
 import cvAsset from "../assets/cv.doc.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -20,12 +18,18 @@ export const Route = createFileRoute("/")({
 
 type Lang = "he" | "en";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-const WHATSAPP_NUMBER = "972500000000";
+const WHATSAPP_NUMBER = "972508937753";
+const PHONE_DISPLAY = "+972 50-893-7753";
+const PHONE_TEL = "+972508937753";
+const EMAIL = "YonitYudelevich@gmail.com";
 
 const t = {
   nav: { he: "צרי קשר", en: "Contact" },
   heroHeadline: { he: "טיפול בתנועה שיטת פלדנקרייז יוגה רגישה", en: "Movement Therapy, Feldenkrais Method, Trauma-Sensitive Yoga" },
+  heroTopics: {
+    he: ["טיפול בתנועה", "שיטת פלדנקרייז", "יוגה רגישה"],
+    en: ["Movement Therapy", "Feldenkrais Method", "Trauma-Sensitive Yoga"],
+  },
   heroSub: {
     he: "לעבוד דרך הגוף לפגוש את עצמך ולנוע עם החיים",
     en: "Working through the body, meeting yourself, and moving with life.",
@@ -147,17 +151,32 @@ const t = {
     he: "שלחי לי הודעה קצרה ואחזור אלייך לתיאום שיחה.",
     en: "Send me a short message and I'll get back to you to schedule a call.",
   },
-  name: { he: "שם", en: "Name" },
-  contactField: { he: "אימייל או טלפון", en: "Email or Phone" },
-  message: { he: "הודעה", en: "Message" },
-  send: { he: "שליחה", en: "Send" },
-  sent: { he: "תודה, אחזור אלייך בקרוב.", en: "Thank you — I'll be in touch soon." },
+  contactWhatsappNote: {
+    he: "אפשר גם ליצור קשר בוואטסאפ.",
+    en: "You can also reach me on WhatsApp.",
+  },
+  contactPhoneLabel: { he: "טלפון", en: "Phone" },
+  contactEmailLabel: { he: "אימייל", en: "Email" },
   whatsapp: { he: "צרי קשר ב-WhatsApp", en: "Message Me on WhatsApp" },
   whatsappMsg: {
     he: "היי יונית, הגעתי דרך האתר ואשמח לתאם שיחה קצרה כדי לבדוק אם זה מתאים לי.",
     en: "Hi Yonit, I came through your website and I'd love to schedule a short call to see if this is a good fit for me.",
   },
   cvLink: { he: "קורות חיים", en: "Curriculum Vitae" },
+  navLinks: {
+    he: [
+      { id: "about", label: "מי אני" },
+      { id: "how", label: "איך מתחילים" },
+      { id: "videos", label: "וידאו" },
+      { id: "contact", label: "צרי קשר" },
+    ],
+    en: [
+      { id: "about", label: "About" },
+      { id: "how", label: "How to Begin" },
+      { id: "videos", label: "Videos" },
+      { id: "contact", label: "Contact" },
+    ],
+  },
 };
 
 const videos = [
@@ -189,7 +208,6 @@ const videos = [
 
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
-  const [sent, setSent] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const isHe = lang === "he";
@@ -207,42 +225,38 @@ function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    try {
-      await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-    } catch {
-      // ignore network errors silently for now
-    }
-    setSent(true);
-    form.reset();
-  };
-
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tr(t.whatsappMsg))}`;
 
   return (
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
       {/* Top toggles */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-3" style={{ color: "var(--ink)" }}>
-          <div className="text-sm tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
-            Yonit Yudelevich
-          </div>
-          <div className="flex items-center gap-2">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4" style={{ color: "var(--ink)" }}>
+          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "var(--heading)" }}>
+            {tr(t.heroName)}
+          </a>
+          <nav className="hidden sm:flex items-center gap-5 text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+            {t.navLinks[lang].map((l) => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                onClick={scrollTo(l.id)}
+                className="transition-colors hover:opacity-80"
+                style={{ color: "var(--ink)" }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2 shrink-0">
             <LangSwitcher lang={lang} setLang={setLang} />
           </div>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="relative w-full pt-14">
-        <div className="relative w-full overflow-hidden" style={{ minHeight: "50vh", aspectRatio: "16 / 9" }}>
+      <section id="top" className="relative w-full pt-14">
+        <div className="relative w-full overflow-hidden flex items-center justify-center" style={{ minHeight: "88vh" }}>
           <video
             autoPlay
             loop
@@ -261,14 +275,14 @@ function Index() {
             }}
           />
           <div
-            className="relative z-20 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
+            className="relative z-20 max-w-4xl mx-auto px-6 text-center"
             style={{
-              color: "#F0EEE9",
+              color: "var(--ink)",
               padding: "2rem 1.5rem",
             }}
           >
             <h1
-              className="mb-4"
+              className="mb-6"
               style={{
                 fontFamily: "var(--font-typewriter)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
@@ -280,33 +294,33 @@ function Index() {
             {tr(t.heroName)}
             </h1>
             <h2
-              className="tracking-[0.08em]"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "#F0EEE9",
-              }}
-            >
-              {tr(t.heroHeadline)}
-            </h2>
-            <h2
-              className="mt-4"
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
-                fontWeight: 500,
-                color: "#E2DED6",
+                color: "var(--ink)",
+                lineHeight: 1.25,
               }}
             >
               {tr(t.heroSub)}
             </h2>
+            <p
+              className="mt-5 tracking-[0.08em]"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(1rem, 2.2vw, 1.35rem)",
+                fontWeight: 400,
+                color: "var(--ink-soft)",
+              }}
+            >
+              {t.heroTopics[lang].join("  •  ")}
+            </p>
           </div>
         </div>
       </section>
 
       {/* Videos */}
-      <section className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.videosTitle)}</h2>
           <div className="h-10" />
@@ -337,7 +351,7 @@ function Index() {
       </section>
 
       {/* About */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <img
             src={aboutNew.url}
@@ -372,7 +386,7 @@ function Index() {
       </section>
 
       {/* How */}
-      <section className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.howTitle)}</h2>
           <div className="h-10" />
@@ -449,54 +463,58 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src={contactPhoto.url}
-            alt="Yonit Yudelevich"
-            className="w-full object-cover"
-            style={{ filter: "saturate(1.35) contrast(1.05)" }}
-            loading="lazy"
-          />
-          <div>
-            <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
-            <div className="h-6" />
-            <p className="mb-10" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
-            {sent ? (
-              <div
-                className="p-8 text-center"
-                style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
+          <div className="h-4" />
+          <p className="mb-8" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
+          <div
+            className="p-8 space-y-5"
+            style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
+          >
+            <div>
+              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
+              <a href={`tel:${PHONE_TEL}`} className="text-lg" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                {PHONE_DISPLAY}
+              </a>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
+              <a href={`mailto:${EMAIL}`} className="text-lg break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+                {EMAIL}
+              </a>
+            </div>
+            <p className="text-sm" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</p>
+            <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
+                style={{ background: "#25D366", color: "#fff", borderRadius: "4px", fontWeight: 600 }}
               >
-                {tr(t.sent)}
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} className="space-y-4">
-                <Field name="name" label={tr(t.name)} required />
-                <Field name="contact" label={tr(t.contactField)} required />
-                <Field name="message" label={tr(t.message)} as="textarea" required />
-                <div className="pt-2">
-                  <Btn type="submit" full>{tr(t.send)}</Btn>
-                </div>
-              </form>
-            )}
+                {tr(t.whatsapp)}
+              </a>
+              <a
+                href={cvAsset.url}
+                target="_blank"
+                rel="noreferrer"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
+                style={{
+                  background: "var(--accent)",
+                  color: "var(--accent-ink)",
+                  borderRadius: "4px",
+                  fontWeight: 600,
+                }}
+              >
+                {tr(t.cvLink)} ↓
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="py-10 text-center" style={{ borderTop: "1px solid var(--line)" }}>
-        <a
-          href={cvAsset.url}
-          target="_blank"
-          rel="noreferrer"
-          download
-          className="inline-block mb-4 underline underline-offset-4 tracking-wider"
-          style={{
-            fontFamily: "'Courier Prime', 'Courier New', monospace",
-            color: "var(--heading)",
-            fontSize: "1rem",
-          }}
-        >
-          {tr(t.cvLink)} ↓
-        </a>
         <div className="text-xs" style={{ color: "var(--ink-soft)" }}>
           © {new Date().getFullYear()} Yonit Yudelevich
         </div>
@@ -542,51 +560,6 @@ function Index() {
         </div>
       )}
     </div>
-  );
-}
-
-function Btn({ children, full, type = "button" }: { children: React.ReactNode; full?: boolean; type?: "button" | "submit" }) {
-  return (
-    <button
-      type={type}
-      className={`px-8 py-3.5 text-sm tracking-wide transition-colors ${full ? "w-full" : ""}`}
-      style={{
-        background: "var(--accent)",
-        color: "var(--accent-ink)",
-        borderRadius: "4px",
-        border: "none",
-        boxShadow: "none",
-        fontWeight: 600,
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
-      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
-    >
-      {children}
-    </button>
-  );
-}
-
-
-
-function Field({
-  name, label, required, as,
-}: { name: string; label: string; required?: boolean; as?: "textarea" }) {
-  const shared = {
-    name,
-    required,
-    placeholder: label,
-    className: "w-full px-4 py-3 text-sm bg-transparent outline-none focus:border-[var(--accent)] transition-colors",
-    style: {
-      border: "1px solid var(--line)",
-      background: "var(--surface)",
-      color: "var(--ink)",
-    } as React.CSSProperties,
-  };
-  return (
-    <label className="block">
-      <span className="sr-only">{label}</span>
-      {as === "textarea" ? <textarea rows={5} {...shared} /> : <input type="text" {...shared} />}
-    </label>
   );
 }
 
