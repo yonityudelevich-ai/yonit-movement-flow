@@ -487,10 +487,11 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
-              <div className="flex items-center gap-3 flex-wrap">
-                <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr" }}>
-                  {PHONE_DISPLAY}
-                </a>
+              <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                {PHONE_DISPLAY}
+              </a>
+              <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
+              <div className="mt-2">
                 <a
                   href={whatsappHref}
                   target="_blank"
@@ -505,7 +506,6 @@ function Index() {
                   </svg>
                 </a>
               </div>
-              <div className="text-xs mt-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
             </div>
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
