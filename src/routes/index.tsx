@@ -522,7 +522,7 @@ function Index() {
       <Quote data={isHe ? quotes[2].he : quotes[2].en} />
 
       {/* How */}
-      <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
+      <section id="how" className="py-24" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
