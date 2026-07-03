@@ -152,8 +152,8 @@ const t = {
     en: "Send me a short message and I'll get back to you to schedule a call.",
   },
   contactWhatsappNote: {
-    he: "אפשר גם ליצור קשר בוואטסאפ.",
-    en: "You can also reach me on WhatsApp.",
+    he: "אפשר גם ליצור קשר בוואטסאפ",
+    en: "You can also reach me on WhatsApp",
   },
   contactPhoneLabel: { he: "טלפון", en: "Phone" },
   contactEmailLabel: { he: "אימייל", en: "Email" },
@@ -206,6 +206,21 @@ const videos = [
   },
 ];
 
+const quotes: { he: { text: string; author: string }; en: { text: string; author: string } }[] = [
+  {
+    he: { text: "יונית היא מטפלת יוצאת דופן. העבודה איתה שינתה את הקשר שלי עם הגוף שלי.", author: "שם הממליץ/ה" },
+    en: { text: "Yonit is an exceptional therapist. Working with her transformed my relationship with my body.", author: "Client name" },
+  },
+  {
+    he: { text: "המרחב שיונית יוצרת הוא בטוח, עדין ומדויק. מומלץ בחום.", author: "שם הממליץ/ה" },
+    en: { text: "The space Yonit creates is safe, gentle and precise. Highly recommended.", author: "Client name" },
+  },
+  {
+    he: { text: "נוכחות רגישה, ידע עמוק, ולב פתוח — יונית נותנת יותר ממה שאפשר לתאר במילים.", author: "שם הממליץ/ה" },
+    en: { text: "Sensitive presence, deep knowledge, and an open heart — Yonit gives more than words can describe.", author: "Client name" },
+  },
+];
+
 function Index() {
   const [lang, setLang] = useState<Lang>("he");
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -232,7 +247,7 @@ function Index() {
       {/* Top toggles */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4" style={{ color: "var(--ink)" }}>
-          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "var(--heading)" }}>
+          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF", fontWeight: 700 }}>
             {tr(t.heroName)}
           </a>
           <nav className="hidden sm:flex items-center gap-5 text-sm" style={{ fontFamily: "var(--font-heading)" }}>
@@ -242,7 +257,7 @@ function Index() {
                 href={`#${l.id}`}
                 onClick={scrollTo(l.id)}
                 className="transition-colors hover:opacity-80"
-                style={{ color: "var(--ink)" }}
+                style={{ color: "var(--ink)", fontWeight: 600 }}
               >
                 {l.label}
               </a>
@@ -319,6 +334,81 @@ function Index() {
         </div>
       </section>
 
+      {/* Guidance + Rehab cards (moved up, directly below hero) */}
+      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
+              <ul className="space-y-2">
+                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                    <span style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Quote data={isHe ? quotes[0].he : quotes[0].en} />
+
+      {/* Poem */}
+      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          {(() => {
+            const poem = isHe ? t.poem.he : t.poem.en;
+            return (
+              <>
+                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.title}</h3>
+                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "var(--font-typewriter)" }}>{poem.body}</p>
+                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.author}</p>
+              </>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
+          <div className="h-6" />
+          <div className="w-full">
+            {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
+              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
+            ))}
+          </div>
+          <div className="mt-6">
+            <a
+              href={cvAsset.url}
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
+              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+            >
+              {tr(t.cvLink)} <Download size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Quote data={isHe ? quotes[1].he : quotes[1].en} />
+
       {/* Videos */}
       <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
@@ -350,52 +440,20 @@ function Index() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
-          <div className="h-6" />
-          <div className="w-full">
-            {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
-            ))}
-          </div>
-          <div className="mt-6">
-            <a
-              href={cvAsset.url}
-              target="_blank"
-              rel="noreferrer"
-              download
-              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
-              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
-            >
-              {tr(t.cvLink)} <Download size={18} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Poem — independent below About */}
-      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          {(() => {
-            const poem = isHe ? t.poem.he : t.poem.en;
-            return (
-              <>
-                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.title}</h3>
-                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "var(--font-typewriter)" }}>{poem.body}</p>
-                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.author}</p>
-              </>
-            );
-          })()}
-        </div>
-      </section>
+      <Quote data={isHe ? quotes[2].he : quotes[2].en} />
 
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.approachesLabel)}</h2>
-          <div className="h-10" />
+          <h2 className="text-3xl sm:text-4xl text-center mb-6">{tr(t.approachesLabel)}</h2>
+          <ul className="space-y-4 max-w-3xl mx-auto mb-16">
+            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
+              </li>
+            ))}
+          </ul>
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
@@ -419,49 +477,6 @@ function Index() {
               );
             })}
           </div>
-
-          <div className="h-20" />
-          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
-          <div className="h-10" />
-          <ul className="space-y-4 max-w-3xl mx-auto">
-            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Guidance */}
-      {/* Guidance + Rehab as matching cards */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
-              <ul className="space-y-2">
-                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                    <span style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -472,10 +487,11 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
-              <div className="flex items-center gap-3 flex-wrap">
-                <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr" }}>
-                  {PHONE_DISPLAY}
-                </a>
+              <a href={`tel:${PHONE_TEL}`} className="text-xl" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                {PHONE_DISPLAY}
+              </a>
+              <div className="text-xs mt-3" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
+              <div className="mt-2">
                 <a
                   href={whatsappHref}
                   target="_blank"
@@ -490,7 +506,6 @@ function Index() {
                   </svg>
                 </a>
               </div>
-              <div className="text-xs mt-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</div>
             </div>
             <div className="flex-1">
               <div className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
@@ -548,6 +563,24 @@ function Index() {
         </div>
       )}
     </div>
+  );
+}
+
+function Quote({ data }: { data: { text: string; author: string } }) {
+  return (
+    <section className="py-16" style={{ background: "var(--quote-bg)", borderTop: "1px solid var(--quote-border)", borderBottom: "1px solid var(--quote-border)" }}>
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <p
+          className="text-xl sm:text-2xl leading-relaxed"
+          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)", fontStyle: "italic" }}
+        >
+          "{data.text}"
+        </p>
+        <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+          — {data.author}
+        </p>
+      </div>
+    </section>
   );
 }
 

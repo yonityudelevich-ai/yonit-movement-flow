@@ -181,6 +181,14 @@
   --ink-soft: #D6D1C5;
 }
 
+:root,
+.dark {
+  --ink: #FFFFFF;
+  --ink-soft: #E8E8E8;
+  --quote-bg: #2A1B3D;
+  --quote-border: #3B2A55;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -192,6 +200,7 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     line-height: 1.7;
+    font-weight: 300;
   }
 
   h1 {
