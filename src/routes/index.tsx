@@ -143,7 +143,7 @@ const t = {
       "Mentoring for therapists at the beginning of their path and in professional development",
     ],
   },
-  whoForTitle: { he: "מי זה מתאים לו?", en: "Who is this for?" },
+  whoForTitle: { he: "למי זה מתאים?", en: "Who is this for?" },
   whoForItems: {
     he: [
       "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
