@@ -657,7 +657,7 @@ function Quote({ data }: { data: { text: string; author: string } }) {
       <div className="max-w-3xl mx-auto px-6 text-center">
         <p
           className="text-xl sm:text-2xl leading-relaxed"
-          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)", fontStyle: "italic" }}
+          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)" }}
         >
           "{data.text}"
         </p>
