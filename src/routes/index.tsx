@@ -347,20 +347,18 @@ function Index() {
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 mt-8 px-7 py-3 text-base transition-colors"
               style={{
-                background: "var(--surface)",
+                background: "var(--bg)",
                 color: "var(--ink)",
-                border: "1px solid var(--line)",
-                borderRadius: "9999px",
+                border: "1px solid var(--accent)",
+                borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "var(--accent-soft)";
-                e.currentTarget.style.borderColor = "var(--accent)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--surface)";
-                e.currentTarget.style.borderColor = "var(--line)";
+                e.currentTarget.style.background = "var(--bg)";
               }}
             >
               <WhatsAppIcon size={18} />
