@@ -441,8 +441,8 @@ function Index() {
 
       {/* Audience & approach principles */}
       <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Who this is for */}
             <div
               className="p-8"
@@ -455,8 +455,8 @@ function Index() {
               <ul className="space-y-4">
                 {(isHe ? t.whoForItems.he : t.whoForItems.en).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
-                    <span className="leading-relaxed" style={{ color: "var(--ink)" }}>{item}</span>
+                    <span className="mt-1 text-sm flex-shrink-0" style={{ color: "var(--accent)" }}>✦</span>
+                    <span className="text-sm whitespace-nowrap" style={{ color: "var(--ink)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
