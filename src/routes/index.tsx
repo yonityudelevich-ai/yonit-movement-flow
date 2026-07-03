@@ -354,7 +354,6 @@ function Index() {
             loading="lazy"
           />
           <div>
-            <SectionLabel>{isHe ? "היכרות" : "Introduction"}</SectionLabel>
             <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
             <AccentRule />
             <div className="h-6" />
