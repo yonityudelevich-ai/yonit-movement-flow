@@ -334,6 +334,81 @@ function Index() {
         </div>
       </section>
 
+      {/* Guidance + Rehab cards (moved up, directly below hero) */}
+      <section className="py-20" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
+              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
+              <ul className="space-y-2">
+                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                    <span style={{ color: "var(--ink)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
+            >
+              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
+              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Quote data={isHe ? quotes[0].he : quotes[0].en} />
+
+      {/* Poem */}
+      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          {(() => {
+            const poem = isHe ? t.poem.he : t.poem.en;
+            return (
+              <>
+                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.title}</h3>
+                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "var(--font-typewriter)" }}>{poem.body}</p>
+                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.author}</p>
+              </>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
+          <div className="h-6" />
+          <div className="w-full">
+            {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
+              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
+            ))}
+          </div>
+          <div className="mt-6">
+            <a
+              href={cvAsset.url}
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
+              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
+            >
+              {tr(t.cvLink)} <Download size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Quote data={isHe ? quotes[1].he : quotes[1].en} />
+
       {/* Videos */}
       <section id="videos" className="py-16" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-4xl mx-auto px-6">
@@ -365,52 +440,20 @@ function Index() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
-          <div className="h-6" />
-          <div className="w-full">
-            {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
-            ))}
-          </div>
-          <div className="mt-6">
-            <a
-              href={cvAsset.url}
-              target="_blank"
-              rel="noreferrer"
-              download
-              className="inline-flex items-center gap-2 underline underline-offset-4 tracking-wider"
-              style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}
-            >
-              {tr(t.cvLink)} <Download size={18} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Poem — independent below About */}
-      <section className="py-20" style={{ background: "var(--bg)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          {(() => {
-            const poem = isHe ? t.poem.he : t.poem.en;
-            return (
-              <>
-                <h3 className="text-xl sm:text-2xl mb-6" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.title}</h3>
-                <p className="text-base sm:text-lg leading-loose whitespace-pre-line" style={{ fontFamily: "var(--font-typewriter)" }}>{poem.body}</p>
-                <p className="mt-8 text-sm sm:text-base" style={{ color: "var(--heading)", fontFamily: "var(--font-typewriter)" }}>{poem.author}</p>
-              </>
-            );
-          })()}
-        </div>
-      </section>
+      <Quote data={isHe ? quotes[2].he : quotes[2].en} />
 
       {/* How */}
       <section id="how" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl text-center mb-3">{tr(t.approachesLabel)}</h2>
-          <div className="h-10" />
+          <h2 className="text-3xl sm:text-4xl text-center mb-6">{tr(t.approachesLabel)}</h2>
+          <ul className="space-y-4 max-w-3xl mx-auto mb-16">
+            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
+              </li>
+            ))}
+          </ul>
           <p className="text-center mb-16 max-w-3xl mx-auto text-lg leading-relaxed" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
             {tr(t.howIntro)}
           </p>
@@ -433,49 +476,6 @@ function Index() {
                 </div>
               );
             })}
-          </div>
-
-          <div className="h-20" />
-          <h2 className="text-2xl sm:text-3xl text-center mb-3">{tr(t.approachesBasedLabel)}</h2>
-          <div className="h-10" />
-          <ul className="space-y-4 max-w-3xl mx-auto">
-            {(isHe ? t.approachesBased.he : t.approachesBased.en).map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-2 w-2 h-2 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                <span className="text-lg" style={{ color: "var(--ink)" }}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Guidance */}
-      {/* Guidance + Rehab as matching cards */}
-      <section className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.guidanceTitle)}</h3>
-              <p className="mb-4 leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.guidanceIntro)}</p>
-              <ul className="space-y-2">
-                {(isHe ? t.guidance.he : t.guidance.en).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
-                    <span style={{ color: "var(--ink)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{ background: "var(--surface)", border: "1px solid var(--line)", minHeight: "260px" }}
-            >
-              <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{tr(t.rehabTitle)}</h3>
-              <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.rehabBody)}</p>
-            </div>
           </div>
         </div>
       </section>
