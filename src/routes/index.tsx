@@ -465,54 +465,58 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="py-24" style={{ borderTop: "1px solid var(--line)" }}>
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src={contactPhoto.url}
-            alt="Yonit Yudelevich"
-            className="w-full object-cover"
-            style={{ filter: "saturate(1.35) contrast(1.05)" }}
-            loading="lazy"
-          />
-          <div>
-            <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
-            <div className="h-6" />
-            <p className="mb-10" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
-            {sent ? (
-              <div
-                className="p-8 text-center"
-                style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.contactTitle)}</h2>
+          <div className="h-4" />
+          <p className="mb-8" style={{ color: "var(--ink)" }}>{tr(t.contactSub)}</p>
+          <div
+            className="p-8 space-y-5"
+            style={{ background: "var(--surface)", border: "1px solid var(--line)" }}
+          >
+            <div>
+              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactPhoneLabel)}</div>
+              <a href={`tel:${PHONE_TEL}`} className="text-lg" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)", direction: "ltr", display: "inline-block" }}>
+                {PHONE_DISPLAY}
+              </a>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--ink-soft)" }}>{tr(t.contactEmailLabel)}</div>
+              <a href={`mailto:${EMAIL}`} className="text-lg break-all" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+                {EMAIL}
+              </a>
+            </div>
+            <p className="text-sm" style={{ color: "var(--ink-soft)" }}>{tr(t.contactWhatsappNote)}</p>
+            <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
+                style={{ background: "#25D366", color: "#fff", borderRadius: "4px", fontWeight: 600 }}
               >
-                {tr(t.sent)}
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} className="space-y-4">
-                <Field name="name" label={tr(t.name)} required />
-                <Field name="contact" label={tr(t.contactField)} required />
-                <Field name="message" label={tr(t.message)} as="textarea" required />
-                <div className="pt-2">
-                  <Btn type="submit" full>{tr(t.send)}</Btn>
-                </div>
-              </form>
-            )}
+                {tr(t.whatsapp)}
+              </a>
+              <a
+                href={cvAsset.url}
+                target="_blank"
+                rel="noreferrer"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wide transition-colors"
+                style={{
+                  background: "var(--accent)",
+                  color: "var(--accent-ink)",
+                  borderRadius: "4px",
+                  fontWeight: 600,
+                }}
+              >
+                {tr(t.cvLink)} ↓
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="py-10 text-center" style={{ borderTop: "1px solid var(--line)" }}>
-        <a
-          href={cvAsset.url}
-          target="_blank"
-          rel="noreferrer"
-          download
-          className="inline-block mb-4 underline underline-offset-4 tracking-wider"
-          style={{
-            fontFamily: "'Courier Prime', 'Courier New', monospace",
-            color: "var(--heading)",
-            fontSize: "1rem",
-          }}
-        >
-          {tr(t.cvLink)} ↓
-        </a>
         <div className="text-xs" style={{ color: "var(--ink-soft)" }}>
           © {new Date().getFullYear()} Yonit Yudelevich
         </div>
