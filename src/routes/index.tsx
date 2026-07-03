@@ -454,12 +454,15 @@ function Index() {
                 </a>
               </div>
             </div>
-            <div className="md:col-span-1">
+            <div
+              className="md:col-span-1 overflow-hidden"
+              style={{ border: "1px solid var(--line)", lineHeight: 0 }}
+            >
               <img
                 src={yonitPortrait.url}
                 alt={tr(t.heroName)}
-                className="w-full h-full object-cover"
-                style={{ border: "1px solid var(--line)" }}
+                className="block w-full h-full object-cover"
+                style={{ transform: "scale(1.05)", transformOrigin: "center top" }}
                 loading="lazy"
               />
             </div>
