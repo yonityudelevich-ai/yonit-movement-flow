@@ -233,19 +233,32 @@ function Index() {
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
       {/* Top toggles */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-3" style={{ color: "var(--ink)" }}>
-          <div className="text-sm tracking-wide" style={{ fontFamily: "var(--font-heading)" }}>
-            Yonit Yudelevich
-          </div>
-          <div className="flex items-center gap-2">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4" style={{ color: "var(--ink)" }}>
+          <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "var(--heading)" }}>
+            {tr(t.heroName)}
+          </a>
+          <nav className="hidden sm:flex items-center gap-5 text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+            {t.navLinks[lang].map((l) => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                onClick={scrollTo(l.id)}
+                className="transition-colors hover:opacity-80"
+                style={{ color: "var(--ink)" }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2 shrink-0">
             <LangSwitcher lang={lang} setLang={setLang} />
           </div>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="relative w-full pt-14">
-        <div className="relative w-full overflow-hidden" style={{ minHeight: "50vh", aspectRatio: "16 / 9" }}>
+      <section id="top" className="relative w-full pt-14">
+        <div className="relative w-full overflow-hidden flex items-center justify-center" style={{ minHeight: "88vh" }}>
           <video
             autoPlay
             loop
@@ -264,14 +277,14 @@ function Index() {
             }}
           />
           <div
-            className="relative z-20 max-w-4xl mx-auto px-6 pt-16 sm:pt-24 text-center"
+            className="relative z-20 max-w-4xl mx-auto px-6 text-center"
             style={{
-              color: "#F0EEE9",
+              color: "var(--ink)",
               padding: "2rem 1.5rem",
             }}
           >
             <h1
-              className="mb-4"
+              className="mb-6"
               style={{
                 fontFamily: "var(--font-typewriter)",
                 fontSize: "clamp(1.75rem, 5vw, 3rem)",
@@ -283,27 +296,27 @@ function Index() {
             {tr(t.heroName)}
             </h1>
             <h2
-              className="tracking-[0.08em]"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
                 fontWeight: 500,
-                color: "#F0EEE9",
-              }}
-            >
-              {tr(t.heroHeadline)}
-            </h2>
-            <h2
-              className="mt-4"
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
-                fontWeight: 500,
-                color: "#E2DED6",
+                color: "var(--ink)",
+                lineHeight: 1.25,
               }}
             >
               {tr(t.heroSub)}
             </h2>
+            <p
+              className="mt-5 tracking-[0.08em]"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(1rem, 2.2vw, 1.35rem)",
+                fontWeight: 400,
+                color: "var(--ink-soft)",
+              }}
+            >
+              {t.heroTopics[lang].join("  •  ")}
+            </p>
           </div>
         </div>
       </section>
