@@ -269,7 +269,7 @@ function Index() {
   return (
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
       {/* Top toggles */}
-      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg) 78%, transparent)" }}>
+      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-sm" style={{ background: "color-mix(in oklab, var(--bg-alt) 90%, transparent)" }}>
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4" style={{ color: "var(--ink)" }}>
           <a href="#top" onClick={scrollTo("top")} className="text-sm tracking-wide shrink-0" style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF", fontWeight: 700 }}>
             {tr(t.heroName)}
