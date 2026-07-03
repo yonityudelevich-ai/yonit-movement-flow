@@ -148,12 +148,14 @@ const t = {
     he: [
       "נשים, ילדים ומתבגרים המתמודדים עם כאב, טראומה או מעברי חיים",
       "מבוגרים המחפשים רווחה, ויסות וחיבור מחודש לגוף",
+      "רקדנים, אנשי תנועה ומקצועות גוף המחפשים להעמיק את הקשר עם הגוף בעבודה ובחיים",
       "מטפלים ואנשי מקצוע המעוניינים בהעמקה מקצועית והדרכה",
       "כל מי שמרגיש שמשהו מבקש להשתנות – ומוכן לעבוד דרך הגוף",
     ],
     en: [
       "Women, children, and adolescents facing pain, trauma, or life transitions",
       "Adults seeking well-being, regulation, and a renewed connection with the body",
+      "Dancers, movement practitioners, and body professionals seeking to deepen their connection with the body in work and life",
       "Therapists and professionals wanting professional deepening and guidance",
       "Anyone who feels something wants to change — and is ready to work through the body",
     ],
