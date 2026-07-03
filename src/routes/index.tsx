@@ -418,7 +418,7 @@ function Index() {
               style={{
                 background: "var(--accent)",
                 color: "var(--accent-ink)",
-                borderRadius: "6px",
+                borderRadius: "2px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
