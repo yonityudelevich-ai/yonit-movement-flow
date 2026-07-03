@@ -425,23 +425,24 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               download
-              className="inline-flex items-center gap-2 px-5 py-2.5 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm transition-colors"
               style={{
-                background: "var(--bg)",
+                background: "var(--accent-soft)",
                 color: "var(--ink)",
-                border: "1px solid var(--accent)",
                 borderRadius: "6px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.background = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-ink)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--bg)";
+                e.currentTarget.style.background = "var(--accent-soft)";
+                e.currentTarget.style.color = "var(--ink)";
               }}
             >
-              {tr(t.cvLink)} <Download size={18} />
+              {tr(t.cvLink)} <Download size={16} />
             </a>
           </div>
         </div>
