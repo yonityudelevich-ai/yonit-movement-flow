@@ -566,6 +566,24 @@ function Index() {
   );
 }
 
+function Quote({ data }: { data: { text: string; author: string } }) {
+  return (
+    <section className="py-16" style={{ background: "var(--quote-bg)", borderTop: "1px solid var(--quote-border)", borderBottom: "1px solid var(--quote-border)" }}>
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <p
+          className="text-xl sm:text-2xl leading-relaxed"
+          style={{ color: "#FFFFFF", fontFamily: "var(--font-typewriter)", fontStyle: "italic" }}
+        >
+          "{data.text}"
+        </p>
+        <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: "var(--heading)", fontFamily: "var(--font-heading)" }}>
+          — {data.author}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function LangSwitcher({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
   return (
     <div
