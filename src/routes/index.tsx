@@ -513,11 +513,53 @@ function Index() {
                     minHeight: "220px",
                   }}
                 >
-                  <h3 className="text-xl mb-3" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <h3 className="text-xl mb-2" style={{ color: "var(--heading)", fontWeight: 700 }}>{card.title}</h3>
+                  <p className="text-sm mb-4" style={{ color: "var(--accent)", fontFamily: "var(--font-heading)", fontWeight: 500 }}>{card.for}</p>
                   <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{card.body}</p>
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Training & Mentorship */}
+      <section id="training" className="py-24" style={{ background: "var(--bg-alt)", borderTop: "1px solid var(--line)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl mb-4">{tr(t.trainingSectionTitle)}</h2>
+            <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
+            <div className="p-8" style={{ background: "var(--surface)", border: "1px solid var(--line)" }}>
+              <div className="space-y-4">
+                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingFormat)}</p>
+                <p className="leading-relaxed" style={{ color: "var(--ink)" }}>{tr(t.trainingAudience)}</p>
+              </div>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 transition-colors"
+                style={{
+                  background: "var(--accent-soft)",
+                  color: "var(--ink)",
+                  border: "1px solid var(--line)",
+                  borderRadius: "9999px",
+                  fontFamily: "var(--font-heading)",
+                  fontWeight: 600,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--accent)";
+                  e.currentTarget.style.color = "var(--accent-ink)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--accent-soft)";
+                  e.currentTarget.style.color = "var(--ink)";
+                }}
+              >
+                <WhatsAppIcon size={18} />
+                {tr(t.trainingCta)}
+              </a>
+            </div>
           </div>
         </div>
       </section>
