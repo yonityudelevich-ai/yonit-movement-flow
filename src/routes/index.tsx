@@ -46,7 +46,7 @@ const t = {
     he: "",
     en: "Suitable for women, children, rehabilitation processes, regulation, and reconnecting with the body.",
   },
-  heroCta: { he: "צרי איתי קשר", en: "Get in Touch" },
+  heroCta: { he: "צרו קשר", en: "Get in Touch" },
   heroName: { he: "יונית יודלביץ'", en: "Yonit Yudelevich" },
   bridge: {
     he: "קצת מהתנועה עצמה, לפני הכל.",
@@ -171,14 +171,14 @@ const t = {
   contactEmailLabel: { he: "אימייל", en: "Email" },
   logisticsTitle: { he: "פרטי מפגש", en: "Session Details" },
   logisticsFormat: { he: "פגישות פרטניות או קבוצתיות, פנים אל פנים או בזום", en: "Individual or group sessions, in-person or via Zoom" },
-  logisticsLength: { he: "משך טיפולי אופייני: 45–60 דקות", en: "Typical session length: 45–60 minutes" },
-  logisticsBooking: { he: "לתיאום: שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "To book: send a WhatsApp or email, and I'll reply within 24 hours" },
+  logisticsLength: { he: "משך טיפולי אופייני: 60–75 דקות", en: "Typical session length: 60–75 minutes" },
+  logisticsBooking: { he: "שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "Send a WhatsApp or email, and I'll reply within 24 hours" },
   trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
   trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening." },
   trainingFormat: { he: "פורמט: מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים", en: "Format: individual or group sessions, in-person or online" },
   trainingAudience: { he: "קהל יעד: מטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש", en: "Audience: licensed therapists and body-mind professionals" },
   trainingCta: { he: "לתיאום שיחת היכרות", en: "Schedule an introductory conversation" },
-  whatsapp: { he: "צרי קשר ב-WhatsApp", en: "Message Me on WhatsApp" },
+  whatsapp: { he: "צרו קשר ב-WhatsApp", en: "Message Me on WhatsApp" },
   whatsappMsg: {
     he: "היי יונית, הגעתי דרך האתר ואשמח לתאם שיחה קצרה כדי לבדוק אם זה מתאים לי.",
     en: "Hi Yonit, I came through your website and I'd love to schedule a short call to see if this is a good fit for me.",
@@ -355,11 +355,11 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 mt-8 px-4 py-1.5 text-xs transition-colors"
+              className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2.5 text-sm transition-colors"
               style={{
                 background: "var(--accent)",
                 color: "var(--accent-ink)",
-                borderRadius: "6px",
+                borderRadius: "2px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
@@ -372,7 +372,7 @@ function Index() {
                 e.currentTarget.style.color = "var(--accent-ink)";
               }}
             >
-              <WhatsAppIcon size={14} />
+              <WhatsAppIcon size={16} />
               {tr(t.heroCta)}
             </a>
           </div>
@@ -418,7 +418,7 @@ function Index() {
               style={{
                 background: "var(--accent)",
                 color: "var(--accent-ink)",
-                borderRadius: "6px",
+                borderRadius: "2px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
               }}
@@ -565,7 +565,7 @@ function Index() {
                 style={{
                   background: "var(--accent)",
                   color: "var(--accent-ink)",
-                  borderRadius: "6px",
+                  borderRadius: "2px",
                   fontFamily: "var(--font-heading)",
                   fontWeight: 600,
                 }}
