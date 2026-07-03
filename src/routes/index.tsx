@@ -160,7 +160,7 @@ const t = {
   contactPhoneLabel: { he: "טלפון", en: "Phone" },
   contactEmailLabel: { he: "אימייל", en: "Email" },
   logisticsTitle: { he: "פרטי מפגש", en: "Session Details" },
-  logisticsFormat: { he: "פגישות פרטניות או קבוצתיות — פנים אל פנים או בזום", en: "Individual or group sessions — in-person or via Zoom" },
+  logisticsFormat: { he: "פגישות פרטניות או קבוצתיות, פנים אל פנים או בזום", en: "Individual or group sessions, in-person or via Zoom" },
   logisticsLength: { he: "משך טיפולי אופייני: 45–60 דקות", en: "Typical session length: 45–60 minutes" },
   logisticsBooking: { he: "לתיאום: שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "To book: send a WhatsApp or email, and I'll reply within 24 hours" },
   trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
