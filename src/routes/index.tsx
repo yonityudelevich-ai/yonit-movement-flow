@@ -286,7 +286,7 @@ function Index() {
           <div
             className="absolute inset-0 z-10"
             style={{
-              background: "rgba(10,15,26,0.55)",
+              background: "rgba(14,8,23,0.55)",
             }}
           />
           <div
