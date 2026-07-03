@@ -406,36 +406,47 @@ function Index() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl mb-3">{tr(t.aboutTitle)}</h2>
           <div className="h-6" />
-          <div className="w-full">
-            {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
-              <p key={i} className="mb-4" style={{ color: "var(--ink)" }}>{p}</p>
-            ))}
-          </div>
-          <div className="mt-8">
-            <a
-              href={cvAsset.url}
-              target="_blank"
-              rel="noreferrer"
-              download
-              className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
-              style={{
-                background: "var(--accent)",
-                color: "var(--accent-ink)",
-                borderRadius: "2px",
-                fontFamily: "var(--font-heading)",
-                fontWeight: 600,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--accent-hover)";
-                e.currentTarget.style.color = "var(--accent-ink)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--accent)";
-                e.currentTarget.style.color = "var(--accent-ink)";
-              }}
-            >
-              {tr(t.cvLink)} <Download size={14} />
-            </a>
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2 space-y-4">
+              {(isHe ? t.aboutBody.he : t.aboutBody.en).map((p, i) => (
+                <p key={i} style={{ color: "var(--ink)" }}>{p}</p>
+              ))}
+              <div className="pt-4">
+                <a
+                  href={cvAsset.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  download
+                  className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
+                  style={{
+                    background: "var(--accent)",
+                    color: "var(--accent-ink)",
+                    borderRadius: "2px",
+                    fontFamily: "var(--font-heading)",
+                    fontWeight: 600,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--accent-hover)";
+                    e.currentTarget.style.color = "var(--accent-ink)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "var(--accent)";
+                    e.currentTarget.style.color = "var(--accent-ink)";
+                  }}
+                >
+                  {tr(t.cvLink)} <Download size={14} />
+                </a>
+              </div>
+            </div>
+            <div className="md:col-span-1">
+              <img
+                src={yonitPortrait.url}
+                alt={tr(t.heroName)}
+                className="w-full h-auto object-cover"
+                style={{ border: "1px solid var(--line)" }}
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
