@@ -176,7 +176,7 @@ const t = {
   logisticsLength: { he: "משך טיפולי אופייני: 60–75 דקות", en: "Typical session length: 60–75 minutes" },
   logisticsBooking: { he: "שלחי הודעת וואטסאפ או אימייל, ואחזור אלייך תוך 24 שעות", en: "Send a WhatsApp or email, and I'll reply within 24 hours" },
   trainingSectionTitle: { he: "הדרכה ומנטורינג למטפלים", en: "Training & Mentorship for Therapists" },
-  trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening." },
+  trainingIntro: { he: "הדרכה וליווי מקצועי של מטפלים, מנחים ואנשי מקצוע בתחומי הגוף והנפש בתהליכי למידה, התפתחות והעמקה מקצועית. הפורמט כולל מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים, ומיועד למטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש.", en: "Professional guidance and accompaniment for therapists, facilitators, and body-mind professionals in learning, development, and professional deepening. The format includes individual or group sessions, in-person or online, and is intended for licensed therapists and body-mind professionals." },
   trainingFormat: { he: "פורמט: מפגשים פרטניים או קבוצתיים, פנים אל פנים או מקוונים", en: "Format: individual or group sessions, in-person or online" },
   trainingAudience: { he: "קהל יעד: מטפלים מוסמכים ואנשי מקצוע בתחומי הגוף-נפש", en: "Audience: licensed therapists and body-mind professionals" },
   trainingCta: { he: "לתיאום שיחת היכרות", en: "Schedule an introductory conversation" },
