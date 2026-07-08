@@ -273,13 +273,13 @@ function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const whatsappHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
   const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    try {
-      window.top?.location.assign(whatsappHref);
-    } catch {
-      window.location.assign(whatsappHref);
+    const opened = window.open(whatsappHref, "_blank", "noopener,noreferrer");
+
+    if (!opened) {
+      window.location.href = whatsappHref;
     }
   };
 
@@ -373,7 +373,7 @@ function Index() {
             </p>
             <a
               href={whatsappHref}
-              target="_top"
+              target="_blank"
               rel="noreferrer"
               onClick={openWhatsApp}
               className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2.5 text-sm transition-colors"
@@ -588,7 +588,7 @@ function Index() {
             <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
             <a
               href={whatsappHref}
-              target="_top"
+              target="_blank"
               rel="noreferrer"
               onClick={openWhatsApp}
               className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
@@ -636,7 +636,7 @@ function Index() {
                 <div className="mt-3">
                   <a
                     href={whatsappHref}
-                    target="_top"
+                    target="_blank"
                     rel="noreferrer"
                     onClick={openWhatsApp}
                     aria-label={tr(t.whatsapp)}
@@ -668,7 +668,7 @@ function Index() {
       {/* Floating WhatsApp */}
       <a
         href={whatsappHref}
-        target="_top"
+        target="_blank"
         rel="noreferrer"
         onClick={openWhatsApp}
         aria-label={tr(t.whatsapp)}
