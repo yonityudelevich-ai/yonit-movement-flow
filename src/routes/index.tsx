@@ -273,7 +273,7 @@ function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const whatsappHref = `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
 
   return (
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
