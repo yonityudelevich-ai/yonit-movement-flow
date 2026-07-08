@@ -274,6 +274,14 @@ function Index() {
   };
 
   const whatsappHref = `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const opened = window.open(whatsappHref, "_blank", "noopener,noreferrer");
+
+    if (!opened) {
+      window.location.assign(whatsappHref);
+    }
+  };
 
   return (
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
@@ -367,6 +375,7 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
+              onClick={openWhatsApp}
               className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2.5 text-sm transition-colors"
               style={{
                 background: "var(--accent)",
@@ -581,6 +590,7 @@ function Index() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
+              onClick={openWhatsApp}
               className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
               style={{
                 background: "var(--accent)",
@@ -628,6 +638,7 @@ function Index() {
                     href={whatsappHref}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={openWhatsApp}
                     aria-label={tr(t.whatsapp)}
                     title={tr(t.whatsapp)}
                     className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
@@ -659,6 +670,7 @@ function Index() {
         href={whatsappHref}
         target="_blank"
         rel="noreferrer"
+        onClick={openWhatsApp}
         aria-label={tr(t.whatsapp)}
         className="fixed bottom-6 z-30 w-14 h-14 flex items-center justify-center shadow-lg transition-colors"
         style={{
