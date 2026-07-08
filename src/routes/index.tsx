@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 
 type Lang = "he" | "en";
 
-const WHATSAPP_NUMBER = "972508937753";
+const WHATSAPP_NUMBER = "+972508937753";
 const PHONE_DISPLAY = "+972 50-893-7753";
 const PHONE_TEL = "+972508937753";
 const EMAIL = "YonitYudelevich@gmail.com";
@@ -273,7 +273,7 @@ function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const whatsappHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const whatsappHref = `https://api.whatsapp.com/send?phone=${encodeURIComponent(WHATSAPP_NUMBER)}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
   const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const opened = window.open(whatsappHref, "_blank", "noopener,noreferrer");
