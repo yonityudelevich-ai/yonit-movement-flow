@@ -222,14 +222,6 @@ const videos = [
     desc_he: "",
   },
   {
-    videoId: "tWOz2OCQIZY",
-    isShort: true,
-    title_en: "Presence",
-    title_he: "נוכחות",
-    desc_en: "",
-    desc_he: "",
-  },
-  {
     videoId: "MVE6CVj-xP8",
     isShort: false,
     title_en: "",
