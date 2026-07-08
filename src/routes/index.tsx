@@ -273,7 +273,15 @@ function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const whatsappHref = `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tr(t.whatsappMsg))}`;
+  const openWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      window.top?.location.assign(whatsappHref);
+    } catch {
+      window.location.assign(whatsappHref);
+    }
+  };
 
   return (
     <div dir={dir} className="min-h-screen" style={{ background: "var(--bg)" }}>
@@ -365,8 +373,9 @@ function Index() {
             </p>
             <a
               href={whatsappHref}
-              target="_blank"
+              target="_top"
               rel="noreferrer"
+              onClick={openWhatsApp}
               className="inline-flex items-center justify-center gap-2 mt-8 px-5 py-2.5 text-sm transition-colors"
               style={{
                 background: "var(--accent)",
@@ -579,8 +588,9 @@ function Index() {
             <p className="text-lg leading-relaxed mb-8" style={{ color: "var(--ink)" }}>{tr(t.trainingIntro)}</p>
             <a
               href={whatsappHref}
-              target="_blank"
+              target="_top"
               rel="noreferrer"
+              onClick={openWhatsApp}
               className="inline-flex items-center gap-2 px-4 py-1.5 text-xs transition-colors"
               style={{
                 background: "var(--accent)",
@@ -626,8 +636,9 @@ function Index() {
                 <div className="mt-3">
                   <a
                     href={whatsappHref}
-                    target="_blank"
+                    target="_top"
                     rel="noreferrer"
+                    onClick={openWhatsApp}
                     aria-label={tr(t.whatsapp)}
                     title={tr(t.whatsapp)}
                     className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
@@ -657,8 +668,9 @@ function Index() {
       {/* Floating WhatsApp */}
       <a
         href={whatsappHref}
-        target="_blank"
+        target="_top"
         rel="noreferrer"
+        onClick={openWhatsApp}
         aria-label={tr(t.whatsapp)}
         className="fixed bottom-6 z-30 w-14 h-14 flex items-center justify-center shadow-lg transition-colors"
         style={{
