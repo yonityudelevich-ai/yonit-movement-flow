@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
-import heroVideo from "../assets/hero-video.mp4.asset.json";
-import cvAsset from "../assets/cv.doc.asset.json";
-import yonitPortrait from "../assets/yonit-about-portrait.jpg.asset.json";
+const heroVideo = { url: "/media/hero-video.mp4" };
+const cvAsset = { url: "/media/Yonit-Yudelevich-CV.doc" };
+const yonitPortrait = { url: "/media/yonit-about-portrait.jpg" };
 
 function WhatsAppIcon({ size = 20 }: { size?: number }) {
   return (
