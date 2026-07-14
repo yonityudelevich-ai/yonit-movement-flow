@@ -1,4 +1,4 @@
-import faviconAsset from "../assets/favicon-spiral.png.asset.json";
+const faviconAsset = { url: "/media/favicon-spiral.png" };
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
